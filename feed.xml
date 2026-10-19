@@ -8,6 +8,355 @@
   <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
   <atom:link href="https://mealsaid.app/feed.xml" rel="self" type="application/rss+xml"/>
   <item>
+    <title>Why most people quit calorie tracking within two weeks (what the research says)</title>
+    <link>https://mealsaid.app/blog/why-people-quit-calorie-tracking/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/why-people-quit-calorie-tracking/</guid>
+    <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Seven studies on food-logging dropout, with the real numbers and links. 2.58% of 189,770 downloads stayed active. 84% of quitters called it tedious. Simplified logging got 97% of days versus 49%.</description>
+    <content:encoded><![CDATA[<p>Most people stop logging food within a few weeks, and the research says the reasons are effort and forgetting, not motivation. The cleanest number: of 189,770 people who downloaded a free food-journal app, 2.58% used it actively for more than a week (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4004142/">Helander et al., 2014</a>). In a six-month MyFitnessPal trial, 84% of those who quit or cut back gave one reason: tedious (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4422872/">Laing et al., 2014</a>).</p>
+<p>I read these papers because I was about to build another tracker and wanted to know what kills them. Every number links to its source with the sample size. Checked 20 October 2026.</p>
+<h2 id="how-many-people-actually-keep-logging">How many people actually keep logging?</h2>
+<p>Almost nobody, past the first week. The best large-scale number is 2.58%; the best trial number is a fall from 97% to 35% of participants logging in between month one and month six.</p>
+<p>The Eatery was a free iPhone app that logged meals by photo. Helander and colleagues had the data for every download between October 2011 and April 2012: 189,770 people used it at least once. "Active" meant ten or more photos and at least a week of use. Result: "only 2.58% (4895/189,770) used the app actively". Another 11% were semi-active and 86% never took a valid photo (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4004142/">J Med Internet Res 2014</a>).</p>
+<p>The MyFitnessPal trial is the one people misquote, including me until this week. Laing and colleagues randomized 212 overweight primary-care patients, half to MyFitnessPal. Logins in the app group ran 97% in month one, 55% in month two, then 47%, 43%, 23% and 35% in month six; median logins went from 8 a month to zero. Weight loss was no different from usual care. At six months 80% said they planned to keep using the app, a number I had inverted in my notes as "20% would continue". The honest reading is worse: most said they would continue, and most did not (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4422872/">Ann Intern Med 2014</a>).</p>
+<p>The reviews agree on the shape. Burke, Wang and Sevick's review of 22 self-monitoring studies describes "a gradual decline in self-monitoring adherence" wherever it was measured over time, with one study where only 25% were still logging at the end (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3268700/">J Am Diet Assoc 2011</a>). Goldstein and colleagues measured dietary logging in a coached 12-week program at 92.7%, 94.9% and 86.7% by month, and found it "decreased significantly over time for eating and weight" (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7156825/">Obes Sci Pract 2020</a>). That is with coaching; the free-app curve above is without.</p>
+<p>Industry numbers are rougher. Adjust's benchmark has Day 7 retention at 13% and Day 30 at 7% across all app categories, and health and fitness at 27% on Day 1 (<a href="https://www.adjust.com/blog/what-makes-a-good-retention-rate/">Adjust</a>). I could not trace the "health apps keep 12 to 16% at Day 7" figure that circulates in blog posts to a primary report, so I am not repeating it.</p>
+<h2 id="why-do-people-stop">Why do people stop?</h2>
+<p>Effort first, forgetting second, social situations third, in every study that asked.</p>
+<table>
+<thead>
+<tr>
+<th>Study</th>
+<th>Who</th>
+<th>Finding</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cordeiro et al., CHI 2015</td>
+<td>141 food journalers (47 active, 94 lapsed) plus 5,526 forum posts</td>
+<td>Top lapse reasons were "too much effort" (31 respondents), "time-consuming" (27), "tedious" (16). Forgetting was the most-cited reason for individual missed entries. 22 of 94 lapsed said they no longer needed to journal.</td>
+<td><a href="https://homes.cs.washington.edu/~jfogarty/publications/chi2015-barriersandnegativenudges.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>Laing et al., 2014</td>
+<td>212 patients, MFP vs usual care, 6 months</td>
+<td>Of 58 who stopped or reduced use, 84% said tedious, 28% too busy or stressed. Logins 97% in month 1, 35% in month 6.</td>
+<td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4422872/">PMC</a></td>
+</tr>
+<tr>
+<td>Helander et al., 2014</td>
+<td>189,770 downloads of a photo food journal</td>
+<td>2.58% active beyond one week.</td>
+<td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4004142/">PMC</a></td>
+</tr>
+<tr>
+<td>Patel et al., 2022</td>
+<td>38 adults, 84 days, detailed vs simplified logging</td>
+<td>Median days logged: 49% detailed vs 97% simplified. Weight loss 3.4 kg vs 3.3 kg.</td>
+<td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9795401/">PMC</a></td>
+</tr>
+<tr>
+<td>Bentley and Tollmar, CHI 2013</td>
+<td>10-user pilot then 60-user study</td>
+<td>Logging frequency 12% without notifications, 63% with. Observational, not randomized.</td>
+<td><a href="https://library.selfresearch.org/?p=26308">Abstract</a></td>
+</tr>
+<tr>
+<td>Chen et al., CHI 2024</td>
+<td>Randomized, weight maintenance app</td>
+<td>Context-triggered notifications: 21.77% logged within 60 minutes vs 17.32% for fixed-time ones.</td>
+<td><a href="https://www.ruizlab.org/wp-content/uploads/2024/10/3613904.3641993.pdf">PDF</a></td>
+</tr>
+<tr>
+<td>Goldstein et al., 2020</td>
+<td>12-week digital program</td>
+<td>Dietary logging adherence 92.7%, 94.9%, 86.7% by month, declining significantly.</td>
+<td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7156825/">PMC</a></td>
+</tr>
+</tbody>
+</table>
+<p>Cordeiro's paper is the one to read. It is qualitative, so the counts above are respondents, not percentages, but it names the mechanism: every entry costs a search, a portion guess and a decision, and people forget until the moment has passed. "Simply forgetting to journal is a major barrier to reliable journals". Lapsers also felt judged by red numbers after a bad day and stopped opening the app, the "negative nudge" in the title.</p>
+<h2 id="does-making-logging-simpler-actually-help">Does making logging simpler actually help?</h2>
+<p>Yes, in the one randomized test I could find, and by a lot: 97% of days logged versus 49%, with the same weight loss.</p>
+<p>Patel and colleagues ran a fully remote pilot with 38 adults over 84 days. Eighteen logged every food in the Fitbit app. Twenty used a daily checklist of "red zone" foods, no calorie counting. Median days logged: 49% (interquartile range 5 to 67) detailed, 97% (86 to 100) simplified. Weight change 3.4 kg versus 3.3 kg, a wash (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9795401/">JMIR Form Res 2022</a>). Thirty-eight people is a pilot, not a verdict, but it is the only head-to-head I know of and the gap is not subtle.</p>
+<h2 id="do-reminders-fix-forgetting">Do reminders fix forgetting?</h2>
+<p>Partly. Notifications roughly quintupled logging in one early study, and context-triggered prompts beat clock-based ones in a 2024 randomized trial. But that effect was 21.8% versus 17.3%, so most prompts are still ignored.</p>
+<p>Bentley and Tollmar added daily notifications to a wellbeing-logging app and saw logging go from 12% in a 10-user pilot to 63% in a 60-user study (<a href="https://library.selfresearch.org/?p=26308">CHI 2013</a>). Two different groups, not a controlled comparison, so read it as "reminders matter a lot", not "reminders give you 5x".</p>
+<p>Chen and colleagues did it properly in 2024, randomizing fixed-time notifications against context-triggered ones. Context won, 21.77% to 17.32% of prompts followed by a log within the hour (<a href="https://www.ruizlab.org/wp-content/uploads/2024/10/3613904.3641993.pdf">CHI 2024</a>). The "meal-time prompts improve logging 64%" figure from my notes is in neither paper; the 63% above is probably where it came from.</p>
+<p>Both papers share one thing: a notification is still a request to open an app and do the work. It fixes forgetting and leaves effort alone.</p>
+<h2 id="what-does-this-mean-for-picking-a-tracker">What does this mean for picking a tracker?</h2>
+<p>Pick for the two failure modes the research found: minimise the effort of one entry, and have something that interrupts you before the meal is forgotten. Accuracy matters less than you think, because an entry that never happens has infinite error.</p>
+<p>Four tests before you commit:</p>
+<ol>
+<li>Time one real meal from Home Screen to saved. Over about 20 seconds and the Laing curve is coming for you.</li>
+<li>Check what happens when you forget. Is there a reminder? Can you log yesterday's dinner in one step?</li>
+<li>Check whether a bad day punishes you. Cordeiro's lapsers stopped opening the app after red numbers.</li>
+<li>Check that meals land in Apple Health, so switching apps later keeps your history. Who writes and reads is in <a href="/blog/calorie-apps-apple-health/">the Apple Health post</a>.</li>
+</ol>
+<p>MealSaid is my attempt at the first two, and it is one answer, not the only one. You say what you ate, by voice or by a Siri phrase with the app closed, so an entry is one sentence instead of a search per ingredient. At the times you pick, it calls your phone like a real call and asks what you ate; a call is harder to swipe away than a banner, which is the whole idea. The caveats: no barcode scanner, English only, iOS 26 required, and I have not yet published my own adherence numbers. That 30-day test (reminders versus widget versus scheduled call, same person, days logged per condition) is running and will go up with the raw table whether or not the call wins. Patel's checklist, or a photo-first app, are reasonable answers for people who do not want to talk to their phone.</p>
+<h2 id="how-i-checked-this">How I checked this</h2>
+<p>Checked 20 October 2026. Each study was opened at the linked publisher or PubMed Central page and the numbers read from the full text or abstract, not from secondary blogs. Two figures from my earlier notes were wrong and are corrected above: the MyFitnessPal "20% would continue" (it is 80% said they would, and 35% logged in during month six), and "meal-time prompts plus 64%" (no such number; Bentley and Tollmar report 12% to 63%). I also dropped a Day 7 and Day 30 health-app retention range I could not trace to a primary report. ACM Digital Library pages return 403 to scripts, so the Cordeiro and Bentley links go to open copies; the DOIs are 10.1145/2702123.2702155 and 10.1145/2470654.2466140. Corrections to ohmbrock42@gmail.com.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title>MyFitnessPal alternatives in 2026, checked this month</title>
+    <link>https://mealsaid.app/blog/myfitnesspal-alternatives/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/myfitnesspal-alternatives/</guid>
+    <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    <description>What MyFitnessPal moved behind the paywall, what Premium costs now ($79.99 a year), and seven alternatives with their free tier, price, logging method, Apple Health write and ads, verified against official pages on 20 October 2026.</description>
+    <content:encoded><![CDATA[<p>MyFitnessPal is still free, but since 2022 the parts people actually used to save time (barcode scanning, then photo and voice logging) sit behind Premium at $19.99 a month or $79.99 a year, and the free tier shows ads. If that is why you are leaving, the alternatives with those features free are Cronometer and MyNetDiary; the ones with no ads at all are MyNetDiary, MacroFactor (paid only) and MealSaid.</p>
+<p>Every price and feature below was checked against the company's own page or its US App Store listing on 20 October 2026. I built MealSaid, so it is last in the table, with where it loses.</p>
+<h2 id="what-did-myfitnesspal-move-behind-the-paywall">What did MyFitnessPal move behind the paywall?</h2>
+<p>Barcode scanning on 1 October 2022, Voice Log in December 2024, and Meal Scan (photo). The free tier keeps manual logging, the database and Apple Health sync, with ads.</p>
+<p>MyFitnessPal's own help page is blunt about the barcode change: "As of October 1, 2022, Barcode Scan is available only with a Premium subscription" (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032624771-How-to-use-the-Barcode-Scanner">MFP support</a>). The change was announced on 24 August 2022 (<a href="https://www.droid-life.com/2022/08/24/myfitnesspal-puts-barcode-scanner-behind-premium-paywall/">Droid Life</a>). Voice Log followed in December 2024, and the help page says "Voice Logging is currently available for Premium users on iOS and Android" (<a href="https://support.myfitnesspal.com/hc/en-us/articles/30332897072269-How-to-log-food-with-your-voice">MFP support</a>). Meal Scan is listed under Premium in the Free, Premium and Premium+ comparison (<a href="https://support.myfitnesspal.com/hc/en-us/articles/34889191368077-The-difference-between-Free-Premium-and-Premium">MFP support</a>).</p>
+<p>Ads: "The core of MyFitnessPal is free, and it stays that way because ads help pay for it" (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032273152-The-ad-free-experience-with-MyfitnessPal-Premium">MFP support</a>).</p>
+<p>Still free, and credit where due: the biggest food database in the category, search logging, recipes, and writing meals to Apple Health with no Premium gate (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032271092-Apple-Health-connection-and-syncing">MFP support</a>). If you log packaged food by barcode, Premium is still a reasonable buy. If you log by search anyway, free is fine apart from the ads.</p>
+<h2 id="what-does-myfitnesspal-premium-cost-in-2026">What does MyFitnessPal Premium cost in 2026?</h2>
+<p>Premium is $19.99 a month or $79.99 a year. Premium+ (adds meal planning) is $24.99 a month or $99.99 a year.</p>
+<p>Both are from MFP's own pricing post (<a href="https://blog.myfitnesspal.com/myfitnesspal-membership-pricing-tiers/">MFP blog</a>) and match the in-app purchase list on the US App Store (<a href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718">App Store</a>), which also shows $49.99 and $9.99 promotional or legacy SKUs.</p>
+<h2 id="which-alternatives-are-worth-switching-to">Which alternatives are worth switching to?</h2>
+<p>Seven, for different reasons.</p>
+<table>
+<thead>
+<tr>
+<th>App</th>
+<th>Free tier</th>
+<th>Paid price, US App Store</th>
+<th>Main logging method</th>
+<th>Writes nutrition to Apple Health</th>
+<th>Ads on free tier</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MyFitnessPal</td>
+<td>Yes, search logging, database, Health sync</td>
+<td>$19.99/mo, $79.99/yr; Premium+ $99.99/yr</td>
+<td>Database search; barcode, photo, voice are Premium</td>
+<td>Yes</td>
+<td>Yes</td>
+<td><a href="https://blog.myfitnesspal.com/myfitnesspal-membership-pricing-tiers/">Pricing</a></td>
+</tr>
+<tr>
+<td>Lose It!</td>
+<td>Yes, "core calorie logging, barcode scanning, weight tracking"</td>
+<td>$79.99/yr list; monthly SKUs $9.99 to $11.99; prices vary with promotions</td>
+<td>Search, barcode; photo (Snap It) and AI Voice are Premium</td>
+<td>Yes, all iOS users</td>
+<td>Yes; one-time ad-removal purchase</td>
+<td><a href="https://loseit.zendesk.com/hc/en-us/articles/51906561286804-Lose-It-Membership-Tiers-Pricing">Tiers</a>, <a href="https://loseit.zendesk.com/hc/en-us/articles/54516668028564-About-Lose-It">About</a></td>
+</tr>
+<tr>
+<td>Cronometer</td>
+<td>Yes, unlimited, barcode included</td>
+<td>Gold $10.99/mo, $59.99/yr</td>
+<td>Search, barcode free; photo and voice are Gold</td>
+<td>Yes, 13 nutrients plus cholesterol</td>
+<td>Yes, Gold removes them</td>
+<td><a href="https://cronometer.com/gold/index.html">Gold</a>, <a href="https://cronometer.com/features/free-nutrition-tracking-app.html">Free tier</a></td>
+</tr>
+<tr>
+<td>MacroFactor</td>
+<td>No. 7-day trial</td>
+<td>$11.99/mo, $47.99 half year, $71.99/yr</td>
+<td>Search, barcode and label scan, AI photo, Describe by typing or speaking</td>
+<td>Yes, and reads it back</td>
+<td>No ads, ever</td>
+<td><a href="https://help.macrofactorapp.com/en/articles/393-how-macrofactor-subscriptions-and-bundles-work">Subscriptions</a>, <a href="https://macrofactor.com/macrofactor/">About</a></td>
+</tr>
+<tr>
+<td>MyNetDiary</td>
+<td>Yes, barcode, voice, 108 nutrients</td>
+<td>Premium $8.99/mo, $59.99/yr; Premium Plus $14.99/mo, $99.99/yr</td>
+<td>Search, barcode, voice free; photo Meal Scan is Premium</td>
+<td>Yes, "51 data types"</td>
+<td>No</td>
+<td><a href="https://www.mynetdiary.com/free-calorie-tracker.html">Free tier</a></td>
+</tr>
+<tr>
+<td>Cal AI</td>
+<td>Photo scanning needs a subscription; 3-day trial</td>
+<td>App Store SKUs $29.99 and $19.99 (Unlimited); no public price page</td>
+<td>Photo first; barcode; describe by voice or text</td>
+<td>Not confirmed by Cal AI's own pages</td>
+<td>No evidence either way</td>
+<td><a href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616">App Store</a>, <a href="https://www.calai.app/">calai.app</a></td>
+</tr>
+<tr>
+<td>FatSecret</td>
+<td>Yes, search, barcode, reports</td>
+<td>App Store SKUs $14.99/mo, $59.99/yr; FatSecret says prices vary by region</td>
+<td>Search, barcode free; photo and voice Smart Assistant are Premium</td>
+<td>Yes</td>
+<td>Not stated officially</td>
+<td><a href="https://www.fatsecret.com/premium">Premium</a>, <a href="https://apps.apple.com/us/app/id347184248">App Store</a></td>
+</tr>
+<tr>
+<td>MealSaid</td>
+<td>Yes, everything; no in-app purchases</td>
+<td>Free</td>
+<td>Voice, Siri phrase, keyboard fallback; no barcode, no photo, no database to browse</td>
+<td>Yes, energy, protein, carbs, fat, fiber</td>
+<td>No</td>
+<td><a href="/blog/how-mealsaid-works/">How it works</a></td>
+</tr>
+</tbody>
+</table>
+<p>"SKU" means the company publishes no US price and I am quoting the App Store in-app purchase list, which is what you would be charged.</p>
+<h2 id="who-is-each-one-for">Who is each one for?</h2>
+<p>Pick by what you log and how you feel about ads.</p>
+<p>Cronometer is the pick if you want the most for free. Its basic account is "for an unlimited amount of time" (<a href="https://support.cronometer.com/hc/en-us/articles/360028026971-Subscription-Types">Cronometer support</a>) and includes "Unlimited use of our Barcode Scanner" (<a href="https://cronometer.com/features/free-nutrition-tracking-app.html">Cronometer</a>). Ads until you pay $59.99 a year for Gold. Smaller database than MFP, far better curated for whole foods, and it tracks micronutrients MFP does not.</p>
+<p>MyNetDiary is the pick if ads drove you out. Its free tier promises "no ads, no account required to start, no expiration, and no scanner paywall" (<a href="https://www.mynetdiary.com/free-calorie-tracker.html">MyNetDiary</a>), and plain voice logging is free. Premium is $59.99 a year. The interface is dated; that is the trade.</p>
+<p>Lose It is the closest like-for-like swap. Its About page lists barcode scanning in the free version (<a href="https://loseit.zendesk.com/hc/en-us/articles/54516668028564-About-Lose-It">Lose It</a>), though its tiers page puts "barcode scanning, smart photo and voice logging features" under Premium (<a href="https://loseit.zendesk.com/hc/en-us/articles/51906561286804-Lose-It-Membership-Tiers-Pricing">Lose It</a>); I could not resolve that from their docs, so check on a fresh install. Premium lists at $79.99 a year but Lose It says it "adjusts prices based on various factors like seasonal promotions" (<a href="https://loseit.zendesk.com/hc/en-us/articles/47345136549652-What-is-Lose-It-Premium">Lose It</a>), so the $39.99 you see quoted elsewhere is a promo, not the list price. Ads on free, with a one-time purchase to remove them.</p>
+<p>MacroFactor is the pick if you are willing to pay and hate ads. "There isn't (and will never be) a free version" and "We will never serve ads or use ad networks to track you" (<a href="https://macrofactor.com/macrofactor/">MacroFactor</a>). $71.99 a year. Its adaptive calorie targets and its two-way Apple Health sync are the best in the group. It is the app I would use if I logged by barcode and weighed food.</p>
+<p>Cal AI is the pick if you want to point a camera at a plate and nothing else. The photo scan is subscription-only ("FOOD SCANNING ANALYSIS RESULTS REQUIRE A SUBSCRIPTION", <a href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616">App Store</a>) after a 3-day trial. Two cautions: Cal AI publishes no price page and no Apple Health write documentation that I could find, and an NIH study presented at NUTRITION 2026 found four photo apps, Cal AI among them, under-estimated meal energy by about 33% across 102 controlled meals (<a href="https://www.healio.com/news/primary-care/20260804/ai-photobased-calorietracking-tools-underestimate-them-by-33">Healio</a>).</p>
+<p>FatSecret is the quiet option. Free search and barcode, an old community, and App Store SKUs of $59.99 a year for photo and voice. FatSecret's own premium page gives no US price (<a href="https://www.fatsecret.com/premium">FatSecret</a>) and I could not find an official statement on ads, so that column is blank rather than guessed.</p>
+<h2 id="where-does-mealsaid-fit-and-where-does-it-not">Where does MealSaid fit, and where does it not?</h2>
+<p>MealSaid fits if your problem with MFP was the number of taps, and it does not fit if your problem was the barcode paywall, because we have no barcode scanner at all.</p>
+<p>You say what you ate, by holding a mic or by "Hey Siri, log in MealSaid, two eggs and toast" with the app closed, and calories, protein, carbs, fat and fiber are written to Apple Health in about a second. If you forget, the app calls your phone at times you picked and waits while you list the day. Free, no ads, no in-app purchases.</p>
+<p>What it does not do: no barcode, no photo, no database you can browse, no micronutrients beyond fiber, no Android, English only, and it requires iOS 26. The estimates come from a language model checked against USDA values, so they are estimates; a weighed plate in Cronometer will be more precise. If you need any of those things, pick from the table above and use MealSaid for the meals you would otherwise skip, since everyone on this list writes to the same Apple Health ledger (<a href="/blog/calorie-apps-apple-health/">who writes and who reads</a>).</p>
+<h2 id="how-i-checked-this">How I checked this</h2>
+<p>Checked 20 October 2026. For each app I opened the US App Store listing and read the in-app purchase list, then opened the company's own pricing or help page and the Apple Health page where one exists. Prices are US dollars as shown that day; several companies say they vary by region and promotion, and I have flagged those. MyFitnessPal, Lose It, Cronometer and FatSecret help pages return 403 to scripts, so they were read in Safari. The MacroFactor App Store ID in my earlier notes was wrong and 404s; the live listing is <a href="https://apps.apple.com/us/app/id1553503471">id1553503471</a>. I have not timed or measured accuracy for any of these apps in this post; that is the next two posts. If a price has changed by the time you read this, email ohmbrock42@gmail.com and I will update the table with a new dated row.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title>How to log food on iPhone without opening an app (Siri, Lock Screen, widget)</title>
+    <link>https://mealsaid.app/blog/log-food-without-opening-the-app/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/log-food-without-opening-the-app/</guid>
+    <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Three ways to log a meal on iPhone in one sentence or one tap, step by step with MealSaid, plus what Shortcuts can and cannot do with MyFitnessPal, Lose It, Cronometer and MacrosFirst.</description>
+    <content:encoded><![CDATA[<p>You can log a meal on an iPhone without opening any app by saying "Hey Siri, log in MealSaid, two eggs and toast." The entry lands in Apple Health with calories and macros while your phone stays locked. The Lock Screen control and the Home Screen widget are one tap each, but they open the app (already listening), so they are a close second.</p>
+<p>Checked 20 October 2026 on my iPhone running iOS 26. I built MealSaid, so read the competitor section as "what I could find in their docs", not a hands-on test of each one.</p>
+<h2 id="why-does-it-matter-whether-the-app-opens">Why does it matter whether the app opens?</h2>
+<p>Because opening a tracker is the step people skip. Every tap between "I just ate" and "it is logged" is a chance to decide you will do it later, and later is usually never. A stopwatch comparison across six apps is coming as its own post; this one is about the routes.</p>
+<h2 id="how-do-i-log-with-siri-and-mealsaid">How do I log with Siri and MealSaid?</h2>
+<p>Say "Hey Siri, log in MealSaid, two eggs and toast" and let go. Siri shows a card confirming what was logged. The app does not open.</p>
+<p>The phrase has three parts, and only the middle one is fixed:</p>
+<ol>
+<li>"Hey Siri" (or hold the side button).</li>
+<li>"log in MealSaid" or "tell MealSaid". Apple requires the app name in third-party Siri phrases; its own guide says you run a shortcut by saying its name (<a href="https://support.apple.com/guide/shortcuts/run-shortcuts-with-siri-apd07c25bb38/ios">Apple Support</a>). Not our rule.</li>
+<li>What you ate, in plain words. "Two eggs and toast." "Chicken burrito from Chipotle, no rice." "Did chest for 45 minutes" logs a workout instead.</li>
+</ol>
+<p>Your words go to our server, a language model turns them into entries with calories, protein, carbs, fat and fiber, and those are written to Apple Health. About a second. Say when ("this morning at 8") and it is logged at that time.</p>
+<p>Two honest limits. The Siri route needs an internet connection, because the understanding happens on our server, not on the phone. And it is English only.</p>
+<p><img alt="MealSaid listening screen with the transcript &quot;two eggs and avocado toast&quot; and a Call me button" src="/blog/img/log.webp"  width="800" height="1738" loading="lazy"></p>
+<h2 id="how-do-i-set-up-the-lock-screen-control">How do I set up the Lock Screen control?</h2>
+<p>Press and hold your Lock Screen, tap Customize, tap Lock Screen, tap the minus on the flashlight or camera control, then tap the plus and choose MealSaid. From then on it is one tap from the locked phone to a listening mic.</p>
+<p>The steps as they appear on my phone, iOS 26:</p>
+<ol>
+<li>Wake the phone, do not unlock it. Press and hold on the Lock Screen until the gallery appears.</li>
+<li>Tap Customize under your current Lock Screen, then Lock Screen (not Home Screen).</li>
+<li>At the bottom you see two controls, flashlight and camera by default. Tap the minus on the one you use less.</li>
+<li>Tap the plus that replaces it. Scroll or search for MealSaid and pick the control.</li>
+<li>Tap Done, top right.</li>
+</ol>
+<p>Apple documents the flow under <a href="https://support.apple.com/guide/iphone/create-a-custom-lock-screen-iph4d0e6c351/ios">Create a custom Lock Screen</a>. Third-party controls exist since iOS 18, so any app that ships one can live here.</p>
+<p>Press and hold the control, the same firm press the flashlight needs. The phone unlocks with Face ID, the app opens straight into the listening screen, and you talk. The MealSaid control opens the app rather than recording from the Lock Screen, so this route is one press plus speaking, with no searching.</p>
+<h2 id="how-do-i-add-the-home-screen-widget">How do I add the Home Screen widget?</h2>
+<p>Press and hold an empty spot on the Home Screen, tap Edit, tap Add Widget, search MealSaid, and add the medium one. Tapping it opens the app already listening and shows today's calories against your target.</p>
+<p>Apple's steps are at <a href="https://support.apple.com/guide/iphone/add-edit-and-remove-widgets-iphb8f1bf206/ios">Add, edit, and remove widgets</a>. The MealSaid widget shows a mic button, today's total and a progress bar. Tap anywhere on it.</p>
+<p><img alt="iPhone Home Screen with the MealSaid widget reading Speak to log calories, 765 of 2,000 kcal today" src="/blog/img/homescreen.webp"  width="800" height="1738" loading="lazy"></p>
+<p>The widget is my route at home, where the phone is unlocked on the table. Siri is for cooking or driving. The Lock Screen control is for the gym.</p>
+<h2 id="which-route-is-fastest">Which route is fastest?</h2>
+<p>Siri, because nothing opens and there is nothing to tap. The other two routes cost one tap plus whatever you say.</p>
+<table>
+<thead>
+<tr>
+<th>Route</th>
+<th>Taps before you speak</th>
+<th>What opens</th>
+<th>Works with the phone locked</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Hey Siri, log in MealSaid, two eggs and toast"</td>
+<td>0</td>
+<td>Nothing (Siri card)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Lock Screen control, then speak</td>
+<td>1 press plus Face ID</td>
+<td>MealSaid, listening</td>
+<td>Press works locked, app unlocks</td>
+</tr>
+<tr>
+<td>Home Screen widget, then speak</td>
+<td>1</td>
+<td>MealSaid, listening</td>
+<td>No, phone must be unlocked</td>
+</tr>
+<tr>
+<td>Open the app, tap plus, tap mic, speak</td>
+<td>3</td>
+<td>MealSaid</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>No stopwatch numbers here on purpose. Timing one app alone tells you little; the comparison against the apps you would otherwise use (five meals, six apps, three runs each, raw CSV) is the next post.</p>
+<h2 id="what-can-shortcuts-and-siri-do-with-other-calorie-apps">What can Shortcuts and Siri do with other calorie apps?</h2>
+<p>Less than you would hope, and the useful bits are mostly paid. The pattern across the big apps is: voice logging exists, but as a button inside the app, behind the subscription.</p>
+<table>
+<thead>
+<tr>
+<th>App</th>
+<th>Siri phrase that logs food with the app closed</th>
+<th>Voice logging inside the app</th>
+<th>Paid?</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MyFitnessPal</td>
+<td>None I could find</td>
+<td>Yes, Voice Log, reached from the app's navigation bar</td>
+<td>Premium only</td>
+<td><a href="https://www.prnewswire.com/news-releases/say-it-log-it-myfitnesspal-unveils-voice-log-302329040.html">PR Newswire, Dec 11 2024</a></td>
+</tr>
+<tr>
+<td>Lose It!</td>
+<td>Not documented</td>
+<td>Yes, "Say It!" voice logging</td>
+<td>Premium only</td>
+<td><a href="https://apps.apple.com/app/lose-it-weight-loss-program-and-calorie-counter/id297368629">App Store listing</a></td>
+</tr>
+<tr>
+<td>Cronometer</td>
+<td>Yes, "Log food in Cronometer", app stays closed; Siri asks which foods</td>
+<td>Yes</td>
+<td>Gold only</td>
+<td><a href="https://support.cronometer.com/hc/en-us/articles/47664884315412-Mobile-Siri-Voice-Logging">Cronometer support</a></td>
+</tr>
+<tr>
+<td>MacrosFirst</td>
+<td>Yes, "Hey Siri" phrases for food, water, weight; food logging may open the app to finish</td>
+<td>Yes</td>
+<td>Log Food via Siri needs Premium; water and weight are free</td>
+<td><a href="https://help.macrosfirst.com/en/articles/75-siri-shortcuts">MacrosFirst help</a></td>
+</tr>
+<tr>
+<td>MealSaid</td>
+<td>Yes, "log in MealSaid" plus what you ate, app stays closed</td>
+<td>Yes</td>
+<td>Free, no in-app purchases</td>
+<td>This post</td>
+</tr>
+</tbody>
+</table>
+<p>MyFitnessPal's announcement calls Voice Log "available to Premium members" and says you reach it from the app's navigation bar, so the app is open before you speak. Lose It's listing puts "Say It!" in its Premium plan. MacrosFirst is the most Shortcuts-friendly: its help page says to "say 'Hey Siri…' followed by one of the phrases below", and water and weight finish inside Siri; food is Premium and may hand off to the app. Cronometer is the closest to our route: its doc says Gold users can "log foods using Siri without having to open the app", by saying "Log food in Cronometer" and then answering Siri's question about food, serving size and diary group. Free users do not get it.</p>
+<h2 id="can-i-build-my-own-siri-shortcut-for-an-app-that-has-none">Can I build my own Siri shortcut for an app that has none?</h2>
+<p>You can build a shortcut that opens the app and dictates text, but you cannot make it save an entry unless the app exposes a "log food" action to Shortcuts. Most do not.</p>
+<p>In the Shortcuts app, tap Add Action and look under the app's name. If it lists a "Log Food" action with a text field, chain Dictate Text into it and name the shortcut something you can say. If it only lists "Open MyFitnessPal", opening it is all Siri can do. The fallback for any app is <a href="https://support.apple.com/guide/iphone/dictate-text-iph2c0651d2/ios">Apple's keyboard dictation</a>: open the search screen, tap the mic on the keyboard, say the food, pick the match by hand. Not hands-free, but no typing.</p>
+<h2 id="where-mealsaid-does-not-fit">Where MealSaid does not fit</h2>
+<p>MealSaid has no barcode scanner, no photo logging and no food database to browse. It estimates from what you said, checked against USDA values for common foods, and the estimate can be off; tap the entry to fix a number. It needs iOS 26, is English only, and has no Android version. If you weigh everything and want gram-level control, Cronometer or MacroFactor will serve you better.</p>
+<h2 id="how-i-checked-this">How I checked this</h2>
+<p>Checked 20 October 2026. Siri, Lock Screen and widget steps were done on my iPhone on iOS 26 with MealSaid 1.0.1 from the App Store, following each route from a locked phone and confirming the entry in Health &gt; Browse &gt; Nutrition. Competitor facts come from the linked pages (PR Newswire release of 11 December 2024, Lose It App Store listing, MacrosFirst and Cronometer help centers; Cronometer's article was last updated about three months before I read it), all opened the same day. I did not install the competitors for this post; the timed comparison is the next one, with a CSV. If a link above says something different by the time you read it, email me at ohmbrock42@gmail.com and I will correct it.</p>]]></content:encoded>
+  </item>
+  <item>
     <title>How MealSaid works</title>
     <link>https://mealsaid.app/blog/how-mealsaid-works/</link>
     <guid isPermaLink="true">https://mealsaid.app/blog/how-mealsaid-works/</guid>
@@ -78,6 +427,123 @@
 <h2 id="requirements">Requirements</h2>
 <p>An iPhone running iOS 26 or later, a microphone and an internet connection. Apple Health is optional, but it is the point. English only for now. Free, with no in-app purchases.</p>
 <p>If you want to try it, the links are below. If something does not work, email me at ohmbrock42@gmail.com and I will answer within two working days.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title>Which calorie apps actually write to (and read from) Apple Health</title>
+    <link>https://mealsaid.app/blog/calorie-apps-apple-health/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/calorie-apps-apple-health/</guid>
+    <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Nine calorie trackers checked against their own support docs on 20 October 2026. Who writes nutrition into Apple Health, who reads it back, which fields, and where double counting comes from.</description>
+    <content:encoded><![CDATA[<p>Most calorie apps write your food into Apple Health. Very few read it back. Of the nine apps I checked on 20 October 2026 against their own support pages, only two import nutrition from Health: Lose It (dietary energy only, free tier) and MacroFactor (calories, macros and micros). MyFitnessPal, Cronometer, MyNetDiary, FatSecret, Lifesum, Carbon Diet Coach and MealSaid all write and do not read.</p>
+<p>That one-way street is what makes "syncs with Apple Health" such a slippery phrase. Here is what each app actually does, with the doc it comes from.</p>
+<h2 id="what-does-syncs-with-apple-health-really-mean">What does "syncs with Apple Health" really mean?</h2>
+<p>It can mean three different things and app listings rarely say which. Writing nutrition into Health, reading nutrition out of Health, or reading other data like steps and weight.</p>
+<p>Apple Health is a database on your phone. Apps ask permission to write to specific fields and to read specific fields, one by one. Apple publishes the nutrition fields it supports, 39 of them, from dietaryEnergyConsumed and dietaryProtein down to individual vitamins (<a href="https://developer.apple.com/documentation/healthkit/nutrition-type-identifiers">Apple developer docs: nutrition type identifiers</a>). You can see exactly what each app asked for under Settings &gt; Health &gt; Data Access &amp; Devices (<a href="https://support.apple.com/guide/iphone/share-your-health-data-iph5ede58c3d/ios">Apple Support: share your Health data</a>).</p>
+<p>So when an app says it "syncs", ask three questions. Does it write my meals in? Does it read meals other apps wrote? Does it only read steps and weight and call that sync?</p>
+<h2 id="which-apps-write-nutrition-and-which-read-it">Which apps write nutrition and which read it?</h2>
+<p>Seven of nine write only. Two read. Nobody is a complete two-way mirror.</p>
+<table>
+<thead>
+<tr>
+<th>App</th>
+<th>Writes food to Health</th>
+<th>Fields written (per their doc)</th>
+<th>Reads food from Health</th>
+<th>Reads other Health data</th>
+<th>Source, date seen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MyFitnessPal</td>
+<td>Yes</td>
+<td>"Meal summaries and most nutrients"; caffeine and vitamin A excluded; no per-meal timestamps</td>
+<td>No</td>
+<td>Exercise, weight, sleep</td>
+<td><a href="https://support.myfitnesspal.com/hc/en-us/articles/360032271092-Apple-Health-connection-and-syncing">MFP support</a>, updated 24 Sep 2026</td>
+</tr>
+<tr>
+<td>Lose It</td>
+<td>Yes</td>
+<td>Food (fields not itemised)</td>
+<td>Yes, dietary energy only on free; macros and water with Premium custom goals</td>
+<td>Weight, exercise</td>
+<td><a href="https://help.loseit.com/hc/en-us/articles/47773580085140-Using-Apple-Health-With-Lose-It">Lose It help</a>, updated 1 Apr 2026</td>
+</tr>
+<tr>
+<td>MacroFactor</td>
+<td>Yes</td>
+<td>Calories, macros, supported micros</td>
+<td>Yes, calories, macros and micros for the day</td>
+<td>Weight, both directions</td>
+<td><a href="https://help.macrofactorapp.com/en/articles/102-integrations">MacroFactor help</a></td>
+</tr>
+<tr>
+<td>Cronometer</td>
+<td>Yes</td>
+<td>"13 Different Nutrients" plus dietary cholesterol</td>
+<td>No</td>
+<td>Activity, exercise, weight, sleep, biometrics</td>
+<td><a href="https://support.cronometer.com/hc/en-us/articles/360020734212-Apple-Health-Apple-Watch">Cronometer support</a>, updated 18 Oct 2026</td>
+</tr>
+<tr>
+<td>MyNetDiary</td>
+<td>Yes</td>
+<td>"up to 38 nutrients", water</td>
+<td>No (reads water)</td>
+<td>Workouts, steps, weight, blood pressure, glucose, sleep</td>
+<td><a href="https://www.mynetdiary.com/supportArticle.do?articleId=418">MyNetDiary support</a></td>
+</tr>
+<tr>
+<td>FatSecret</td>
+<td>Yes</td>
+<td>Foods with "detailed nutritional information"</td>
+<td>No</td>
+<td>Calories burned, steps</td>
+<td><a href="https://apps.apple.com/us/app/calorie-counter-by-fatsecret/id347184248">App Store listing</a></td>
+</tr>
+<tr>
+<td>Lifesum</td>
+<td>Yes</td>
+<td>"Food calories, Food nutrition, Weight, Water intake"</td>
+<td>No</td>
+<td>Exercise calories, steps, workouts, weight</td>
+<td><a href="https://help.lifesum.com/en/article/eagtau/">Lifesum help</a>, updated 26 Aug 2026</td>
+</tr>
+<tr>
+<td>Carbon Diet Coach</td>
+<td>Yes</td>
+<td>Energy, macros, available micros</td>
+<td>No</td>
+<td>Weight, body fat</td>
+<td><a href="https://help.joincarbon.com/en/articles/9814262-apple-health-integration">Carbon help</a>, updated 8 Sep 2025</td>
+</tr>
+<tr>
+<td>MealSaid</td>
+<td>Yes</td>
+<td>Dietary energy, protein, carbohydrates, total fat, fiber; workouts with active calories</td>
+<td>No</td>
+<td>Workouts, steps, weight, heart rate, sleep</td>
+<td>Our own app, <a href="/blog/how-mealsaid-works/">how it works</a></td>
+</tr>
+</tbody>
+</table>
+<p>Cal AI is missing from the table on purpose. Its FAQ describes connecting Apple Health for steps, and its App Store listing does not mention Health at all. Third-party blogs say it writes calories and macros. I could not confirm that from anything Cal AI publishes, so I am not putting it in a row.</p>
+<p>Two rows deserve a note. MacroFactor's import has a priority rule: manual entry beats its own food log, which beats Apple Health, and a MacroFactor food entry for a day blocks the Health import for that day (<a href="https://help.macrofactorapp.com/en/articles/102-integrations">MacroFactor help</a>). Lose It marks imported dietary energy with a heart icon in the log so you can tell it apart; its doc says "Food data from other 3rd party apps in Apple Health may appear in Lose It!"</p>
+<h2 id="why-does-it-matter-whether-an-app-reads-nutrition-back">Why does it matter whether an app reads nutrition back?</h2>
+<p>Because reading is what lets you switch apps, or use two, without losing the day. A write-only app is a one-way door: its entries land in Health for everyone else to see, but it never looks at what anyone else logged.</p>
+<p>In practice that means if you log breakfast with a Siri phrase in one app and lunch by barcode in another, only Apple Health itself has the whole day. MyFitnessPal will show you its own meals. Cronometer will show you its own. Health &gt; Browse &gt; Nutrition &gt; Dietary Energy shows both, which is why I tell people to treat the Health app as the ledger and the trackers as input devices.</p>
+<p>MacroFactor is the one app here built for that two-app life, and it is the only one whose doc explains the conflict rules. Lose It gets you partway (energy only, and no macros unless you pay and set a custom goal).</p>
+<h2 id="why-are-my-calories-doubled-in-apple-health">Why are my calories doubled in Apple Health?</h2>
+<p>Two sources wrote the same meal, and Health adds them up. Fix it under Health &gt; Browse &gt; Nutrition &gt; Dietary Energy &gt; Data Sources &amp; Access by turning off the source you do not want counted.</p>
+<p>This is the trap the "sync" word hides. Every write-only app above will happily add its entries next to another app's entries. MyNetDiary's own support page says it directly: if you log the same food in two apps, "you may see duplicate records in Apple Health". It is not only two apps either; the Athlytic recovery app's help doc notes that "MyFitnessPal has been known to double-log calories in Apple Health" on its own (<a href="https://athlyticapp.helpscoutdocs.com/article/51-missing-or-incorrect-calories-from-your-nutrition-tracker-in-athlytic">Athlytic help</a>, updated 24 Feb 2025).</p>
+<p>A reader-plus-writer is a different risk. If an app reads dietary energy from Health and also writes dietary energy to Health, a second tracker's entries can get imported and then re-exported as the first app's own. MacroFactor handles this with the priority rule above. Lose It's doc does not say what happens if you also write from another app, and I could not test it for this post.</p>
+<p>Carbon Diet Coach took the blunt route: "We do not import nutrition from other apps." It reads back only its own entries, to avoid writing them twice.</p>
+<h2 id="which-fields-does-mealsaid-write-and-what-does-it-not-do">Which fields does MealSaid write and what does it not do?</h2>
+<p>MealSaid writes five nutrition fields (dietary energy, protein, carbohydrates, total fat, fiber) and real workouts with active calories. It reads workouts, steps, weight, heart rate and sleep for context. It does not read food from Health, it does not write water, caffeine, sugar, sodium or micronutrients, and the Health data it reads never leaves your phone.</p>
+<p>If you want 38 nutrients in Health, MyNetDiary or Cronometer will give you more than we do. If you want an app that imports what other trackers logged, that is MacroFactor. MealSaid's bet is narrower: get the meal into Health in one sentence, by voice or by Siri, with the app closed, and let Health be the ledger. It also requires iOS 26, is English only, has no barcode scanner, and there is no Android version, so Health Connect users are out of luck.</p>
+<h2 id="how-i-checked-this">How I checked this</h2>
+<p>Checked 20 October 2026. For each app I read the current Apple Health page in its own help center or, where none exists, the developer's own App Store description, and recorded the write and read lists and the page's "updated" date where shown. MyFitnessPal, Lose It and Cronometer block scripted fetches of their help centers (they return 403 to anything that is not a browser), so those three were read through the help center's public API and confirmed in Safari. Cal AI's FAQ and listing were read the same day and found silent on nutrition writes. MealSaid's row is from our own HealthKit permission list. I did not install every app and inspect Settings &gt; Health &gt; Data Access for this post; that is a follow-up, with screenshots, and if it contradicts a doc I will say so here. Corrections to ohmbrock42@gmail.com.</p>]]></content:encoded>
   </item>
 </channel>
 </rss>
