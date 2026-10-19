@@ -246,17 +246,17 @@ footer a:hover{color:var(--ink)}
 
     <div class="thanks" id="thanks">
       <h2>Thanks, you are in.</h2>
-      <p>We will reach out from om@turgon.ai about the next collab. Meanwhile, tag <strong>#mealsaid</strong> on anything you post.</p>
+      <p>We will reach out from ohmbrock42@gmail.com about the next collab. Meanwhile, tag <strong>#mealsaid</strong> on anything you post.</p>
     </div>
   </section>
 </main>
 
 <footer class="wrap">
-  <span>© 2026 Turgon</span>
+  <span>© 2026 MealSaid</span>
   <nav aria-label="Footer">
     <a href="privacy.html">Privacy</a>
     <a href="support.html">Support</a>
-    <a href="mailto:om@turgon.ai">om@turgon.ai</a>
+    <a href="mailto:ohmbrock42@gmail.com">ohmbrock42@gmail.com</a>
   </nav>
 </footer>
 
@@ -271,7 +271,7 @@ footer a:hover{color:var(--ink)}
     fetch('https://voicefit-api.fly.dev/creators',{method:'POST',body:new URLSearchParams(new FormData(f))})
       .then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(j.error||r.status);})})
       .then(function(){f.style.display='none';document.getElementById('thanks').style.display='block'})
-      .catch(function(x){err.textContent='Could not send ('+x.message+'). Email om@turgon.ai instead.';err.style.display='block';go.disabled=false;go.textContent='Send my details'});
+      .catch(function(x){err.textContent='Could not send ('+x.message+'). Email ohmbrock42@gmail.com instead.';err.style.display='block';go.disabled=false;go.textContent='Send my details'});
   });
 })();
 </script>

@@ -88,4 +88,4 @@ It also needs an internet connection to log. Reading your log and your progress 
 
 An iPhone running iOS 26 or later, a microphone and an internet connection. Apple Health is optional, but it is the point. English only for now. Free, with no in-app purchases.
 
-If you want to try it, the links are below. If something does not work, email me at om@turgon.ai and I will answer within two working days.
+If you want to try it, the links are below. If something does not work, email me at ohmbrock42@gmail.com and I will answer within two working days.

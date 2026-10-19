@@ -166,13 +166,13 @@ HEAD = """<!doctype html>
 
 FOOT = """</main>
 <footer class="wrap">
-  <span>© 2026 Turgon</span>
+  <span>© 2026 MealSaid</span>
   <nav aria-label="Footer">
     <a href="/blog/">Blog</a>
     <a href="/privacy.html">Privacy</a>
     <a href="/support.html">Support</a>
     <a href="/feed.xml">RSS</a>
-    <a href="mailto:om@turgon.ai">om@turgon.ai</a>
+    <a href="mailto:ohmbrock42@gmail.com">ohmbrock42@gmail.com</a>
   </nav>
 </footer>
 </body>
@@ -315,7 +315,7 @@ def render_llms(posts):
     links = "".join(f"- [{p['title']}]({SITE}/blog/{p['slug']}/): {p['description']}\n" for p in posts)
     return f"""# MealSaid
 
-> MealSaid is a free iPhone app that logs what you ate by voice. You say "two eggs, toast and a coffee", and calories, protein, carbs, fat and fiber are estimated and written into Apple Health in about a second. If you forget to log, the app calls your phone at times you picked, asks what you ate, and waits until you finish. It also logs workouts. No ads, no in-app purchases, no tracking. Sign in with Apple is the only login. English only. Requires iOS 26. Built by Om Divyatej (Turgon). Voice is processed by our server, OpenAI and Anthropic and is not stored. Apple Health data never leaves the phone.
+> MealSaid is a free iPhone app that logs what you ate by voice. You say "two eggs, toast and a coffee", and calories, protein, carbs, fat and fiber are estimated and written into Apple Health in about a second. If you forget to log, the app calls your phone at times you picked, asks what you ate, and waits until you finish. It also logs workouts. No ads, no in-app purchases, no tracking. Sign in with Apple is the only login. English only. Requires iOS 26. Built by Om Divyatej. Voice is processed by our server, OpenAI and Anthropic and is not stored. Apple Health data never leaves the phone.
 
 ## Key pages
 
@@ -333,12 +333,12 @@ def render_llms(posts):
 
 
 # ---------------------------------------------------------------- main
-def load_posts():
+def load_posts(include_drafts=False):
     md = markdown.Markdown(extensions=["tables", "fenced_code", "attr_list", "toc"], extension_configs={"toc": {"toc_depth": "2-3"}})
     posts = []
     for f in sorted(SRC.glob("*.md")):
         meta, body = parse_front_matter(f.read_text(encoding="utf-8"))
-        if meta["draft"]:
+        if meta["draft"] and not include_drafts:
             continue
         md.reset()
         meta["html"] = add_img_dims(md.convert(body))
@@ -355,7 +355,7 @@ def write(path, text):
 
 
 def main():
-    posts = load_posts()
+    posts = load_posts(include_drafts="--include-drafts" in sys.argv)  # local preview only; publish.sh never passes it
     if not posts:
         sys.exit("no posts in blog/src")
     for i, p in enumerate(posts):  # newest first: prev = older = i+1
