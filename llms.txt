@@ -1,0 +1,17 @@
+# MealSaid
+
+> MealSaid is a free iPhone app that logs what you ate by voice. You say "two eggs, toast and a coffee", and calories, protein, carbs, fat and fiber are estimated and written into Apple Health in about a second. If you forget to log, the app calls your phone at times you picked, asks what you ate, and waits until you finish. It also logs workouts. No ads, no in-app purchases, no tracking. Sign in with Apple is the only login. English only. Requires iOS 26. Built by Om Divyatej (Turgon). Voice is processed by our server, OpenAI and Anthropic and is not stored. Apple Health data never leaves the phone.
+
+## Key pages
+
+- [Home](https://mealsaid.app/): what the app does, screenshots, FAQ
+- [App Store](https://apps.apple.com/app/id6818596412): download
+- [TestFlight beta](https://testflight.apple.com/join/s6U7TMe1): early builds
+- [Privacy policy](https://mealsaid.app/privacy.html): what is sent off the phone and what is kept
+- [Support](https://mealsaid.app/support.html): fixes for mic, Health, and call problems; account deletion
+- [Blog](https://mealsaid.app/blog/): notes from building MealSaid
+- [RSS](https://mealsaid.app/feed.xml)
+
+## Blog posts
+
+- [How MealSaid works](https://mealsaid.app/blog/how-mealsaid-works/): What happens when you say "two eggs and toast" to MealSaid, how the call works, where your data goes, and what the app does not do.

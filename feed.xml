@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+  <title>MealSaid blog</title>
+  <link>https://mealsaid.app/blog/</link>
+  <description>Notes from building MealSaid, the calorie tracker you talk to.</description>
+  <language>en</language>
+  <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <atom:link href="https://mealsaid.app/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>How MealSaid works</title>
+    <link>https://mealsaid.app/blog/how-mealsaid-works/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/how-mealsaid-works/</guid>
+    <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+    <description>What happens when you say &quot;two eggs and toast&quot; to MealSaid, how the call works, where your data goes, and what the app does not do.</description>
+    <content:encoded><![CDATA[<p>I built MealSaid because every calorie tracker I tried asked me to do the same thing: open the app, search a database, pick a portion, repeat for every ingredient. I stopped after a week, every time. MealSaid is my attempt at the opposite. You say what you ate. It is logged. That is the whole app.</p>
+<p>This post explains what actually happens when you use it, so you can decide if it is for you.</p>
+<h2 id="what-happens-when-you-log-a-meal">What happens when you log a meal</h2>
+<p>You hold the mic button and say something like "two eggs, toast and a coffee" or "did chest for 45 minutes". Then you let go.</p>
+<ol>
+<li>Your iPhone turns your speech into text. For the mic button this happens on the device, using Apple's speech recognition.</li>
+<li>The text goes to our server, which asks a language model (Anthropic's Claude) to turn it into entries: a food or a workout, an amount, and an estimate for calories, protein, carbs, fat and fiber. For common foods it checks against USDA FoodData Central values.</li>
+<li>The entries come back to your phone and are written to Apple Health as dietary energy, protein, carbohydrates, total fat and fiber. Workouts are written as real workouts with active calories.</li>
+</ol>
+<p>Start to finish, this takes about a second. If you said when it happened ("this morning at 8"), it is logged at that time. Tap any entry and you see the exact words it was estimated from, and you can fix a number if the estimate is off.</p>
+<p>There is no search box, no barcode scanner and no portion slider. There is a keyboard fallback for when the gym is too loud, but I do not expect you to use it.</p>
+<h2 id="you-do-not-have-to-open-the-app">You do not have to open the app</h2>
+<p>Three shortcuts cover most of my own logging:</p>
+<table>
+<thead>
+<tr>
+<th>Where</th>
+<th>What you do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Siri</td>
+<td>"Hey Siri, log in MealSaid, two eggs and toast." Logged with the app closed.</td>
+</tr>
+<tr>
+<td>Lock Screen</td>
+<td>Tap the MealSaid control. The app opens already listening.</td>
+</tr>
+<tr>
+<td>Home Screen</td>
+<td>Tap the widget. Same thing.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-app-calls-you">The app calls you</h2>
+<p>This is the part that is unusual, so let me be precise about it.</p>
+<p>In the Profile tab you pick the times you usually forget to log, say 9 pm. At that time our server sends a push to your phone and your iPhone rings with a normal incoming call screen from "MealSaid". You can answer it from the Lock Screen like any call.</p>
+<p>When you answer, a voice asks what you ate today and whether you worked out. Then it waits. It does not cut you off after three seconds the way a voice assistant does. You can pause, think, list everything from breakfast to the snack you are not proud of, and it only replies when you are actually finished. If you correct yourself ("actually that was two slices, not one") it fixes the entry. When you say "that's all", it hangs up and the entries appear on your Home screen and in Apple Health.</p>
+<p>Some details, because they matter:</p>
+<ul>
+<li>Calls only ring at the times you picked, or when you ask. You can say "call me" into the mic at any time and it rings you back in about five seconds.</li>
+<li>If you already logged recently, the scheduled call is skipped.</li>
+<li>It never dials a phone number or another person. It is a two-way voice conversation between you and the app, carried over your internet connection.</li>
+<li>The voice on the call is OpenAI's Realtime model, streamed through our server. Nothing on the call is recorded.</li>
+</ul>
+<h2 id="seeing-your-day">Seeing your day</h2>
+<p>The Home screen shows today's calories and macros against your targets, with a week strip you can scrub. The Progress tab shows calorie bars per day for the last 7, 30 or 90 days, plus protein per day and your streak. There is a Home Screen widget with today's numbers.</p>
+<p>Your targets come from onboarding, which is also a conversation: you say your weight, height, goal and how you train, and the app sets daily calorie and macro targets. Change your mind later and just say so.</p>
+<h2 id="where-your-data-lives">Where your data lives</h2>
+<p>I want to be plain about this because "voice" and "AI" make people nervous, reasonably.</p>
+<ul>
+<li><strong>Your log</strong> is stored on your iPhone, in Apple Health, and in your MealSaid account on our server (hosted on Fly.io), so a new phone keeps your history. You sign in once with Sign in with Apple. "Hide My Email" works fine.</li>
+<li><strong>Apple Health data never leaves your phone.</strong> The app reads your workouts, steps, weight, heart rate and sleep on the device to give the call context, and writes meals and workouts there. None of that is uploaded.</li>
+<li><strong>Your voice is processed, not kept.</strong> Speech is streamed to our server and on to OpenAI (the voice on the call) and Anthropic (understanding what you said), then discarded. Audio is not stored. The text of what you said is saved so you can read it under each entry.</li>
+<li><strong>No ads, no tracking, no analytics SDKs.</strong> We count which features are used, with no food names attached, and that is it.</li>
+<li><strong>Delete account</strong> in the Profile tab removes your account and every row about you from our server and wipes the app on your phone. Entries already written to Apple Health stay there until you delete them in Health.</li>
+</ul>
+<p>The full detail is in the <a href="/privacy.html">privacy policy</a>.</p>
+<h2 id="what-it-is-not">What it is not</h2>
+<p>MealSaid gives you calorie and macro estimates from what you said. They are estimates, made by a language model from your description and public nutrition data, and they can be off. It is a logging convenience, not medical advice and not a medical device. If you need gram-level precision, you still need a scale.</p>
+<p>It also needs an internet connection to log. Reading your log and your progress works offline, but understanding what you said does not happen on the phone.</p>
+<h2 id="requirements">Requirements</h2>
+<p>An iPhone running iOS 26 or later, a microphone and an internet connection. Apple Health is optional, but it is the point. English only for now. Free, with no in-app purchases.</p>
+<p>If you want to try it, the links are below. If something does not work, email me at om@turgon.ai and I will answer within two working days.</p>]]></content:encoded>
+  </item>
+</channel>
+</rss>
