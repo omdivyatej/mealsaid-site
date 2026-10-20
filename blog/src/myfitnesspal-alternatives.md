@@ -8,6 +8,7 @@ author: Om Divyatej
 tags: [myfitnesspal, alternatives, cronometer, lose it, macrofactor, mynetdiary, cal ai, mealsaid]
 image: blog/img/myfitnesspal-alternatives-1.webp
 draft: false
+medium: https://om-divyatej.medium.com/myfitnesspal-alternatives-in-2026-checked-this-month-b9186f086092
 takeaways:
   - MyFitnessPal Premium is $19.99 a month or $79.99 a year; barcode scanning went behind it on 1 October 2022, Voice Log in December 2024.
   - Cronometer and MyNetDiary give you barcode scanning free; MyNetDiary also runs no ads on its free tier.

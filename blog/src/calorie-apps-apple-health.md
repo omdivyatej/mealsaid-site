@@ -8,6 +8,7 @@ author: Om Divyatej
 tags: [apple health, healthkit, myfitnesspal, lose it, macrofactor, cronometer, mealsaid]
 image: blog/img/calorie-apps-apple-health-1.webp
 draft: false
+medium: https://om-divyatej.medium.com/which-calorie-apps-actually-write-to-and-read-from-apple-health-d972176c5a43
 takeaways:
   - Of nine calorie apps checked on 20 October 2026, only Lose It and MacroFactor read nutrition back from Apple Health. The other seven only write.
   - Apple Health supports 39 nutrition fields, and every app asks for its own subset, so "syncs with Apple Health" can mean three different things.

@@ -8,6 +8,7 @@ author: Om Divyatej
 tags: [siri, shortcuts, lock screen, widget, mealsaid, iphone]
 image: blog/img/log-food-without-opening-the-app-3.webp
 draft: false
+medium: https://om-divyatej.medium.com/how-to-log-food-on-iphone-without-opening-an-app-siri-lock-screen-widget-951f6b512dfa
 takeaways:
   - The Siri phrase costs 0 taps and nothing opens; the Lock Screen control and widget cost 1 tap and open the app already listening.
   - Apple requires the app name in third-party Siri phrases, so it is "log in MealSaid" or "tell MealSaid", never just "log two eggs".

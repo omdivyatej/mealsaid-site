@@ -8,6 +8,7 @@ author: Om Divyatej
 tags: [research, adherence, calorie tracking, myfitnesspal, mealsaid]
 image: blog/img/why-people-quit-calorie-tracking-1.webp
 draft: false
+medium: https://om-divyatej.medium.com/why-most-people-quit-calorie-tracking-within-two-weeks-what-the-research-says-6ac6b453ca16
 faq:
   - q: What percentage of people stop using a calorie tracking app?
     a: In the biggest dataset I found, 189,770 people downloaded a free food-photo app and 2.58% used it actively for more than a week. In a MyFitnessPal trial, 97% logged in during month one and 35% during month six.
