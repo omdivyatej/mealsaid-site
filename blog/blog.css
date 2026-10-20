@@ -59,7 +59,7 @@ h1{font-size:clamp(36px,5vw,56px);line-height:1.02;letter-spacing:-.035em;font-w
 .prose li{padding-left:.2em}
 .prose li::marker{color:var(--acc)}
 .prose li+li{margin-top:.3em}
-.prose blockquote{border-left:2px solid var(--acc);padding-left:1em;color:var(--ink-2);font-style:italic}
+.prose blockquote{margin:1.6em 0 1.6em 1.2em;padding:0;border:0;color:var(--ink-2);font-style:italic}
 .prose code{font:.9em/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;background:rgba(255,255,255,.07);padding:2px 6px;border-radius:6px}
 .prose pre{background:var(--glass);border:1px solid var(--line);border-radius:14px;padding:18px 20px;overflow-x:auto}
 .prose pre code{background:none;padding:0}
@@ -78,11 +78,11 @@ h1{font-size:clamp(36px,5vw,56px);line-height:1.02;letter-spacing:-.035em;font-w
 .prose .headerlink{display:none}
 
 /* key takeaways, on-this-page, callouts */
-.takeaways{margin:0 0 2em;padding:22px 26px 22px 28px;border-radius:18px;background:var(--glass);border:1px solid var(--line);border-left:3px solid var(--acc);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
-.takeaways h2{font-size:13px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--acc);margin-bottom:12px}
+.takeaways{margin:0 0 2.4em;padding:20px 0 22px;border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:0;background:none}
+.takeaways h2{font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin:0 0 12px}
 .takeaways ul{padding-left:1.2em;list-style:disc}
 .takeaways li{color:var(--ink-2);font-size:17px;line-height:1.55;text-wrap:pretty}
-.takeaways li::marker{color:var(--acc)}
+.takeaways li::marker{color:var(--ink-3)}
 .takeaways li+li{margin-top:8px}
 .toc{margin:0 0 2.4em;font-size:15px}
 .toc summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
@@ -94,13 +94,13 @@ h1{font-size:clamp(36px,5vw,56px);line-height:1.02;letter-spacing:-.035em;font-w
 .toc li::marker{color:var(--ink-3);font-variant-numeric:tabular-nums}
 .toc a{border-bottom:1px solid transparent}
 .toc a:hover{color:var(--ink);border-color:var(--acc)}
-.prose .stat{margin:1.8em 0;padding:24px 28px;border-radius:18px;background:var(--glass);border:1px solid var(--line);display:grid;gap:4px}
-.prose .stat strong{display:block;font-size:clamp(44px,6vw,64px);line-height:1;letter-spacing:-.04em;font-weight:700;color:var(--acc);font-variant-numeric:tabular-nums}
+.prose .stat{margin:2.2em 0;padding:0 0 1.4em;border:0;border-bottom:1px solid var(--line);border-radius:0;background:none;display:grid;gap:6px}
+.prose .stat strong{display:block;font-size:clamp(48px,7vw,72px);line-height:1;letter-spacing:-.04em;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
 .prose .stat span{font-size:17px;color:var(--ink);text-wrap:pretty}
 .prose .stat small{font-size:13.5px;color:var(--ink-3)}
 .prose .stat small a{color:var(--ink-3);border-color:transparent}
 .prose .stat small a:hover{color:var(--ink);border-color:var(--acc)}
-.prose .note{margin:1.6em 0;padding:16px 20px;border-radius:14px;background:rgba(255,255,255,.02);border:1px solid var(--line);font-size:16.5px;color:var(--ink-3)}
+.prose .note{margin:1.6em 0 1.6em 1.2em;padding:0;border:0;border-radius:0;background:none;font-size:16.5px;color:var(--ink-3)}
 .prose .note p{color:var(--ink-3)}
 .prose .note p+p{margin-top:.6em}
 
@@ -138,8 +138,8 @@ h1{font-size:clamp(36px,5vw,56px);line-height:1.02;letter-spacing:-.035em;font-w
 @media (max-width:640px){
   body{font-size:18px}
   .toc ol{columns:1}
-  .takeaways{padding:18px 20px 18px 22px}
-  .prose .stat{padding:20px 22px}
+  .takeaways{padding:16px 0 18px}
+  .prose .stat{padding:0 0 1.2em}
   .prose table{font-size:14px}
   .prose th,.prose td{padding:9px 12px;min-width:11em}
   .prose th:first-child,.prose td:first-child{min-width:8em;max-width:8em}
