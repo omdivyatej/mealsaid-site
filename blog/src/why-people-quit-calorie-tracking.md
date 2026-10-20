@@ -42,7 +42,6 @@ Result: "only 2.58% (4895/189,770) used the app actively". Another 11% were semi
 
 ![10 by 10 grid of 100 squares with 2.58 filled in: the share of 189,770 downloads of The Eatery that stayed active past the first week, Helander 2014](/blog/img/why-people-quit-calorie-tracking-2.webp)
 
-!stat 2.58% | of 189,770 downloads stayed active past the first week | [Helander et al., 2014](https://pmc.ncbi.nlm.nih.gov/articles/PMC4004142/)
 
 The MyFitnessPal trial is the one people misquote, including me until this week. Laing and colleagues randomized 212 overweight primary-care patients, half to MyFitnessPal. Logins in the app group ran 97% in month one, 55% in month two, then 47%, 43%, 23% and 35% in month six; median logins went from 8 a month to zero. Weight loss was no different from usual care.
 
