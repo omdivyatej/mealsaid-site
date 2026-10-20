@@ -6,7 +6,7 @@ date: 2026-10-20
 updated: 2026-10-20
 author: Om Divyatej
 tags: [apple health, healthkit, myfitnesspal, lose it, macrofactor, cronometer, mealsaid]
-image: assets/og.png
+image: blog/img/calorie-apps-apple-health-1.webp
 draft: false
 takeaways:
   - Of nine calorie apps checked on 20 October 2026, only Lose It and MacroFactor read nutrition back from Apple Health. The other seven only write.
@@ -55,6 +55,8 @@ So when an app says it "syncs", ask three questions.
 
 Seven of nine write only. Two read. Nobody is a complete two-way mirror.
 
+![Matrix of MyFitnessPal, Lose It, Cronometer, MacroFactor and MealSaid showing all five write nutrition to Apple Health and only MacroFactor reads it back in full, Lose It energy only](/blog/img/calorie-apps-apple-health-1.webp)
+
 | App | Writes food to Health | Fields written (per their doc) | Reads food from Health | Reads other Health data | Source, date seen |
 |---|---|---|---|---|---|
 | MyFitnessPal | Yes | "Meal summaries and most nutrients"; caffeine and vitamin A excluded; no per-meal timestamps | No | Exercise, weight, sleep | [MFP support](https://support.myfitnesspal.com/hc/en-us/articles/360032271092-Apple-Health-connection-and-syncing), updated 24 Sep 2026 |
@@ -100,6 +102,8 @@ Carbon Diet Coach took the blunt route: "We do not import nutrition from other a
 ## Which fields does MealSaid write and what does it not do?
 
 MealSaid writes five nutrition fields (dietary energy, protein, carbohydrates, total fat, fiber) and real workouts with active calories. It reads workouts, steps, weight, heart rate and sleep for context.
+
+![MealSaid macros card for a chicken burrito bowl: 32 g protein, 52 g carbs, 14 g fat, 4 g fiber, each against its daily target, with Tap any value to edit](/blog/img/calorie-apps-apple-health-2.webp)
 
 What it does not do:
 

@@ -6,7 +6,7 @@ date: 2026-10-20
 updated: 2026-10-20
 author: Om Divyatej
 tags: [mealsaid, calorie tracking, apple health, voice]
-image: assets/og.png
+image: blog/img/how-mealsaid-works-3.webp
 draft: false
 takeaways:
   - You hold a mic button, say what you ate, and calories, protein, carbs, fat and fiber land in Apple Health in about a second.
@@ -45,6 +45,8 @@ Start to finish, this takes about a second. If you said when it happened ("this 
 
 !stat ~1 second | from letting go of the mic to the meal landing in Apple Health
 
+![Flow from what you say to Apple Health: two eggs, toast and a coffee becomes calories and macros, then dietary energy, protein, carbs, fat and fiber in Health, about a second end to end](/blog/img/how-mealsaid-works-3.webp)
+
 Tap any entry and you see the exact words it was estimated from, and you can fix a number if the estimate is off.
 
 There is no search box, no barcode scanner and no portion slider. There is a keyboard fallback for when the gym is too loud, but I do not expect you to use it.
@@ -71,6 +73,8 @@ In the Profile tab you pick the times you usually forget to log, say 9 pm. At th
 
 When you answer, a voice asks what you ate today and whether you worked out. Then it waits. It does not cut you off after three seconds the way a voice assistant does. You can pause, think, list everything from breakfast to the snack you are not proud of, and it only replies when you are actually finished.
 
+![MealSaid call screen: a normal iPhone call from MealSaid at 0:43, with the transcript Lunch was a chicken burrito bowl and then an apple](/blog/img/how-mealsaid-works-2.webp)
+
 If you correct yourself ("actually that was two slices, not one") it fixes the entry. When you say "that's all", it hangs up and the entries appear on your Home screen and in Apple Health.
 
 Some details, because they matter:
@@ -87,6 +91,8 @@ Some details, because they matter:
 - The Home screen shows today's calories and macros against your targets, with a week strip you can scrub.
 - The Progress tab shows calorie bars per day for the last 7, 30 or 90 days, plus protein per day and your streak.
 - There is a Home Screen widget with today's numbers.
+
+![MealSaid Home screen on 3 October: 765 kcal eaten with 1,235 left of 2,000, protein 40 of 150 g, carbs 99 of 250 g, fat 20 of 70 g, fiber 9 of 30 g, and today's log](/blog/img/how-mealsaid-works-1.webp)
 
 Your targets come from onboarding, which is also a conversation: you say your weight, height, goal and how you train, and the app sets daily calorie and macro targets. Change your mind later and just say so.
 

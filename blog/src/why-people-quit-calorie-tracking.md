@@ -6,7 +6,7 @@ date: 2026-10-20
 updated: 2026-10-20
 author: Om Divyatej
 tags: [research, adherence, calorie tracking, myfitnesspal, mealsaid]
-image: assets/og.png
+image: blog/img/why-people-quit-calorie-tracking-1.webp
 draft: false
 faq:
   - q: What percentage of people stop using a calorie tracking app?
@@ -39,11 +39,15 @@ The Eatery was a free iPhone app that logged meals by photo. Helander and collea
 
 Result: "only 2.58% (4895/189,770) used the app actively". Another 11% were semi-active and 86% never took a valid photo ([J Med Internet Res 2014](https://pmc.ncbi.nlm.nih.gov/articles/PMC4004142/)).
 
+![10 by 10 grid of 100 squares with 2.58 filled in: the share of 189,770 downloads of The Eatery that stayed active past the first week, Helander 2014](/blog/img/why-people-quit-calorie-tracking-2.webp)
+
 !stat 2.58% | of 189,770 downloads stayed active past the first week | [Helander et al., 2014](https://pmc.ncbi.nlm.nih.gov/articles/PMC4004142/)
 
 The MyFitnessPal trial is the one people misquote, including me until this week. Laing and colleagues randomized 212 overweight primary-care patients, half to MyFitnessPal. Logins in the app group ran 97% in month one, 55% in month two, then 47%, 43%, 23% and 35% in month six; median logins went from 8 a month to zero. Weight loss was no different from usual care.
 
 At six months 80% said they planned to keep using the app, a number I had inverted in my notes as "20% would continue". The honest reading is worse: most said they would continue, and most did not ([Ann Intern Med 2014](https://pmc.ncbi.nlm.nih.gov/articles/PMC4422872/)).
+
+![Line chart of the share of the MyFitnessPal group logging in each month of the Laing 2014 trial: 97, 55, 47, 43, 23 and 35 percent](/blog/img/why-people-quit-calorie-tracking-1.webp)
 
 The reviews agree on the shape. Burke, Wang and Sevick's review of 22 self-monitoring studies describes "a gradual decline in self-monitoring adherence" wherever it was measured over time, with one study where only 25% were still logging at the end ([J Am Diet Assoc 2011](https://pmc.ncbi.nlm.nih.gov/articles/PMC3268700/)).
 
@@ -78,6 +82,8 @@ Patel and colleagues ran a fully remote pilot with 38 adults over 84 days. Eight
 Median days logged: 49% (interquartile range 5 to 67) detailed, 97% (86 to 100) simplified. Weight change 3.4 kg versus 3.3 kg, a wash ([JMIR Form Res 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9795401/)). Thirty-eight people is a pilot, not a verdict, but it is the only head-to-head I know of and the gap is not subtle.
 
 !stat 97% vs 49% | of days logged with a daily checklist versus full logging, same weight loss | [Patel et al., 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9795401/)
+
+![Two bars comparing the median share of 84 days logged: 97 percent with a daily checklist versus 49 percent logging every food, Patel 2022](/blog/img/why-people-quit-calorie-tracking-3.webp)
 
 ## Do reminders fix forgetting?
 

@@ -19,10 +19,12 @@
 <p>Almost nobody, past the first week. The best large-scale number is 2.58%; the best trial number is a fall from 97% to 35% of participants logging in between month one and month six.</p>
 <p>The Eatery was a free iPhone app that logged meals by photo. Helander and colleagues had the data for every download between October 2011 and April 2012: 189,770 people used it at least once. "Active" meant ten or more photos and at least a week of use.</p>
 <p>Result: "only 2.58% (4895/189,770) used the app actively". Another 11% were semi-active and 86% never took a valid photo (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4004142/">J Med Internet Res 2014</a>).</p>
+<figure><img alt="10 by 10 grid of 100 squares with 2.58 filled in: the share of 189,770 downloads of The Eatery that stayed active past the first week, Helander 2014" src="/blog/img/why-people-quit-calorie-tracking-2.webp"  width="1600" height="900" loading="lazy"><figcaption>10 by 10 grid of 100 squares with 2.58 filled in: the share of 189,770 downloads of The Eatery that stayed active past the first week, Helander 2014</figcaption></figure>
 <div class="stat"><strong>2.58%</strong><span>of 189,770 downloads stayed active past the first week</span><small><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4004142/">Helander et al., 2014</a></small></div>
 
 <p>The MyFitnessPal trial is the one people misquote, including me until this week. Laing and colleagues randomized 212 overweight primary-care patients, half to MyFitnessPal. Logins in the app group ran 97% in month one, 55% in month two, then 47%, 43%, 23% and 35% in month six; median logins went from 8 a month to zero. Weight loss was no different from usual care.</p>
 <p>At six months 80% said they planned to keep using the app, a number I had inverted in my notes as "20% would continue". The honest reading is worse: most said they would continue, and most did not (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4422872/">Ann Intern Med 2014</a>).</p>
+<figure><img alt="Line chart of the share of the MyFitnessPal group logging in each month of the Laing 2014 trial: 97, 55, 47, 43, 23 and 35 percent" src="/blog/img/why-people-quit-calorie-tracking-1.webp"  width="1600" height="900" loading="lazy"><figcaption>Line chart of the share of the MyFitnessPal group logging in each month of the Laing 2014 trial: 97, 55, 47, 43, 23 and 35 percent</figcaption></figure>
 <p>The reviews agree on the shape. Burke, Wang and Sevick's review of 22 self-monitoring studies describes "a gradual decline in self-monitoring adherence" wherever it was measured over time, with one study where only 25% were still logging at the end (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3268700/">J Am Diet Assoc 2011</a>).</p>
 <p>Goldstein and colleagues measured dietary logging in a coached 12-week program at 92.7%, 94.9% and 86.7% by month, and found it "decreased significantly over time for eating and weight" (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7156825/">Obes Sci Pract 2020</a>). That is with coaching; the free-app curve above is without.</p>
 <p>Industry numbers are rougher. Adjust's benchmark has Day 7 retention at 13% and Day 30 at 7% across all app categories, and health and fitness at 27% on Day 1 (<a href="https://www.adjust.com/blog/what-makes-a-good-retention-rate/">Adjust</a>). I could not trace the "health apps keep 12 to 16% at Day 7" figure that circulates in blog posts to a primary report, so I am not repeating it.</p>
@@ -90,6 +92,7 @@
 <p>Median days logged: 49% (interquartile range 5 to 67) detailed, 97% (86 to 100) simplified. Weight change 3.4 kg versus 3.3 kg, a wash (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9795401/">JMIR Form Res 2022</a>). Thirty-eight people is a pilot, not a verdict, but it is the only head-to-head I know of and the gap is not subtle.</p>
 <div class="stat"><strong>97% vs 49%</strong><span>of days logged with a daily checklist versus full logging, same weight loss</span><small><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9795401/">Patel et al., 2022</a></small></div>
 
+<figure><img alt="Two bars comparing the median share of 84 days logged: 97 percent with a daily checklist versus 49 percent logging every food, Patel 2022" src="/blog/img/why-people-quit-calorie-tracking-3.webp"  width="1600" height="900" loading="lazy"><figcaption>Two bars comparing the median share of 84 days logged: 97 percent with a daily checklist versus 49 percent logging every food, Patel 2022</figcaption></figure>
 <h2 id="do-reminders-fix-forgetting">Do reminders fix forgetting?</h2>
 <p>Partly. Notifications roughly quintupled logging in one early study, and context-triggered prompts beat clock-based ones in a 2024 randomized trial. But that effect was 21.8% versus 17.3%, so most prompts are still ignored.</p>
 <p>Bentley and Tollmar added daily notifications to a wellbeing-logging app and saw logging go from 12% in a 10-user pilot to 63% in a 60-user study (<a href="https://library.selfresearch.org/?p=26308">CHI 2013</a>). Two different groups, not a controlled comparison, so read it as "reminders matter a lot", not "reminders give you 5x".</p>
@@ -135,6 +138,7 @@
 </ul>
 <p>Ads: "The core of MyFitnessPal is free, and it stays that way because ads help pay for it" (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032273152-The-ad-free-experience-with-MyfitnessPal-Premium">MFP support</a>).</p>
 <p>Still free, and credit where due: the biggest food database in the category, search logging, recipes, and writing meals to Apple Health with no Premium gate (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032271092-Apple-Health-connection-and-syncing">MFP support</a>). If you log packaged food by barcode, Premium is still a reasonable buy. If you log by search anyway, free is fine apart from the ads.</p>
+<figure><img alt="Timeline of what MyFitnessPal moved behind Premium: barcode scanning on 1 October 2022, Voice Log in December 2024, Meal Scan with no published date" src="/blog/img/myfitnesspal-alternatives-2.webp"  width="1600" height="900" loading="lazy"><figcaption>Timeline of what MyFitnessPal moved behind Premium: barcode scanning on 1 October 2022, Voice Log in December 2024, Meal Scan with no published date</figcaption></figure>
 <h2 id="what-does-myfitnesspal-premium-cost-in-2026">What does MyFitnessPal Premium cost in 2026?</h2>
 <p>Premium is $19.99 a month or $79.99 a year. Premium+ (adds meal planning) is $24.99 a month or $99.99 a year.</p>
 <p>Both are from MFP's own pricing post (<a href="https://blog.myfitnesspal.com/myfitnesspal-membership-pricing-tiers/">MFP blog</a>) and match the in-app purchase list on the US App Store (<a href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718">App Store</a>), which also shows $49.99 and $9.99 promotional or legacy SKUs.</p>
@@ -232,6 +236,7 @@
 <aside class="note">
 <p>"SKU" means the company publishes no US price and I am quoting the App Store in-app purchase list, which is what you would be charged.</p>
 </aside>
+<figure><img alt="Table of MyFitnessPal and seven alternatives in October 2026: paid price, whether barcode and voice logging are free, Apple Health write and ads on the free tier" src="/blog/img/myfitnesspal-alternatives-1.webp"  width="1600" height="1000" loading="lazy"><figcaption>Table of MyFitnessPal and seven alternatives in October 2026: paid price, whether barcode and voice logging are free, Apple Health write and ads on the free tier</figcaption></figure>
 <h2 id="who-is-each-one-for">Who is each one for?</h2>
 <p>Pick by what you log and how you feel about ads.</p>
 <p>Cronometer is the pick if you want the most for free. Its basic account is "for an unlimited amount of time" (<a href="https://support.cronometer.com/hc/en-us/articles/360028026971-Subscription-Types">Cronometer support</a>) and includes "Unlimited use of our Barcode Scanner" (<a href="https://cronometer.com/features/free-nutrition-tracking-app.html">Cronometer</a>). Ads until you pay $59.99 a year for Gold. Smaller database than MFP, far better curated for whole foods, and it tracks micronutrients MFP does not.</p>
@@ -270,6 +275,7 @@
 <p>Checked 20 October 2026 on my iPhone running iOS 26. I built MealSaid, so read the competitor section as "what I could find in their docs", not a hands-on test of each one.</p>
 <h2 id="why-does-it-matter-whether-the-app-opens">Why does it matter whether the app opens?</h2>
 <p>Because opening a tracker is the step people skip. Every tap between "I just ate" and "it is logged" is a chance to decide you will do it later, and later is usually never. A stopwatch comparison across six apps is coming as its own post; this one is about the routes.</p>
+<figure><img alt="Three ways to log in MealSaid without finding the app: the Siri phrase Hey Siri, log in MealSaid, two eggs and toast; the Lock Screen control that opens the listening screen; the Home Screen widget" src="/blog/img/log-food-without-opening-the-app-3.webp"  width="1600" height="900" loading="lazy"><figcaption>Three ways to log in MealSaid without finding the app: the Siri phrase Hey Siri, log in MealSaid, two eggs and toast; the Lock Screen control that opens the listening screen; the Home Screen widget</figcaption></figure>
 <h2 id="how-do-i-log-with-siri-and-mealsaid">How do I log with Siri and MealSaid?</h2>
 <p>Say "Hey Siri, log in MealSaid, two eggs and toast" and let go. Siri shows a card confirming what was logged. The app does not open.</p>
 <div class="stat"><strong>0 taps</strong><span>&quot;Hey Siri, log in MealSaid, two eggs and toast&quot; logs with the phone locked and nothing opens</span></div>
@@ -440,6 +446,7 @@
 <p>Start to finish, this takes about a second. If you said when it happened ("this morning at 8"), it is logged at that time.</p>
 <div class="stat"><strong>~1 second</strong><span>from letting go of the mic to the meal landing in Apple Health</span></div>
 
+<figure><img alt="Flow from what you say to Apple Health: two eggs, toast and a coffee becomes calories and macros, then dietary energy, protein, carbs, fat and fiber in Health, about a second end to end" src="/blog/img/how-mealsaid-works-3.webp"  width="1600" height="900" loading="lazy"><figcaption>Flow from what you say to Apple Health: two eggs, toast and a coffee becomes calories and macros, then dietary energy, protein, carbs, fat and fiber in Health, about a second end to end</figcaption></figure>
 <p>Tap any entry and you see the exact words it was estimated from, and you can fix a number if the estimate is off.</p>
 <p>There is no search box, no barcode scanner and no portion slider. There is a keyboard fallback for when the gym is too loud, but I do not expect you to use it.</p>
 <h2 id="you-do-not-have-to-open-the-app">You do not have to open the app</h2>
@@ -472,6 +479,7 @@
 <p>This is the part that is unusual, so let me be precise about it.</p>
 <p>In the Profile tab you pick the times you usually forget to log, say 9 pm. At that time our server sends a push to your phone and your iPhone rings with a normal incoming call screen from "MealSaid". You can answer it from the Lock Screen like any call.</p>
 <p>When you answer, a voice asks what you ate today and whether you worked out. Then it waits. It does not cut you off after three seconds the way a voice assistant does. You can pause, think, list everything from breakfast to the snack you are not proud of, and it only replies when you are actually finished.</p>
+<figure><img alt="MealSaid call screen: a normal iPhone call from MealSaid at 0:43, with the transcript Lunch was a chicken burrito bowl and then an apple" src="/blog/img/how-mealsaid-works-2.webp"  width="800" height="1738" loading="lazy"><figcaption>MealSaid call screen: a normal iPhone call from MealSaid at 0:43, with the transcript Lunch was a chicken burrito bowl and then an apple</figcaption></figure>
 <p>If you correct yourself ("actually that was two slices, not one") it fixes the entry. When you say "that's all", it hangs up and the entries appear on your Home screen and in Apple Health.</p>
 <p>Some details, because they matter:</p>
 <ul>
@@ -487,6 +495,7 @@
 <li>The Progress tab shows calorie bars per day for the last 7, 30 or 90 days, plus protein per day and your streak.</li>
 <li>There is a Home Screen widget with today's numbers.</li>
 </ul>
+<figure><img alt="MealSaid Home screen on 3 October: 765 kcal eaten with 1,235 left of 2,000, protein 40 of 150 g, carbs 99 of 250 g, fat 20 of 70 g, fiber 9 of 30 g, and today's log" src="/blog/img/how-mealsaid-works-1.webp"  width="800" height="1738" loading="lazy"><figcaption>MealSaid Home screen on 3 October: 765 kcal eaten with 1,235 left of 2,000, protein 40 of 150 g, carbs 99 of 250 g, fat 20 of 70 g, fiber 9 of 30 g, and today's log</figcaption></figure>
 <p>Your targets come from onboarding, which is also a conversation: you say your weight, height, goal and how you train, and the app sets daily calorie and macro targets. Change your mind later and just say so.</p>
 <h2 id="where-your-data-lives">Where your data lives</h2>
 <p><strong>Your log lives on your phone, in Apple Health and in your account on our server; your voice is processed and discarded; Health data stays on the phone.</strong></p>
@@ -541,6 +550,7 @@
 </ul>
 <h2 id="which-apps-write-nutrition-and-which-read-it">Which apps write nutrition and which read it?</h2>
 <p>Seven of nine write only. Two read. Nobody is a complete two-way mirror.</p>
+<figure><img alt="Matrix of MyFitnessPal, Lose It, Cronometer, MacroFactor and MealSaid showing all five write nutrition to Apple Health and only MacroFactor reads it back in full, Lose It energy only" src="/blog/img/calorie-apps-apple-health-1.webp"  width="1600" height="900" loading="lazy"><figcaption>Matrix of MyFitnessPal, Lose It, Cronometer, MacroFactor and MealSaid showing all five write nutrition to Apple Health and only MacroFactor reads it back in full, Lose It energy only</figcaption></figure>
 <div class="tbl"><table>
 <thead>
 <tr>
@@ -646,6 +656,7 @@
 <p>Carbon Diet Coach took the blunt route: "We do not import nutrition from other apps." It reads back only its own entries, to avoid writing them twice.</p>
 <h2 id="which-fields-does-mealsaid-write-and-what-does-it-not-do">Which fields does MealSaid write and what does it not do?</h2>
 <p>MealSaid writes five nutrition fields (dietary energy, protein, carbohydrates, total fat, fiber) and real workouts with active calories. It reads workouts, steps, weight, heart rate and sleep for context.</p>
+<figure><img alt="MealSaid macros card for a chicken burrito bowl: 32 g protein, 52 g carbs, 14 g fat, 4 g fiber, each against its daily target, with Tap any value to edit" src="/blog/img/calorie-apps-apple-health-2.webp"  width="1600" height="1000" loading="lazy"><figcaption>MealSaid macros card for a chicken burrito bowl: 32 g protein, 52 g carbs, 14 g fat, 4 g fiber, each against its daily target, with Tap any value to edit</figcaption></figure>
 <p>What it does not do:</p>
 <ul>
 <li>It does not read food from Health.</li>

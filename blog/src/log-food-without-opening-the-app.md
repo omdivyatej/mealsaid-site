@@ -6,7 +6,7 @@ date: 2026-10-20
 updated: 2026-10-20
 author: Om Divyatej
 tags: [siri, shortcuts, lock screen, widget, mealsaid, iphone]
-image: blog/img/homescreen.webp
+image: blog/img/log-food-without-opening-the-app-3.webp
 draft: false
 takeaways:
   - The Siri phrase costs 0 taps and nothing opens; the Lock Screen control and widget cost 1 tap and open the app already listening.
@@ -34,6 +34,8 @@ Checked 20 October 2026 on my iPhone running iOS 26. I built MealSaid, so read t
 ## Why does it matter whether the app opens?
 
 Because opening a tracker is the step people skip. Every tap between "I just ate" and "it is logged" is a chance to decide you will do it later, and later is usually never. A stopwatch comparison across six apps is coming as its own post; this one is about the routes.
+
+![Three ways to log in MealSaid without finding the app: the Siri phrase Hey Siri, log in MealSaid, two eggs and toast; the Lock Screen control that opens the listening screen; the Home Screen widget](/blog/img/log-food-without-opening-the-app-3.webp)
 
 ## How do I log with Siri and MealSaid?
 

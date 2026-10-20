@@ -6,7 +6,7 @@ date: 2026-10-20
 updated: 2026-10-20
 author: Om Divyatej
 tags: [myfitnesspal, alternatives, cronometer, lose it, macrofactor, mynetdiary, cal ai, mealsaid]
-image: assets/og.png
+image: blog/img/myfitnesspal-alternatives-1.webp
 draft: false
 takeaways:
   - MyFitnessPal Premium is $19.99 a month or $79.99 a year; barcode scanning went behind it on 1 October 2022, Voice Log in December 2024.
@@ -45,6 +45,8 @@ Ads: "The core of MyFitnessPal is free, and it stays that way because ads help p
 
 Still free, and credit where due: the biggest food database in the category, search logging, recipes, and writing meals to Apple Health with no Premium gate ([MFP support](https://support.myfitnesspal.com/hc/en-us/articles/360032271092-Apple-Health-connection-and-syncing)). If you log packaged food by barcode, Premium is still a reasonable buy. If you log by search anyway, free is fine apart from the ads.
 
+![Timeline of what MyFitnessPal moved behind Premium: barcode scanning on 1 October 2022, Voice Log in December 2024, Meal Scan with no published date](/blog/img/myfitnesspal-alternatives-2.webp)
+
 ## What does MyFitnessPal Premium cost in 2026?
 
 Premium is $19.99 a month or $79.99 a year. Premium+ (adds meal planning) is $24.99 a month or $99.99 a year.
@@ -69,6 +71,8 @@ Both are from MFP's own pricing post ([MFP blog](https://blog.myfitnesspal.com/m
 | MealSaid | Yes, everything; no in-app purchases | Free | Voice, Siri phrase, keyboard fallback; no barcode, no photo, no database to browse | Yes, energy, protein, carbs, fat, fiber | No | [How it works](/blog/how-mealsaid-works/) |
 
 !note "SKU" means the company publishes no US price and I am quoting the App Store in-app purchase list, which is what you would be charged.
+
+![Table of MyFitnessPal and seven alternatives in October 2026: paid price, whether barcode and voice logging are free, Apple Health write and ads on the free tier](/blog/img/myfitnesspal-alternatives-1.webp)
 
 ## Who is each one for?
 
