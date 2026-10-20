@@ -28,18 +28,22 @@ STATIC_PAGES = ["index.html", "privacy.html", "support.html", "creators.html"]
 
 # ---------------------------------------------------------------- front matter
 def parse_front_matter(text):
-    """YAML-ish: `key: value`, `key: [a, b]`, and a `faq:` list of `- q:` / `  a:` pairs."""
+    """YAML-ish: `key: value`, `key: [a, b]`, a `takeaways:` list of `- text`, and a `faq:` list of `- q:` / `  a:` pairs."""
     m = re.match(r"^---\n(.*?)\n---\n(.*)$", text, re.S)
     if not m:
         raise ValueError("missing front matter")
     meta, body = {}, m.group(2)
-    faq, cur = [], None
+    faq, takeaways, cur = [], [], None
     for line in m.group(1).splitlines():
         if not line.strip():
             continue
         if cur is not None and line.startswith(" "):
             s = line.strip()
-            if s.startswith("- q:"):
+            if cur is takeaways:
+                if not s.startswith("- "):
+                    raise ValueError(f"bad takeaway line: {line}")
+                cur.append(s[2:].strip().strip('"'))
+            elif s.startswith("- q:"):
                 cur.append({"q": s[4:].strip().strip('"')})
             elif s.startswith("a:"):
                 cur[-1]["a"] = s[2:].strip().strip('"')
@@ -51,11 +55,13 @@ def parse_front_matter(text):
         key, val = key.strip(), val.strip()
         if key == "faq":
             cur = faq
+        elif key == "takeaways":
+            cur = takeaways
         elif val.startswith("["):
             meta[key] = [v.strip().strip('"') for v in val.strip("[]").split(",") if v.strip()]
         else:
             meta[key] = val.strip('"')
-    meta["faq"] = faq
+    meta["faq"], meta["takeaways"] = faq, takeaways
     for k in ("title", "slug", "description", "date"):
         if k not in meta:
             raise ValueError(f"front matter missing {k}")
@@ -102,6 +108,45 @@ def add_img_dims(html_body):
             return tag[:-1].rstrip("/") + f' width="{dims[0]}" height="{dims[1]}" loading="lazy">'
         return tag
     return re.sub(r"<img [^>]*>", fix, html_body)
+
+
+_LINK = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
+
+
+def inline_link(text):
+    return _LINK.sub(lambda m: f'<a href="{esc(m.group(2))}">{esc(m.group(1))}</a>', esc(text)) if _LINK.search(text) else esc(text)
+
+
+def preprocess(body):
+    """`!stat N | label | source` -> stat card; `!note text` -> quiet aside. Runs before markdown."""
+    out = []
+    for line in body.splitlines():
+        if line.startswith("!stat "):
+            parts = [x.strip() for x in line[6:].split("|")]
+            num, label, src = (parts + ["", ""])[:3]
+            out.append(f'<div class="stat"><strong>{esc(num)}</strong><span>{esc(label)}</span>'
+                       + (f"<small>{inline_link(src)}</small>" if src else "") + "</div>")
+        elif line.startswith("!note "):
+            out.append(f'<aside class="note" markdown="1">{line[6:].strip()}</aside>')
+        else:
+            out.append(line)
+    return "\n".join(out) + "\n"
+
+
+def postprocess(html_body):
+    """Images become captioned figures; tables get a scroll wrapper."""
+    html_body = re.sub(r"<p>(<img [^>]*alt=\"([^\"]*)\"[^>]*>)</p>",
+                       lambda m: f"<figure>{m.group(1)}<figcaption>{m.group(2)}</figcaption></figure>", html_body)
+    return re.sub(r"<table>.*?</table>", lambda m: f'<div class="tbl">{m.group(0)}</div>', html_body, flags=re.S)
+
+
+def toc(html_body):
+    heads = re.findall(r'<h2 id="([^"]+)">(.*?)</h2>', html_body)
+    if len(heads) < 3:
+        return ""
+    items = "".join(f'<li><a href="#{i}">{re.sub("<[^>]+>", "", t)}</a></li>' for i, t in heads)
+    return (f'<details class="toc" open><summary>On this page</summary><ol>{items}</ol></details>\n'
+            '<script>if(matchMedia("(max-width:640px)").matches)document.querySelector(".toc").removeAttribute("open")</script>\n')
 
 
 def iso(d):
@@ -217,7 +262,12 @@ def render_post(p, prev_p, next_p):
         ld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in p["faq"]]})
         faq_html = '<section class="faq" aria-labelledby="faq-h"><h2 id="faq-h">Questions</h2>' + "".join(
-            f"<details><summary>{esc(f['q'])}</summary><p>{esc(f['a'])}</p></details>" for f in p["faq"]) + "</section>\n"
+            f"<details{' open' if i == 0 else ''}><summary>{esc(f['q'])}</summary><p>{esc(f['a'])}</p></details>"
+            for i, f in enumerate(p["faq"])) + "</section>\n"
+    takeaways = ""
+    if p["takeaways"]:
+        takeaways = ('<aside class="takeaways"><h2>Key takeaways</h2><ul>'
+                     + "".join(f"<li>{esc(t)}</li>" for t in p["takeaways"]) + "</ul></aside>\n")
 
     dates = f"Published {human(p['date'])}"
     if p["updated"] != p["date"]:
@@ -235,7 +285,7 @@ def render_post(p, prev_p, next_p):
             f'<h1>{esc(p["title"])}</h1>\n<p class="lede">{esc(p["description"])}</p>\n'
             f'<p class="meta"><time datetime="{p["date"]}">{dates}</time></p>\n'
             f'<p class="meta">{esc(p["author"])}, founder of MealSaid</p>\n</header>\n'
-            f'<div class="prose">\n{p["html"]}\n</div>\n{faq_html}</article>\n{TRY_CARD}{nav}')
+            f'{takeaways}{toc(p["html"])}<div class="prose">\n{p["html"]}\n</div>\n{faq_html}</article>\n{TRY_CARD}{nav}')
     return head + body + FOOT
 
 
@@ -334,14 +384,14 @@ def render_llms(posts):
 
 # ---------------------------------------------------------------- main
 def load_posts(include_drafts=False):
-    md = markdown.Markdown(extensions=["tables", "fenced_code", "attr_list", "toc"], extension_configs={"toc": {"toc_depth": "2-3"}})
+    md = markdown.Markdown(extensions=["tables", "fenced_code", "attr_list", "toc", "md_in_html"], extension_configs={"toc": {"toc_depth": "2-3"}})
     posts = []
     for f in sorted(SRC.glob("*.md")):
         meta, body = parse_front_matter(f.read_text(encoding="utf-8"))
         if meta["draft"] and not include_drafts:
             continue
         md.reset()
-        meta["html"] = add_img_dims(md.convert(body))
+        meta["html"] = postprocess(add_img_dims(md.convert(preprocess(body))))
         posts.append(meta)
     posts.sort(key=lambda p: (p["date"], p["slug"]), reverse=True)
     return posts
@@ -372,7 +422,15 @@ def main():
 def _selfcheck():
     meta, body = parse_front_matter('---\ntitle: T\nslug: t\ndescription: D\ndate: 2026-01-02\ntags: [a, b]\nfaq:\n  - q: Q1\n    a: A1\n---\n# hi\n')
     assert meta["tags"] == ["a", "b"] and meta["faq"] == [{"q": "Q1", "a": "A1"}] and meta["updated"] == "2026-01-02"
-    assert body == "# hi\n" and meta["draft"] is False
+    assert body == "# hi\n" and meta["draft"] is False and meta["takeaways"] == []
+    meta, _ = parse_front_matter('---\ntitle: T\nslug: t\ndescription: D\ndate: 2026-01-02\ntakeaways:\n  - one\n  - two\n---\n')
+    assert meta["takeaways"] == ["one", "two"]
+    md = markdown.Markdown(extensions=["tables", "toc", "md_in_html"])
+    out = postprocess(md.convert(preprocess("!stat 2.58% | stayed active | [Helander 2014](https://x.y/)\n\n!note see [a](/b/)\n\n![cap](/assets/og.png)\n\n| a |\n|---|\n| b |\n")))
+    assert '<div class="stat"><strong>2.58%</strong><span>stayed active</span><small><a href="https://x.y/">Helander 2014</a></small></div>' in out, out
+    assert '<aside class="note">\n<p>see <a href="/b/">a</a></p>\n</aside>' in out, out
+    assert "<figure><img" in out and "<figcaption>cap</figcaption></figure>" in out and '<div class="tbl"><table>' in out, out
+    assert toc('<h2 id="a">A</h2><h2 id="b">B <em>x</em></h2><h2 id="c">C</h2>').count("<li>") == 3
     assert image_size(ROOT / "assets" / "og.png") == (1200, 630)
     assert image_size(ROOT / "assets" / "home.webp") == (780, 1695)
     print("selfcheck ok")

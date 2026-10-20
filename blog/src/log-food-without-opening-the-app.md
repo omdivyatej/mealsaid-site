@@ -8,6 +8,12 @@ author: Om Divyatej
 tags: [siri, shortcuts, lock screen, widget, mealsaid, iphone]
 image: blog/img/homescreen.webp
 draft: false
+takeaways:
+  - The Siri phrase costs 0 taps and nothing opens; the Lock Screen control and widget cost 1 tap and open the app already listening.
+  - Apple requires the app name in third-party Siri phrases, so it is "log in MealSaid" or "tell MealSaid", never just "log two eggs".
+  - Cronometer is the closest to the MealSaid route: Gold users can say "Log food in Cronometer" and keep the app closed; free users do not get it.
+  - MyFitnessPal and Lose It have voice logging, but as a Premium button inside the app, so the app is open before you speak.
+  - A homemade Shortcut can only save an entry if the app exposes a "Log Food" action; most apps only expose "Open".
 faq:
   - q: Can Siri log food without saying the app name?
     a: No. Apple requires third-party Siri phrases to include the app name, so you say "log in MealSaid" or "in Lose It". Only Apple's own apps get name-free phrases.
@@ -32,6 +38,8 @@ Because opening a tracker is the step people skip. Every tap between "I just ate
 ## How do I log with Siri and MealSaid?
 
 Say "Hey Siri, log in MealSaid, two eggs and toast" and let go. Siri shows a card confirming what was logged. The app does not open.
+
+!stat 0 taps | "Hey Siri, log in MealSaid, two eggs and toast" logs with the phone locked and nothing opens
 
 The phrase has three parts, and only the middle one is fixed:
 
@@ -59,7 +67,9 @@ The steps as they appear on my phone, iOS 26:
 
 Apple documents the flow under [Create a custom Lock Screen](https://support.apple.com/guide/iphone/create-a-custom-lock-screen-iph4d0e6c351/ios). Third-party controls exist since iOS 18, so any app that ships one can live here.
 
-Press and hold the control, the same firm press the flashlight needs. The phone unlocks with Face ID, the app opens straight into the listening screen, and you talk. The MealSaid control opens the app rather than recording from the Lock Screen, so this route is one press plus speaking, with no searching.
+Press and hold the control, the same firm press the flashlight needs. The phone unlocks with Face ID, the app opens straight into the listening screen, and you talk.
+
+The MealSaid control opens the app rather than recording from the Lock Screen, so this route is one press plus speaking, with no searching.
 
 ## How do I add the Home Screen widget?
 
@@ -69,7 +79,11 @@ Apple's steps are at [Add, edit, and remove widgets](https://support.apple.com/g
 
 ![iPhone Home Screen with the MealSaid widget reading Speak to log calories, 765 of 2,000 kcal today](/blog/img/homescreen.webp)
 
-The widget is my route at home, where the phone is unlocked on the table. Siri is for cooking or driving. The Lock Screen control is for the gym.
+Which route I use depends on where I am:
+
+- The widget is my route at home, where the phone is unlocked on the table.
+- Siri is for cooking or driving.
+- The Lock Screen control is for the gym.
 
 ## Which route is fastest?
 
@@ -82,7 +96,7 @@ Siri, because nothing opens and there is nothing to tap. The other two routes co
 | Home Screen widget, then speak | 1 | MealSaid, listening | No, phone must be unlocked |
 | Open the app, tap plus, tap mic, speak | 3 | MealSaid | No |
 
-No stopwatch numbers here on purpose. Timing one app alone tells you little; the comparison against the apps you would otherwise use (five meals, six apps, three runs each, raw CSV) is the next post.
+!note No stopwatch numbers here on purpose. Timing one app alone tells you little; the comparison against the apps you would otherwise use (five meals, six apps, three runs each, raw CSV) is the next post.
 
 ## What can Shortcuts and Siri do with other calorie apps?
 
@@ -96,18 +110,33 @@ Less than you would hope, and the useful bits are mostly paid. The pattern acros
 | MacrosFirst | Yes, "Hey Siri" phrases for food, water, weight; food logging may open the app to finish | Yes | Log Food via Siri needs Premium; water and weight are free | [MacrosFirst help](https://help.macrosfirst.com/en/articles/75-siri-shortcuts) |
 | MealSaid | Yes, "log in MealSaid" plus what you ate, app stays closed | Yes | Free, no in-app purchases | This post |
 
-MyFitnessPal's announcement calls Voice Log "available to Premium members" and says you reach it from the app's navigation bar, so the app is open before you speak. Lose It's listing puts "Say It!" in its Premium plan. MacrosFirst is the most Shortcuts-friendly: its help page says to "say 'Hey Siri…' followed by one of the phrases below", and water and weight finish inside Siri; food is Premium and may hand off to the app. Cronometer is the closest to our route: its doc says Gold users can "log foods using Siri without having to open the app", by saying "Log food in Cronometer" and then answering Siri's question about food, serving size and diary group. Free users do not get it.
+App by app, from their own pages:
+
+- MyFitnessPal's announcement calls Voice Log "available to Premium members" and says you reach it from the app's navigation bar, so the app is open before you speak.
+- Lose It's listing puts "Say It!" in its Premium plan.
+- MacrosFirst is the most Shortcuts-friendly: its help page says to "say 'Hey Siri…' followed by one of the phrases below", and water and weight finish inside Siri; food is Premium and may hand off to the app.
+- Cronometer is the closest to our route: its doc says Gold users can "log foods using Siri without having to open the app", by saying "Log food in Cronometer" and then answering Siri's question about food, serving size and diary group. Free users do not get it.
 
 ## Can I build my own Siri shortcut for an app that has none?
 
 You can build a shortcut that opens the app and dictates text, but you cannot make it save an entry unless the app exposes a "log food" action to Shortcuts. Most do not.
 
-In the Shortcuts app, tap Add Action and look under the app's name. If it lists a "Log Food" action with a text field, chain Dictate Text into it and name the shortcut something you can say. If it only lists "Open MyFitnessPal", opening it is all Siri can do. The fallback for any app is [Apple's keyboard dictation](https://support.apple.com/guide/iphone/dictate-text-iph2c0651d2/ios): open the search screen, tap the mic on the keyboard, say the food, pick the match by hand. Not hands-free, but no typing.
+In the Shortcuts app, tap Add Action and look under the app's name. If it lists a "Log Food" action with a text field, chain Dictate Text into it and name the shortcut something you can say. If it only lists "Open MyFitnessPal", opening it is all Siri can do.
+
+The fallback for any app is [Apple's keyboard dictation](https://support.apple.com/guide/iphone/dictate-text-iph2c0651d2/ios): open the search screen, tap the mic on the keyboard, say the food, pick the match by hand. Not hands-free, but no typing.
 
 ## Where MealSaid does not fit
 
-MealSaid has no barcode scanner, no photo logging and no food database to browse. It estimates from what you said, checked against USDA values for common foods, and the estimate can be off; tap the entry to fix a number. It needs iOS 26, is English only, and has no Android version. If you weigh everything and want gram-level control, Cronometer or MacroFactor will serve you better.
+**MealSaid is for people who log by talking; if you weigh everything, pick a database app.**
+
+- No barcode scanner, no photo logging and no food database to browse.
+- It estimates from what you said, checked against USDA values for common foods, and the estimate can be off; tap the entry to fix a number.
+- It needs iOS 26, is English only, and has no Android version.
+
+If you weigh everything and want gram-level control, Cronometer or MacroFactor will serve you better.
 
 ## How I checked this
 
-Checked 20 October 2026. Siri, Lock Screen and widget steps were done on my iPhone on iOS 26 with MealSaid 1.0.1 from the App Store, following each route from a locked phone and confirming the entry in Health > Browse > Nutrition. Competitor facts come from the linked pages (PR Newswire release of 11 December 2024, Lose It App Store listing, MacrosFirst and Cronometer help centers; Cronometer's article was last updated about three months before I read it), all opened the same day. I did not install the competitors for this post; the timed comparison is the next one, with a CSV. If a link above says something different by the time you read it, email me at ohmbrock42@gmail.com and I will correct it.
+Checked 20 October 2026. Siri, Lock Screen and widget steps were done on my iPhone on iOS 26 with MealSaid 1.0.1 from the App Store, following each route from a locked phone and confirming the entry in Health > Browse > Nutrition. Competitor facts come from the linked pages (PR Newswire release of 11 December 2024, Lose It App Store listing, MacrosFirst and Cronometer help centers; Cronometer's article was last updated about three months before I read it), all opened the same day.
+
+I did not install the competitors for this post; the timed comparison is the next one, with a CSV. If a link above says something different by the time you read it, email me at ohmbrock42@gmail.com and I will correct it.

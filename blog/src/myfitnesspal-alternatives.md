@@ -8,6 +8,12 @@ author: Om Divyatej
 tags: [myfitnesspal, alternatives, cronometer, lose it, macrofactor, mynetdiary, cal ai, mealsaid]
 image: assets/og.png
 draft: false
+takeaways:
+  - MyFitnessPal Premium is $19.99 a month or $79.99 a year; barcode scanning went behind it on 1 October 2022, Voice Log in December 2024.
+  - Cronometer and MyNetDiary give you barcode scanning free; MyNetDiary also runs no ads on its free tier.
+  - The cheapest paid tiers are Cronometer Gold and MyNetDiary Premium at $59.99 a year; MacroFactor is $71.99 with no free tier and no ads.
+  - An NIH study of 102 controlled meals found four photo apps, Cal AI among them, under-estimated energy by about 33%.
+  - MealSaid is free with no ads or in-app purchases, but has no barcode scanner, no photo logging and needs iOS 26.
 faq:
   - q: Is MyFitnessPal still free in 2026?
     a: Yes, with ads. The free tier still has the food database, manual logging and Apple Health sync. Barcode scanning, Meal Scan and Voice Log need Premium at $19.99 a month or $79.99 a year.
@@ -29,7 +35,11 @@ Every price and feature below was checked against the company's own page or its 
 
 Barcode scanning on 1 October 2022, Voice Log in December 2024, and Meal Scan (photo). The free tier keeps manual logging, the database and Apple Health sync, with ads.
 
-MyFitnessPal's own help page is blunt about the barcode change: "As of October 1, 2022, Barcode Scan is available only with a Premium subscription" ([MFP support](https://support.myfitnesspal.com/hc/en-us/articles/360032624771-How-to-use-the-Barcode-Scanner)). The change was announced on 24 August 2022 ([Droid Life](https://www.droid-life.com/2022/08/24/myfitnesspal-puts-barcode-scanner-behind-premium-paywall/)). Voice Log followed in December 2024, and the help page says "Voice Logging is currently available for Premium users on iOS and Android" ([MFP support](https://support.myfitnesspal.com/hc/en-us/articles/30332897072269-How-to-log-food-with-your-voice)). Meal Scan is listed under Premium in the Free, Premium and Premium+ comparison ([MFP support](https://support.myfitnesspal.com/hc/en-us/articles/34889191368077-The-difference-between-Free-Premium-and-Premium)).
+The three moves, each from MyFitnessPal's own pages:
+
+- Barcode scanning. MyFitnessPal's own help page is blunt about the barcode change: "As of October 1, 2022, Barcode Scan is available only with a Premium subscription" ([MFP support](https://support.myfitnesspal.com/hc/en-us/articles/360032624771-How-to-use-the-Barcode-Scanner)). The change was announced on 24 August 2022 ([Droid Life](https://www.droid-life.com/2022/08/24/myfitnesspal-puts-barcode-scanner-behind-premium-paywall/)).
+- Voice Log followed in December 2024, and the help page says "Voice Logging is currently available for Premium users on iOS and Android" ([MFP support](https://support.myfitnesspal.com/hc/en-us/articles/30332897072269-How-to-log-food-with-your-voice)).
+- Meal Scan is listed under Premium in the Free, Premium and Premium+ comparison ([MFP support](https://support.myfitnesspal.com/hc/en-us/articles/34889191368077-The-difference-between-Free-Premium-and-Premium)).
 
 Ads: "The core of MyFitnessPal is free, and it stays that way because ads help pay for it" ([MFP support](https://support.myfitnesspal.com/hc/en-us/articles/360032273152-The-ad-free-experience-with-MyfitnessPal-Premium)).
 
@@ -41,9 +51,11 @@ Premium is $19.99 a month or $79.99 a year. Premium+ (adds meal planning) is $24
 
 Both are from MFP's own pricing post ([MFP blog](https://blog.myfitnesspal.com/myfitnesspal-membership-pricing-tiers/)) and match the in-app purchase list on the US App Store ([App Store](https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718)), which also shows $49.99 and $9.99 promotional or legacy SKUs.
 
+!stat $79.99 | a year for MyFitnessPal Premium, or $19.99 a month; Premium+ is $99.99 a year | [MFP pricing](https://blog.myfitnesspal.com/myfitnesspal-membership-pricing-tiers/)
+
 ## Which alternatives are worth switching to?
 
-Seven, for different reasons.
+**Seven, for different reasons: Cronometer and MyNetDiary for free barcode scanning, MyNetDiary and MacroFactor for no ads, Lose It for a like-for-like swap, Cal AI for photos, FatSecret for a quiet free tier, MealSaid for voice.**
 
 | App | Free tier | Paid price, US App Store | Main logging method | Writes nutrition to Apple Health | Ads on free tier | Source |
 |---|---|---|---|---|---|---|
@@ -56,7 +68,7 @@ Seven, for different reasons.
 | FatSecret | Yes, search, barcode, reports | App Store SKUs $14.99/mo, $59.99/yr; FatSecret says prices vary by region | Search, barcode free; photo and voice Smart Assistant are Premium | Yes | Not stated officially | [Premium](https://www.fatsecret.com/premium), [App Store](https://apps.apple.com/us/app/id347184248) |
 | MealSaid | Yes, everything; no in-app purchases | Free | Voice, Siri phrase, keyboard fallback; no barcode, no photo, no database to browse | Yes, energy, protein, carbs, fat, fiber | No | [How it works](/blog/how-mealsaid-works/) |
 
-"SKU" means the company publishes no US price and I am quoting the App Store in-app purchase list, which is what you would be charged.
+!note "SKU" means the company publishes no US price and I am quoting the App Store in-app purchase list, which is what you would be charged.
 
 ## Who is each one for?
 
@@ -66,11 +78,17 @@ Cronometer is the pick if you want the most for free. Its basic account is "for 
 
 MyNetDiary is the pick if ads drove you out. Its free tier promises "no ads, no account required to start, no expiration, and no scanner paywall" ([MyNetDiary](https://www.mynetdiary.com/free-calorie-tracker.html)), and plain voice logging is free. Premium is $59.99 a year. The interface is dated; that is the trade.
 
-Lose It is the closest like-for-like swap. Its About page lists barcode scanning in the free version ([Lose It](https://loseit.zendesk.com/hc/en-us/articles/54516668028564-About-Lose-It)), though its tiers page puts "barcode scanning, smart photo and voice logging features" under Premium ([Lose It](https://loseit.zendesk.com/hc/en-us/articles/51906561286804-Lose-It-Membership-Tiers-Pricing)); I could not resolve that from their docs, so check on a fresh install. Premium lists at $79.99 a year but Lose It says it "adjusts prices based on various factors like seasonal promotions" ([Lose It](https://loseit.zendesk.com/hc/en-us/articles/47345136549652-What-is-Lose-It-Premium)), so the $39.99 you see quoted elsewhere is a promo, not the list price. Ads on free, with a one-time purchase to remove them.
+!stat $59.99 | a year for Cronometer Gold or MyNetDiary Premium, the cheapest paid tiers in the table
+
+Lose It is the closest like-for-like swap. Its About page lists barcode scanning in the free version ([Lose It](https://loseit.zendesk.com/hc/en-us/articles/54516668028564-About-Lose-It)), though its tiers page puts "barcode scanning, smart photo and voice logging features" under Premium ([Lose It](https://loseit.zendesk.com/hc/en-us/articles/51906561286804-Lose-It-Membership-Tiers-Pricing)); I could not resolve that from their docs, so check on a fresh install.
+
+Premium lists at $79.99 a year but Lose It says it "adjusts prices based on various factors like seasonal promotions" ([Lose It](https://loseit.zendesk.com/hc/en-us/articles/47345136549652-What-is-Lose-It-Premium)), so the $39.99 you see quoted elsewhere is a promo, not the list price. Ads on free, with a one-time purchase to remove them.
 
 MacroFactor is the pick if you are willing to pay and hate ads. "There isn't (and will never be) a free version" and "We will never serve ads or use ad networks to track you" ([MacroFactor](https://macrofactor.com/macrofactor/)). $71.99 a year. Its adaptive calorie targets and its two-way Apple Health sync are the best in the group. It is the app I would use if I logged by barcode and weighed food.
 
-Cal AI is the pick if you want to point a camera at a plate and nothing else. The photo scan is subscription-only ("FOOD SCANNING ANALYSIS RESULTS REQUIRE A SUBSCRIPTION", [App Store](https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616)) after a 3-day trial. Two cautions: Cal AI publishes no price page and no Apple Health write documentation that I could find, and an NIH study presented at NUTRITION 2026 found four photo apps, Cal AI among them, under-estimated meal energy by about 33% across 102 controlled meals ([Healio](https://www.healio.com/news/primary-care/20260804/ai-photobased-calorietracking-tools-underestimate-them-by-33)).
+Cal AI is the pick if you want to point a camera at a plate and nothing else. The photo scan is subscription-only ("FOOD SCANNING ANALYSIS RESULTS REQUIRE A SUBSCRIPTION", [App Store](https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616)) after a 3-day trial.
+
+Two cautions: Cal AI publishes no price page and no Apple Health write documentation that I could find, and an NIH study presented at NUTRITION 2026 found four photo apps, Cal AI among them, under-estimated meal energy by about 33% across 102 controlled meals ([Healio](https://www.healio.com/news/primary-care/20260804/ai-photobased-calorietracking-tools-underestimate-them-by-33)).
 
 FatSecret is the quiet option. Free search and barcode, an old community, and App Store SKUs of $59.99 a year for photo and voice. FatSecret's own premium page gives no US price ([FatSecret](https://www.fatsecret.com/premium)) and I could not find an official statement on ads, so that column is blank rather than guessed.
 
@@ -80,8 +98,18 @@ MealSaid fits if your problem with MFP was the number of taps, and it does not f
 
 You say what you ate, by holding a mic or by "Hey Siri, log in MealSaid, two eggs and toast" with the app closed, and calories, protein, carbs, fat and fiber are written to Apple Health in about a second. If you forget, the app calls your phone at times you picked and waits while you list the day. Free, no ads, no in-app purchases.
 
-What it does not do: no barcode, no photo, no database you can browse, no micronutrients beyond fiber, no Android, English only, and it requires iOS 26. The estimates come from a language model checked against USDA values, so they are estimates; a weighed plate in Cronometer will be more precise. If you need any of those things, pick from the table above and use MealSaid for the meals you would otherwise skip, since everyone on this list writes to the same Apple Health ledger ([who writes and who reads](/blog/calorie-apps-apple-health/)).
+What it does not do:
+
+- no barcode, no photo
+- no database you can browse
+- no micronutrients beyond fiber
+- no Android, English only
+- it requires iOS 26
+
+The estimates come from a language model checked against USDA values, so they are estimates; a weighed plate in Cronometer will be more precise. If you need any of those things, pick from the table above and use MealSaid for the meals you would otherwise skip, since everyone on this list writes to the same Apple Health ledger ([who writes and who reads](/blog/calorie-apps-apple-health/)).
 
 ## How I checked this
 
-Checked 20 October 2026. For each app I opened the US App Store listing and read the in-app purchase list, then opened the company's own pricing or help page and the Apple Health page where one exists. Prices are US dollars as shown that day; several companies say they vary by region and promotion, and I have flagged those. MyFitnessPal, Lose It, Cronometer and FatSecret help pages return 403 to scripts, so they were read in Safari. The MacroFactor App Store ID in my earlier notes was wrong and 404s; the live listing is [id1553503471](https://apps.apple.com/us/app/id1553503471). I have not timed or measured accuracy for any of these apps in this post; that is the next two posts. If a price has changed by the time you read this, email ohmbrock42@gmail.com and I will update the table with a new dated row.
+Checked 20 October 2026. For each app I opened the US App Store listing and read the in-app purchase list, then opened the company's own pricing or help page and the Apple Health page where one exists. Prices are US dollars as shown that day; several companies say they vary by region and promotion, and I have flagged those.
+
+MyFitnessPal, Lose It, Cronometer and FatSecret help pages return 403 to scripts, so they were read in Safari. The MacroFactor App Store ID in my earlier notes was wrong and 404s; the live listing is [id1553503471](https://apps.apple.com/us/app/id1553503471). I have not timed or measured accuracy for any of these apps in this post; that is the next two posts. If a price has changed by the time you read this, email ohmbrock42@gmail.com and I will update the table with a new dated row.
