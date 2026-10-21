@@ -257,6 +257,7 @@ if __name__ == "__main__":
     log_strip()
     screenshot("home.png", "how-mealsaid-works-1.webp"); screenshot("call.png", "how-mealsaid-works-2.webp"); how_flow()
     voice_levels(); voice_prices()
+    remind_matrix(); remind_response()
 
 
 # ------------------------------------------------------------ voice input
@@ -336,3 +337,80 @@ def voice_prices():
     text(d, (80, 796), "MealSaid is my app. It has no barcode scanner and no photo logging.", 20, fill=INK3)
     source(d, "Sources: each company's own pricing page or US App Store listing, checked 21 October 2026.")
     save(im, "calorie-tracker-voice-input-2.webp")
+
+
+# ------------------------------------------------------------ logging reminders
+REMIND_ROWS = [
+    ("MyFitnessPal", "Push, one per meal, as many as you like", "Yes"),
+    ("Lose It!", "None I could find in the help centre", "No reminder"),
+    ("Cronometer", "Push, daily plus one per diary group", "Yes"),
+    ("MyNetDiary", "Push meal reminders, listed as free", "Not stated"),
+    ("MacroFactor", "None; a weigh-in reminder is requested", "No reminder"),
+    ("MealSaid", "An incoming phone call at times you pick", "Yes"),
+]
+
+
+def remind_matrix():
+    im, d = canvas()
+    text(d, (80, 58), "What each calorie app does when you have not logged", 38)
+    text(d, (80, 112), "Reminder type and whether it is skipped once you have logged, from each app's own docs", 24, fill=INK2)
+    cx = 1210
+    text(d, (80, 186), "APP", 18, fill=INK3)
+    text(d, (560, 186), "WHAT IT SENDS", 18, fill=INK3)
+    text(d, (cx, 186), "SKIPPED IF YOU LOGGED", 18, fill=INK3, anchor="ma")
+    d.line([(80, 222), (1520, 222)], fill=LINE, width=2)
+    y = 272
+    for i, (name, what, skip) in enumerate(REMIND_ROWS):
+        acc = name == "MealSaid"
+        text(d, (80, y), name, 29, fill=ACC if acc else INK, anchor="lm")
+        text(d, (560, y), what, 25, fill=INK2, anchor="lm")
+        if skip == "Yes":
+            d.ellipse([cx - 13, y - 13, cx + 13, y + 13], fill=INK)
+        elif skip == "Not stated":
+            d.ellipse([cx - 13, y - 13, cx + 13, y + 13], outline="#39414f", width=3)
+            text(d, (cx + 30, y), "not stated", 22, fill=INK3, anchor="lm")
+        else:
+            d.line([(cx - 13, y), (cx + 13, y)], fill="#39414f", width=3)
+            text(d, (cx + 30, y), "nothing to skip", 22, fill=INK3, anchor="lm")
+        y += 88
+        if i < len(REMIND_ROWS) - 1:
+            d.line([(80, y - 44), (1520, y - 44)], fill=LINE, width=1)
+    text(d, (80, 790), "Filled dot = the app says it only sends the reminder if you have not logged yet.", 22, fill=INK3)
+    source(d, "Sources: MyFitnessPal, Cronometer and Lose It help centres, MyNetDiary App Store, MacroFactor feedback board, 21 October 2026.")
+    save(im, "calorie-apps-that-remind-you-to-log-1.webp")
+
+
+REMIND_METRICS = [
+    ("Reminders tapped", 13.96, 19.05),
+    ("Followed by a log within an hour", 17.32, 21.77),
+    ("Days with a log, overall", 55.54, 58.87),
+]
+
+
+def remind_response():
+    im, d = canvas()
+    text(d, (80, 58), "How often a logging reminder actually works", 38)
+    text(d, (80, 112), "Same 30 people, four weeks, reminders at fixed times versus reminders timed to activity", 24, fill=INK2)
+    x0, xmax, span = 700, 1380, 70.0
+    for g in (0, 20, 40, 60):
+        gx = x0 + g / span * (xmax - x0)
+        d.line([(gx, 230), (gx, 690)], fill="#1a2029", width=2)
+        text(d, (gx, 706), f"{g}%", 20, fill=INK3, anchor="ma")
+    y = 300
+    for label, a, b in REMIND_METRICS:
+        text(d, (80, y), label, 27, fill=INK, anchor="lm")
+        ax = x0 + a / span * (xmax - x0)
+        bx = x0 + b / span * (xmax - x0)
+        d.line([(ax, y), (bx, y)], fill="#39414f", width=4)
+        d.ellipse([ax - 12, y - 12, ax + 12, y + 12], fill="#6f7889")
+        d.ellipse([bx - 12, y - 12, bx + 12, y + 12], fill=ACC)
+        text(d, (ax - 26, y), f"{a:.2f}%", 24, fill=INK2, anchor="rm")
+        text(d, (bx + 26, y), f"{b:.2f}%", 24, fill=INK, anchor="lm")
+        y += 160
+    d.ellipse([80, 762, 104, 786], fill="#6f7889")
+    text(d, (118, 774), "fixed time", 22, fill=INK2, anchor="lm")
+    d.ellipse([320, 762, 344, 786], fill=ACC)
+    text(d, (358, 774), "timed to your activity", 22, fill=INK2, anchor="lm")
+    text(d, (700, 774), "The first two gaps were significant. The daily log rate gap was not.", 22, fill=INK3, anchor="lm")
+    source(d, "Source: Chen et al., CHI 2024, n = 30, within-subjects, 4 weeks, weight-maintenance app paired with FatSecret.")
+    save(im, "calorie-apps-that-remind-you-to-log-2.webp")
