@@ -12,7 +12,7 @@
     <link>https://mealsaid.app/blog/why-people-quit-calorie-tracking/</link>
     <guid isPermaLink="true">https://mealsaid.app/blog/why-people-quit-calorie-tracking/</guid>
     <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-    <description>Seven studies on food-logging dropout, with the real numbers and links. 2.58% of 189,770 downloads stayed active. 84% of quitters called it tedious. Simplified logging got 97% of days versus 49%.</description>
+    <description>Seven studies on food-logging dropout, with numbers and links. 2.58% of 189,770 downloads stayed active. Simplified logging got 97% of days versus 49%.</description>
     <content:encoded><![CDATA[<p>Most people stop logging food within a few weeks, and the research says the reasons are effort and forgetting, not motivation. The cleanest number: of 189,770 people who downloaded a free food-journal app, 2.58% used it actively for more than a week (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4004142/">Helander et al., 2014</a>). In a six-month MyFitnessPal trial, 84% of those who quit or cut back gave one reason: tedious (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4422872/">Laing et al., 2014</a>).</p>
 <p>I read these papers because I was about to build another tracker and wanted to know what kills them. Every number links to its source with the sample size. Checked 20 October 2026.</p>
 <h2 id="how-many-people-actually-keep-logging">How many people actually keep logging?</h2>
@@ -123,7 +123,7 @@
     <link>https://mealsaid.app/blog/myfitnesspal-alternatives/</link>
     <guid isPermaLink="true">https://mealsaid.app/blog/myfitnesspal-alternatives/</guid>
     <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-    <description>What MyFitnessPal moved behind the paywall, what Premium costs now ($79.99 a year), and seven alternatives with their free tier, price, logging method, Apple Health write and ads, verified against official pages on 20 October 2026.</description>
+    <description>What MyFitnessPal moved behind the paywall, what Premium costs now ($79.99 a year), and seven alternatives compared on price, logging, Apple Health and ads.</description>
     <content:encoded><![CDATA[<p>MyFitnessPal is still free, but since 2022 the parts people actually used to save time (barcode scanning, then photo and voice logging) sit behind Premium at $19.99 a month or $79.99 a year, and the free tier shows ads. If that is why you are leaving, the alternatives with those features free are Cronometer and MyNetDiary; the ones with no ads at all are MyNetDiary, MacroFactor (paid only) and MealSaid.</p>
 <p>Every price and feature below was checked against the company's own page or its US App Store listing on 20 October 2026. I built MealSaid, so it is last in the table, with where it loses.</p>
 <h2 id="what-did-myfitnesspal-move-behind-the-paywall">What did MyFitnessPal move behind the paywall?</h2>
@@ -268,9 +268,9 @@
     <link>https://mealsaid.app/blog/log-food-without-opening-the-app/</link>
     <guid isPermaLink="true">https://mealsaid.app/blog/log-food-without-opening-the-app/</guid>
     <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-    <description>Three ways to log a meal on iPhone in one sentence or one tap, step by step with MealSaid, plus what Shortcuts can and cannot do with MyFitnessPal, Lose It, Cronometer and MacrosFirst.</description>
+    <description>Three ways to log a meal on iPhone in one sentence or one tap, step by step with MealSaid, plus what Shortcuts can and cannot do with four other calorie apps.</description>
     <content:encoded><![CDATA[<p>You can log a meal on an iPhone without opening any app by saying "Hey Siri, log in MealSaid, two eggs and toast." The entry lands in Apple Health with calories and macros while your phone stays locked. The Lock Screen control and the Home Screen widget are one tap each, but they open the app (already listening), so they are a close second.</p>
-<p>Checked 20 October 2026 on my iPhone running iOS 26. I built MealSaid, so read the competitor section as "what I could find in their docs", not a hands-on test of each one.</p>
+<p>Checked 20 October 2026 on my iPhone running iOS 26. I built <a href="/blog/how-mealsaid-works/">MealSaid</a>, so read the competitor section as "what I could find in their docs", not a hands-on test of each one.</p>
 <h2 id="why-does-it-matter-whether-the-app-opens">Why does it matter whether the app opens?</h2>
 <p>Because opening a tracker is the step people skip. Every tap between "I just ate" and "it is logged" is a chance to decide you will do it later, and later is usually never. A stopwatch comparison across six apps is coming as its own post; this one is about the routes.</p>
 <figure><img alt="Three ways to log in MealSaid without finding the app: the Siri phrase Hey Siri, log in MealSaid, two eggs and toast; the Lock Screen control that opens the listening screen; the Home Screen widget" src="/blog/img/log-food-without-opening-the-app-3.webp"  width="1600" height="900" loading="lazy"><figcaption>Three ways to log in MealSaid without finding the app: the Siri phrase Hey Siri, log in MealSaid, two eggs and toast; the Lock Screen control that opens the listening screen; the Home Screen widget</figcaption></figure>
@@ -449,7 +449,7 @@
 <p>There is no search box, no barcode scanner and no portion slider. There is a keyboard fallback for when the gym is too loud, but I do not expect you to use it.</p>
 <h2 id="you-do-not-have-to-open-the-app">You do not have to open the app</h2>
 <p><strong>Siri, the Lock Screen control and the Home Screen widget each get you to a logged meal without finding the app.</strong></p>
-<p>Three shortcuts cover most of my own logging:</p>
+<p>Three shortcuts cover most of my own logging (<a href="/blog/log-food-without-opening-the-app/">step-by-step setup for each is here</a>):</p>
 <div class="tbl"><table>
 <thead>
 <tr>
@@ -528,7 +528,7 @@
     <link>https://mealsaid.app/blog/calorie-apps-apple-health/</link>
     <guid isPermaLink="true">https://mealsaid.app/blog/calorie-apps-apple-health/</guid>
     <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-    <description>Nine calorie trackers checked against their own support docs on 20 October 2026. Who writes nutrition into Apple Health, who reads it back, which fields, and where double counting comes from.</description>
+    <description>Nine calorie apps checked against their own docs on 20 October 2026: who writes nutrition to Apple Health, who reads it back, why calories get doubled.</description>
     <content:encoded><![CDATA[<p>Most calorie apps write your food into Apple Health. Very few read it back. Of the nine apps I checked on 20 October 2026 against their own support pages, only two import nutrition from Health: Lose It (dietary energy only, free tier) and MacroFactor (calories, macros and micros).</p>
 <p>MyFitnessPal, Cronometer, MyNetDiary, FatSecret, Lifesum, Carbon Diet Coach and MealSaid all write and do not read.</p>
 <div class="stat"><strong>2 of 9</strong><span>calorie apps read nutrition back from Apple Health; the other seven only write</span></div>
