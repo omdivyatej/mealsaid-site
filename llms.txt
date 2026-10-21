@@ -14,6 +14,8 @@
 
 ## Blog posts
 
+- [Calorie tracker with voice input: what you actually get](https://mealsaid.app/blog/calorie-tracker-voice-input/): Voice input means three different things in calorie apps. Seven iPhone trackers compared on 21 October 2026, and five charge a median of $79.99 a year.
+- [Which calorie apps remind you to log food, and do they work](https://mealsaid.app/blog/calorie-apps-that-remind-you-to-log/): Four of six iPhone trackers send a logging reminder, checked 21 October 2026. In a 30 person trial, 19.05% of reminders were tapped at best.
 - [Why most people quit calorie tracking within two weeks (what the research says)](https://mealsaid.app/blog/why-people-quit-calorie-tracking/): Seven studies on food-logging dropout, with numbers and links. 2.58% of 189,770 downloads stayed active. Simplified logging got 97% of days versus 49%.
 - [MyFitnessPal alternatives in 2026, checked this month](https://mealsaid.app/blog/myfitnesspal-alternatives/): What MyFitnessPal moved behind the paywall, what Premium costs now ($79.99 a year), and seven alternatives compared on price, logging, Apple Health and ads.
 - [How to log food on iPhone without opening an app (Siri, Lock Screen, widget)](https://mealsaid.app/blog/log-food-without-opening-the-app/): Three ways to log a meal on iPhone in one sentence or one tap, step by step with MealSaid, plus what Shortcuts can and cannot do with four other calorie apps.
