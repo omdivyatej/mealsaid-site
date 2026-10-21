@@ -2,6 +2,7 @@
 """Render the blog figures into blog/img/<slug>-<n>.webp. PIL only, re-runnable.
 usage: tools/.venv/bin/python tools/blog_images.py
 """
+import os
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -10,12 +11,12 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "blog" / "img"
 RAW = Path("/Users/omdivyatej/Downloads/Code/voicefit/release/screenshots/raw")
 BG, INK, INK2, INK3, LINE, ACC = "#0b0e13", "#f3f5f8", "#aeb6c4", "#6f7889", "#232935", "#d6ff3d"
-FONT = "/System/Library/Fonts/HelveticaNeue.ttc"
+FONT = os.environ.get("BLOG_FONT", "/System/Library/Fonts/HelveticaNeue.ttc")  # a .ttc with 4 weights; a plain .ttf renders one weight
 W = {"r": 0, "b": 1, "l": 7, "m": 10}
 
 
 def F(size, w="r"):
-    return ImageFont.truetype(FONT, size, index=W[w])
+    return ImageFont.truetype(FONT, size, index=W[w] if FONT.endswith(".ttc") else 0)
 
 
 def canvas(w=1600, h=900):

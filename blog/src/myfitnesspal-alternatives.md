@@ -1,7 +1,7 @@
 ---
 title: MyFitnessPal alternatives in 2026, checked this month
 slug: myfitnesspal-alternatives
-description: What MyFitnessPal moved behind the paywall, what Premium costs now ($79.99 a year), and seven alternatives with their free tier, price, logging method, Apple Health write and ads, verified against official pages on 20 October 2026.
+description: What MyFitnessPal moved behind the paywall, what Premium costs now ($79.99 a year), and seven alternatives compared on price, logging, Apple Health and ads.
 date: 2026-10-20
 updated: 2026-10-20
 author: Om Divyatej

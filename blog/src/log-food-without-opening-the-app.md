@@ -1,7 +1,7 @@
 ---
 title: How to log food on iPhone without opening an app (Siri, Lock Screen, widget)
 slug: log-food-without-opening-the-app
-description: Three ways to log a meal on iPhone in one sentence or one tap, step by step with MealSaid, plus what Shortcuts can and cannot do with MyFitnessPal, Lose It, Cronometer and MacrosFirst.
+description: Three ways to log a meal on iPhone in one sentence or one tap, step by step with MealSaid, plus what Shortcuts can and cannot do with four other calorie apps.
 date: 2026-10-20
 updated: 2026-10-20
 author: Om Divyatej

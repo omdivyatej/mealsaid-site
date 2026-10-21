@@ -1,7 +1,7 @@
 ---
 title: Why most people quit calorie tracking within two weeks (what the research says)
 slug: why-people-quit-calorie-tracking
-description: Seven studies on food-logging dropout, with the real numbers and links. 2.58% of 189,770 downloads stayed active. 84% of quitters called it tedious. Simplified logging got 97% of days versus 49%.
+description: Seven studies on food-logging dropout, with numbers and links. 2.58% of 189,770 downloads stayed active. Simplified logging got 97% of days versus 49%.
 date: 2026-10-20
 updated: 2026-10-20
 author: Om Divyatej

@@ -1,7 +1,7 @@
 ---
 title: Which calorie apps actually write to (and read from) Apple Health
 slug: calorie-apps-apple-health
-description: Nine calorie trackers checked against their own support docs on 20 October 2026. Who writes nutrition into Apple Health, who reads it back, which fields, and where double counting comes from.
+description: Nine calorie apps checked against their own docs on 20 October 2026: who writes nutrition to Apple Health, who reads it back, why calories get doubled.
 date: 2026-10-20
 updated: 2026-10-20
 author: Om Divyatej
