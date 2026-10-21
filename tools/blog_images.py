@@ -256,3 +256,83 @@ if __name__ == "__main__":
     health_matrix(); health_macros_card()
     log_strip()
     screenshot("home.png", "how-mealsaid-works-1.webp"); screenshot("call.png", "how-mealsaid-works-2.webp"); how_flow()
+    voice_levels(); voice_prices()
+
+
+# ------------------------------------------------------------ voice input
+VOICE_LEVELS = [
+    ("1", "Dictation", [
+        "You tap the Dictate key on the iOS keyboard",
+        "and your words land in the app's search box.",
+        "One food, then you still pick the match.",
+    ], ["Any app with a text field", "Free, it is an iOS keyboard feature"]),
+    ("2", "Voice search", [
+        "A microphone button inside the app searches",
+        "the food database for what you just said.",
+        "Still one food at a time.",
+    ], ["Lose It! (Say It)", "Premium only"]),
+    ("3", "Spoken meal", [
+        "You say a whole sentence and the app returns",
+        "several diary entries for you to review.",
+        "The one that saves real time.",
+    ], ["MyFitnessPal, Cronometer, MyNetDiary,", "MacroFactor, Lifesum, MealSaid"]),
+]
+
+
+def voice_levels():
+    im, d = canvas()
+    text(d, (80, 58), "Three different things calorie apps call voice input", 38)
+    text(d, (80, 112), "What actually happens after you speak, from each app's own help pages", 24, fill=INK2)
+    y = 196
+    for num, name, lines, apps in VOICE_LEVELS:
+        top = y
+        acc = num == "3"
+        text(d, (80, y + 14), num, 84, fill=ACC if acc else INK3)
+        text(d, (190, y), name, 40, fill=INK)
+        for i, ln in enumerate(lines):
+            text(d, (190, y + 58 + i * 36), ln, 25, fill=INK2)
+        text(d, (900, y + 4), "WHERE YOU FIND IT", 18, fill=INK3)
+        for i, ap in enumerate(apps):
+            text(d, (900, y + 40 + i * 36), ap, 25, fill=INK if i == 0 else INK2)
+        y += 220
+        if y < 760:
+            d.line([(80, y - 40), (1520, y - 40)], fill=LINE, width=1)
+        _ = top
+    source(d, "Sources: MyFitnessPal, Cronometer, Lose It, MyNetDiary, MacroFactor and Lifesum help pages, read 21 October 2026.")
+    save(im, "calorie-tracker-voice-input-1.webp")
+
+
+VOICE_PRICES = [
+    ("MyNetDiary Premium Plus", 99.99),
+    ("Lifesum Premium", 99.99),
+    ("MyFitnessPal Premium", 79.99),
+    ("MacroFactor", 71.99),
+    ("Cronometer Gold", 59.99),
+    ("MealSaid", 0.0),
+]
+
+
+def voice_prices():
+    im, d = canvas()
+    text(d, (80, 58), "What a year of speaking your meals costs", 38)
+    text(d, (80, 112), "Cheapest listed US plan that unlocks sentence level voice logging", 24, fill=INK2)
+    x0, xmax, span = 560, 1340, 100.0
+    y = 210
+    med = 79.99
+    mx = x0 + med / span * (xmax - x0)
+    d.line([(mx, 186), (mx, 788)], fill="#39414f", width=2)
+    text(d, (mx, 796), "Median of the five paid plans, $79.99", 20, fill=INK3, anchor="ma")
+    for name, v in VOICE_PRICES:
+        text(d, (80, y + 22), name, 27, fill=INK, anchor="lm")
+        w = v / span * (xmax - x0)
+        if v:
+            d.rounded_rectangle([x0, y, x0 + w, y + 46], 8, fill="#3a4252")
+            text(d, (x0 + w + 18, y + 22), f"${v:.2f}", 27, fill=INK, anchor="lm")
+        else:
+            d.rounded_rectangle([x0, y, x0 + 10, y + 46], 4, fill=ACC)
+            text(d, (x0 + 28, y + 22), "$0, free, no in-app purchases", 27, fill=ACC, anchor="lm")
+        y += 98
+    d.line([(x0, 196), (x0, 788)], fill=LINE, width=2)
+    text(d, (80, 796), "MealSaid is my app. It has no barcode scanner and no photo logging.", 20, fill=INK3)
+    source(d, "Sources: each company's own pricing page or US App Store listing, checked 21 October 2026.")
+    save(im, "calorie-tracker-voice-input-2.webp")
