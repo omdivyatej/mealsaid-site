@@ -1,0 +1,82 @@
+name: writer
+
+# Claude Code writes (daily) or re-verifies (weekly) blog posts, commits them, and this job pushes
+# and then dispatches publish.yml to build + IndexNow. Pushes made with GITHUB_TOKEN never trigger
+# push workflows, which is why the explicit dispatch is needed.
+on:
+  schedule:
+    - cron: "30 0 * * *" # daily writer, 06:00 IST
+    - cron: "30 23 * * 0" # weekly refresh, Monday 05:00 IST
+  workflow_dispatch:
+    inputs:
+      job:
+        description: daily or weekly
+        default: daily
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency: writer
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install markdown pillow
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install -g @anthropic-ai/claude-code
+      - name: Pick job
+        id: pick
+        run: |
+          job="${{ github.event.inputs.job }}"
+          if [ -z "$job" ]; then
+            if [ "${{ github.event.schedule }}" = "30 23 * * 0" ]; then job=weekly; else job=daily; fi
+          fi
+          echo "job=$job" >> "$GITHUB_OUTPUT"
+          echo "running: $job"
+      - name: Claude
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          BLOG_FONT: /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
+          JOB: ${{ steps.pick.outputs.job }}
+        run: |
+          if [ -z "$CLAUDE_CODE_OAUTH_TOKEN" ]; then
+            echo "::error::secret CLAUDE_CODE_OAUTH_TOKEN is not set. Run 'claude setup-token' locally, then 'gh secret set CLAUDE_CODE_OAUTH_TOKEN -R omdivyatej/mealsaid-site'."
+            exit 1
+          fi
+          git config user.name "Om Divyatej"
+          git config user.email "ohmbrock42@gmail.com"
+          if [ "$JOB" = weekly ]; then model=claude-sonnet-5-5; prompt=tools/editorial/PROMPT_WEEKLY.md; else model=claude-opus-5; prompt=tools/editorial/PROMPT_DAILY.md; fi
+          claude -p "$(cat "$prompt")" --model "$model" --dangerously-skip-permissions --max-turns 250 2>&1 | tee claude.log
+      - name: Push and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FORBIDDEN_RE: ${{ secrets.FORBIDDEN_RE }} # words that must never reach the public repo
+        run: |
+          n=$(git rev-list --count origin/main..HEAD)
+          echo "new commits: $n"
+          [ "$n" = 0 ] && { echo "nothing to publish"; exit 0; }
+          if git diff --name-only origin/main..HEAD | grep -Eq '^(blog/[^/]+/index\.html|blog/index\.html|sitemap\.xml|feed\.xml|llms\.txt|index\.html|privacy\.html|support\.html|creators\.html)$'; then
+            echo "::error::a commit touched generated html or a site page; refusing to push"; exit 1
+          fi
+          for c in $(git rev-list origin/main..HEAD); do
+            if [ -n "$FORBIDDEN_RE" ] && git show "$c" | grep -Eqi "$FORBIDDEN_RE"; then echo "::error::forbidden text in $c; refusing to push"; exit 1; fi
+          done
+          git push origin HEAD:main
+          gh workflow run publish.yml --ref main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: claude-log
+          path: claude.log
+          if-no-files-found: ignore

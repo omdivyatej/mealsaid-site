@@ -11,6 +11,7 @@ on:
   pull_request:
     paths:
       - "blog/src/**"
+  workflow_dispatch: # writer.yml dispatches this after it pushes (GITHUB_TOKEN pushes do not fire push events)
 
 # Primary path: the cloud routine (or Om) pushes a post with draft: false straight to main. Any plain
 # git push by a human or a PAT triggers this; only pushes made with GITHUB_TOKEN or commits whose
@@ -20,7 +21,7 @@ permissions:
 
 jobs:
   build:
-    if: github.event_name == 'push'
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

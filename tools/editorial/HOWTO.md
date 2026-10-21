@@ -1,5 +1,7 @@
 # Daily routine: write, self-review, publish
 
+Automation: `.github/workflows/writer.yml` runs Claude Code daily (06:00 IST, prompt `PROMPT_DAILY.md`) and weekly (Monday 05:00 IST, `PROMPT_WEEKLY.md`), pushes the commits and dispatches `publish.yml`. Needs the repo secret `CLAUDE_CODE_OAUTH_TOKEN` (`claude setup-token`, then `gh secret set CLAUDE_CODE_OAUTH_TOKEN -R omdivyatej/mealsaid-site`). Run by hand: `gh workflow run writer.yml -f job=daily`. The steps below are what the prompt makes it do.
+
 1. Read `STYLE.md`, then take the top `todo` row in `BACKLOG.md` (or a `drafted (blocked: ...)` row you can now clear). Never a "needs Om's phone test" row.
 2. Research with web search, primary sources only: the app's own support page or App Store listing, the journal article, USDA FoodData Central. Note the date you read each page; it goes in the post.
 3. Write `blog/src/<slug>.md` with `draft: true` and the full front matter from the STYLE schema. Link at least one other post on the blog. No em dashes anywhere.
