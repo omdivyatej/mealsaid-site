@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """QA gate for blog posts. Exit 1 on any FAIL.   usage: tools/qa_post.py [--skip-links] blog/src/*.md
 
-FAIL: em/en dashes; the string "turgon"; missing front matter (title, slug, description <=160, date, updated,
+FAIL: em/en dashes; a banned company name; missing front matter (title, slug, description <=160, date, updated,
 author, tags, image on disk, 3-5 takeaways, 3-5 faq); paragraph over 90 words; body outside 900-1800 words;
-http link not 200/301/302 (browser UA; 403/429 is a WARN); H2 that is neither a question nor a statement under 70 chars.
+http link not 200/301/302 (browser UA; 403/429 is a WARN); H2 that is neither a question nor a statement under 70 chars;
+a published post (draft: false) with no internal link to another existing blog post.
 WARN: sentence with a digit in a paragraph with no link (unsourced number); banned filler phrases.
 Needs `markdown` installed only because the front matter parser lives in build_blog.py.
 """
@@ -15,9 +16,10 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_blog import ROOT, parse_front_matter  # noqa: E402
+from build_blog import ROOT, SRC, parse_front_matter  # noqa: E402
 
 REQUIRED = ("title", "slug", "description", "date", "updated", "author", "tags", "image", "takeaways", "faq")
+BANNED = "tur" "gon"  # split so this file does not contain the word
 FILLER = ("in today's", "whether you're", "it's important to note", "game changer", "delve")
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15"
 OK_STATUS = {200, 301, 302, 303, 307, 308}
@@ -70,7 +72,7 @@ def qa(path, skip_links):
     for n, line in enumerate(text.splitlines(), 1):
         if "\u2014" in line or "\u2013" in line:
             fails.append(f"line {n}: em/en dash")
-        if "turgon" in line.lower():
+        if BANNED in line.lower():
             fails.append(f"line {n}: banned word")
         low = line.lower()
         for ph in FILLER:
@@ -94,6 +96,14 @@ def qa(path, skip_links):
         fails.append(f"front matter: {len(meta['faq'])} complete faq pairs (need 3-5)")
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", meta["date"]) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", meta["updated"]):
         fails.append("front matter: date/updated must be YYYY-MM-DD")
+
+    if not meta["draft"]:  # publish gate: a live post must point readers at another live post
+        targets = set(re.findall(r"\]\((?:https://mealsaid\.app)?/blog/([a-z0-9-]+)/\)", body)) - {meta["slug"], "img"}
+        live = {s for s in targets if (SRC / f"{s}.md").is_file()}
+        if not live:
+            fails.append("published post has no internal link to another blog post (link /blog/<slug>/)")
+        for s in targets - live:
+            fails.append(f"internal link to /blog/{s}/ but blog/src/{s}.md does not exist")
 
     n = words(body)
     if not 900 <= n <= 1800:

@@ -12,6 +12,9 @@ on:
     paths:
       - "blog/src/**"
 
+# Primary path: the cloud routine (or Om) pushes a post with draft: false straight to main. Any plain
+# git push by a human or a PAT triggers this; only pushes made with GITHUB_TOKEN or commits whose
+# message contains "[skip ci]" do not, which is exactly what stops the commit-back below from looping.
 permissions:
   contents: write
 
@@ -37,7 +40,7 @@ jobs:
           git diff --cached --quiet && echo "nothing to commit" || { git commit -m "ci: build blog [skip ci]" && git push; }
       - run: python tools/indexnow.py --sitemap
 
-  qa:
+  qa: # extra gate for anyone who still opens a PR; the routine runs qa_post.py itself before pushing
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:

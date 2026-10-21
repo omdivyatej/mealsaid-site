@@ -30,7 +30,7 @@ faq:
 
 You can log a meal on an iPhone without opening any app by saying "Hey Siri, log in MealSaid, two eggs and toast." The entry lands in Apple Health with calories and macros while your phone stays locked. The Lock Screen control and the Home Screen widget are one tap each, but they open the app (already listening), so they are a close second.
 
-Checked 20 October 2026 on my iPhone running iOS 26. I built MealSaid, so read the competitor section as "what I could find in their docs", not a hands-on test of each one.
+Checked 20 October 2026 on my iPhone running iOS 26. I built [MealSaid](/blog/how-mealsaid-works/), so read the competitor section as "what I could find in their docs", not a hands-on test of each one.
 
 ## Why does it matter whether the app opens?
 

@@ -1,6 +1,6 @@
 # Blog backlog
 
-Ordered by priority. Status: `todo` | `drafted` | `published` | `needs Om's phone test`. The daily routine takes the top `todo`. Rows marked "needs Om's phone test" wait for raw CSVs from Om (see `blog/data/` once they exist); do not write them from desk research.
+Ordered by priority. Status: `todo` | `drafted` | `published` | `needs Om's phone test`. A draft that failed the publish gate stays `drafted` with the blocker in the same cell, for example `drafted (blocked: two prices unverifiable)`. The daily routine takes the top `todo`, or the top blocked `drafted` row if it can clear the blocker. Rows marked "needs Om's phone test" wait for raw CSVs from Om (see `blog/data/` once they exist); do not write them from desk research.
 
 One rule above all: every post needs one original element that exists nowhere else, listed in the "Required original element" column. A post without it is not written.
 

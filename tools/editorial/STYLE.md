@@ -31,6 +31,7 @@ Every post is a first-person note from Om, the person who built the app. It read
 - Quote at most once per source, under 15 words, in quotation marks, with the link.
 - Credit competitors by name and link to them. If Cronometer does something better, say "Cronometer does this better" and link.
 - State MealSaid's gaps plainly wherever they are relevant (see the facts block below).
+- Link to at least one other post on this blog from the body, with descriptive anchor text ("our Apple Health comparison"), never "click here". A published post without one fails QA.
 - Dated claims carry the date in the sentence. Prices and paywalls change; the "Checked" date is part of the fact.
 
 ## Banned
@@ -77,7 +78,7 @@ faq:
 ---
 ```
 
-`draft: true` keeps the post out of the build. A human flips it to `false` to publish. `medium:` is optional and is added by Om after cross-posting.
+`draft: true` keeps the post out of the build. The routine flips it to `false` only after the gate in HOWTO.md passes; the push to `main` is the publish. `medium:` is optional and is added by Om after cross-posting.
 
 ## Facts you may state about MealSaid
 

@@ -55,7 +55,7 @@ There is no search box, no barcode scanner and no portion slider. There is a key
 
 **Siri, the Lock Screen control and the Home Screen widget each get you to a logged meal without finding the app.**
 
-Three shortcuts cover most of my own logging:
+Three shortcuts cover most of my own logging ([step-by-step setup for each is here](/blog/log-food-without-opening-the-app/)):
 
 | Where | What you do |
 |---|---|
