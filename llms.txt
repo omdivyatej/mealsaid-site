@@ -14,6 +14,8 @@
 
 ## Blog posts
 
+- [Is Cal AI accurate? It missed 345 calories a meal](https://mealsaid.app/blog/is-cal-ai-accurate/): Cal AI says it is about 80% accurate. In an NIH test of 102 weighed meals it came in 345 calories low, the biggest miss of the four photo apps tested.
+- [Free calorie counter without a subscription: what you get](https://mealsaid.app/blog/free-calorie-counter-without-subscription/): Nine free calorie apps list 89 in-app purchases between them, $0.99 to $119.99. What each free tier still does, from the US App Store, 22 October 2026.
 - [Calorie tracker with voice input: what you actually get](https://mealsaid.app/blog/calorie-tracker-voice-input/): Voice input means three different things in calorie apps. Seven iPhone trackers compared on 21 October 2026, and five charge a median of $79.99 a year.
 - [Which calorie apps remind you to log food, and do they work](https://mealsaid.app/blog/calorie-apps-that-remind-you-to-log/): Four of six iPhone trackers send a logging reminder, checked 21 October 2026. In a 30 person trial, 19.05% of reminders were tapped at best.
 - [Why most people quit calorie tracking within two weeks (what the research says)](https://mealsaid.app/blog/why-people-quit-calorie-tracking/): Seven studies on food-logging dropout, with numbers and links. 2.58% of 189,770 downloads stayed active. Simplified logging got 97% of days versus 49%.

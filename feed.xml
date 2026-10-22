@@ -5,8 +5,226 @@
   <link>https://mealsaid.app/blog/</link>
   <description>Notes from building MealSaid, the calorie tracker you talk to.</description>
   <language>en</language>
-  <lastBuildDate>Wed, 21 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 22 Oct 2026 00:00:00 +0000</lastBuildDate>
   <atom:link href="https://mealsaid.app/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>Is Cal AI accurate? It missed 345 calories a meal</title>
+    <link>https://mealsaid.app/blog/is-cal-ai-accurate/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/is-cal-ai-accurate/</guid>
+    <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Cal AI says it is about 80% accurate. In an NIH test of 102 weighed meals it came in 345 calories low, the biggest miss of the four photo apps tested.</description>
+    <content:encoded><![CDATA[<p>Cal AI's own FAQ says the app is "about 80% accurate". When researchers at the NIH photographed 102 meals weighed to the nearest 0.1 gram and ran them through it, Cal AI came in 345 calories low per meal, the biggest miss of the four apps they tested (<a href="https://www.healio.com/news/primary-care/20260804/ai-photobased-calorietracking-tools-underestimate-them-by-33">Healio</a>).</p>
+<p>Those two numbers only agree if the average meal contains 1,725 calories. The meals in that study were ordinary plated meals from a metabolic kitchen.</p>
+<p>I read the NIH press release, the trade coverage carrying the per-app figures, and Cal AI's own site and App Store listing on 22 October 2026. I build a calorie tracker myself, so the last section says where mine is no better.</p>
+<h2 id="how-accurate-is-cal-ai">How accurate is Cal AI?</h2>
+<p><strong>It underestimated meals by 345 calories on average, with a 95% confidence interval of 296 to 392, across 102 controlled meals.</strong></p>
+<p>Olivia Charles and Aaron Hengist of the NIH's NIDDK intramural programme worked from 102 standardised meals made in the metabolic kitchen at the NIH Clinical Center, every ingredient weighed to 0.1 g. They photographed each meal, ran the photos through four apps, and compared the output with food composition tables (<a href="https://www.eurekalert.org/news-releases/1136415">American Society for Nutrition</a>).</p>
+<p>Every app came in low. The headline was an underestimate of roughly a third of the energy on the plate.</p>
+<figure><img alt="Bar chart of calories each app missed per meal in the NIH test: Cal AI 345, Lose It 333, MyFitnessPal 327 and Appediet 252, with 95 percent confidence intervals" src="/blog/img/is-cal-ai-accurate-1.webp"  width="1600" height="900" loading="lazy"><figcaption>Bar chart of calories each app missed per meal in the NIH test: Cal AI 345, Lose It 333, MyFitnessPal 327 and Appediet 252, with 95 percent confidence intervals</figcaption></figure>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>App</th>
+<th>Calories missed per meal</th>
+<th>95% confidence interval</th>
+<th>App Store rating</th>
+<th>Purchases Apple lists</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616">Cal AI</a></td>
+<td>345</td>
+<td>296 to 392</td>
+<td>4.80 from 372k ratings</td>
+<td>$0.99 to $29.99</td>
+</tr>
+<tr>
+<td><a href="https://apps.apple.com/us/app/lose-it-calorie-counter/id297368629">Lose It!</a></td>
+<td>333</td>
+<td>282 to 383</td>
+<td>4.77 from 782k ratings</td>
+<td>$9.99 to $79.99</td>
+</tr>
+<tr>
+<td><a href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718">MyFitnessPal</a></td>
+<td>327</td>
+<td>269 to 385</td>
+<td>4.71 from 2.4M ratings</td>
+<td>$9.99 to $79.99</td>
+</tr>
+<tr>
+<td><a href="https://apps.apple.com/us/app/ai-calorie-counter-appediet/id6450329545">Appediet</a></td>
+<td>252</td>
+<td>210 to 295</td>
+<td>4.78 from 48k ratings</td>
+<td>$6.99 to $79.99</td>
+</tr>
+</tbody>
+</table></div>
+<p>Caveats before anyone quotes this at me. It is a conference abstract presented at NUTRITION 2026 and has not been through journal peer review (<a href="https://www.healio.com/news/primary-care/20260804/ai-photobased-calorietracking-tools-underestimate-them-by-33">Healio</a>). And the apps were fed photographs with no correction, which is how most people use them but not the best case.</p>
+<p>One more thing the chart will not tell you. The intervals for Cal AI, Lose It! and MyFitnessPal overlap heavily, so this test does not establish a ranking among those three. Only the gap to Appediet at 252 comes close to separating.</p>
+<p>Still, 102 weighed meals is a better test than any of these companies has published about itself.</p>
+<h2 id="does-cal-ais-own-accuracy-claim-hold-up">Does Cal AI's own accuracy claim hold up?</h2>
+<p><strong>Not against this test. "About 80% accurate" and a 345 calorie miss only reconcile at meals of 1,725 calories.</strong></p>
+<p>The claim sits in the FAQ on Cal AI's own site, unqualified (<a href="https://www.calai.app/">Cal AI</a>). There is no sample size, no method and no link to data behind it.</p>
+<p>Do the arithmetic the other way. If 345 calories is the mean error and the claim of a 20% error holds, the mean meal has to be 1,725 calories. A plated lunch is not that.</p>
+<div class="stat"><strong>1,725</strong><span>calories a meal would need to contain for a 345 calorie miss to be a 20% error</span><small><a href="https://www.calai.app/">Cal AI FAQ</a></small></div>
+
+<p>The ratings do not help you either. Cal AI holds 4.80 stars from about 372,000 US ratings, the highest of the four apps tested, while posting the largest error (<a href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616">App Store</a>).</p>
+<figure><img alt="Scatter plot of App Store rating against calories missed per meal for four apps, showing Cal AI highest rated at 4.80 and furthest right at 345 calories missed" src="/blog/img/is-cal-ai-accurate-2.webp"  width="1600" height="900" loading="lazy"><figcaption>Scatter plot of App Store rating against calories missed per meal for four apps, showing Cal AI highest rated at 4.80 and furthest right at 345 calories missed</figcaption></figure>
+<h2 id="why-do-photo-apps-miss-so-much-fat">Why do photo apps miss so much fat?</h2>
+<p><strong>Because fat is invisible in a photograph. All four apps were about 30 g of fat short per meal.</strong></p>
+<p>Hengist put it plainly: "These apps tend to underestimate calories, especially from fats" (<a href="https://www.eurekalert.org/news-releases/1136415">American Society for Nutrition</a>). Oil absorbed into a stir fry, butter melted into a sauce, ghee stirred through dal, dressing already tossed into a salad: none of it is visible once the plate is made.</p>
+<p>Fat carries more energy per gram than protein or carbohydrate, so missing 30 g of it costs more than missing 30 g of anything else. Carbohydrates, the one macro you can mostly see on a plate, were estimated more consistently across all four apps (<a href="https://www.eurekalert.org/news-releases/1136415">American Society for Nutrition</a>).</p>
+<p>Cal AI's pitch leans on hardware, saying the phone's depth sensor calculates food volume (<a href="https://www.calai.app/">Cal AI</a>). Depth solves volume. It does not tell you what was poured into the pan twenty minutes earlier.</p>
+<h2 id="what-does-cal-ai-cost">What does Cal AI cost?</h2>
+<p><strong>$29.99 is the highest of five prices Apple lists for its Unlimited purchase, and Cal AI publishes no price page at all.</strong></p>
+<p>The In-App Purchases panel on the US listing shows "Unlimited" at $2.99, $5.99, $9.99, $19.99 and $29.99, plus a $0.99 Streak Restore, which buys back a logging streak you broke (<a href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616">App Store</a>). Apple never prints the billing period, so none of those numbers tells you what you are committing to.</p>
+<p>Cal AI's site offers a 3 day trial and states no price (<a href="https://www.calai.app/">Cal AI</a>). Its terms mention auto-renewal without naming a period or an amount (<a href="https://calai.app/tos">Cal AI terms</a>).</p>
+<p>There is also no free tier. The App Store description carries one line in capitals at the end, that food scanning analysis results require a subscription. I went through the same panel for nine apps in <a href="/blog/free-calorie-counter-without-subscription/">what is actually free in a free calorie counter</a>, and Cal AI was the only one whose core function is gated outright.</p>
+<h2 id="is-cal-ai-worth-it">Is Cal AI worth it?</h2>
+<p><strong>Not if you are buying accuracy. If you want the lowest effort way to get a number, it works, as long as you treat the number as a floor.</strong></p>
+<p>Here is the practical reading of the NIH result. If the pattern held across three meals a day, you would be short about 1,035 calories a day, which is more than most people's entire intended deficit.</p>
+<p>That is a projection from a single-meal mean, not a measured daily figure, so treat it as the direction rather than the size. Even halved, it is enough to make a diary useless for the thing diaries are for.</p>
+<p>If you want fewer calories missed, weigh your food and log it by weight. Cronometer does this better than anything I have built: lab-analysed nutrition data, a free barcode scanner and up to 95 nutrients on the free tier (<a href="https://cronometer.com/features/free-nutrition-tracking-app.html">Cronometer</a>).</p>
+<p>MealSaid, which I built, does not take photos at all. You say what you ate and it writes calories and macros to Apple Health (<a href="/blog/how-mealsaid-works/">how MealSaid works</a>), which moves the guess from the camera to your own description of the portion. That is a different error, not an absent one.</p>
+<p>I have not published accuracy numbers of my own, so nothing on this page says MealSaid beats Cal AI. That test is running: weighed meals against a kitchen scale and USDA reference values, and it will go up with the raw table whichever way it falls. The gaps I can state now are that there is no barcode scanner, no photo logging and no food database search, it needs iOS 26 on an iPhone, and it is English only.</p>
+<h2 id="how-i-checked-this">How I checked this</h2>
+<p>Checked 22 October 2026. The study facts come from the American Society for Nutrition release on the NIDDK work presented at NUTRITION 2026, and the per-app calorie figures and confidence intervals come from Healio's report of the same abstract, which is the only source I found carrying the breakdown by app. The abstract itself does not appear to be published anywhere I can link to.</p>
+<p>The prices, the purchase names and the ratings were read directly off the US App Store listings on 22 October 2026 for all four apps. Cal AI's accuracy claim, the depth sensor line and the 3 day trial came from calai.app, and the auto-renewal line from its terms page.</p>
+<p>What I could not verify: the average energy of the 102 meals, which no source states, so the "about a third" figure stays as reported rather than recomputed per app. Healio prints all four intervals with the larger number first, which fits differences expressed as negatives; I have shown them ascending. The 1,725 calorie and 1,035 calorie figures are my own arithmetic on the published means, with no new data behind them. Corrections to ohmbrock42@gmail.com.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title>Free calorie counter without a subscription: what you get</title>
+    <link>https://mealsaid.app/blog/free-calorie-counter-without-subscription/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/free-calorie-counter-without-subscription/</guid>
+    <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Nine free calorie apps list 89 in-app purchases between them, $0.99 to $119.99. What each free tier still does, from the US App Store, 22 October 2026.</description>
+    <content:encoded><![CDATA[<p>Every calorie counter in the top of the App Store is free to download, and nine of the best known list 89 in-app purchases between them, priced from $0.99 to $119.99. Free is the install, not the app. What matters is what the free tier still does the day the trial ends.</p>
+<p>On 22 October 2026 I opened the In-App Purchases panel on nine US App Store listings and wrote down every purchase Apple shows, then read each company's own page on what the free version keeps.</p>
+<p>If you want a free calorie counter without a subscription hanging over it, the shortlist is short. Cronometer and MyNetDiary hand you a working tracker for nothing, Lose It! does not, and two of the nine have no free tier at all.</p>
+<p>I built MealSaid, which is free and has no purchases, so take my last section with the salt it deserves. The table is from their pages.</p>
+<h2 id="what-does-free-actually-mean-on-the-app-store">What does free actually mean on the App Store?</h2>
+<p><strong>It means free to install. All nine apps I checked sell a subscription inside, and the listed prices span $0.99 to $119.99.</strong></p>
+<p>Apple shows an In-App Purchases panel on every listing, up to ten entries long. Eight of the nine apps fill all ten slots. <a href="https://apps.apple.com/us/app/calorie-counter-by-fatsecret/id347184248">FatSecret</a> shows nine.</p>
+<p>Ten is a display cap, not a count. An app selling twice that many looks the same on the page as one selling ten.</p>
+<figure><img alt="Range chart of the lowest and highest in-app purchase price on nine US App Store listings, from Cal AI at $0.99 to $29.99 up to Lifesum at $21.99 to $119.99, with MealSaid at zero" src="/blog/img/free-calorie-counter-without-subscription-1.webp"  width="1600" height="900" loading="lazy"><figcaption>Range chart of the lowest and highest in-app purchase price on nine US App Store listings, from Cal AI at $0.99 to $29.99 up to Lifesum at $21.99 to $119.99, with MealSaid at zero</figcaption></figure>
+<div class="stat"><strong>89</strong><span>in-app purchases listed across nine free calorie apps, 22 October 2026</span><small><a href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718">US App Store</a></small></div>
+
+<h2 id="which-free-tiers-actually-track-food">Which free tiers actually track food?</h2>
+<p><strong>Cronometer and MyNetDiary. Both keep the barcode scanner and the whole database free, which is the part everyone else charges for.</strong></p>
+<p>Cronometer's free features page is specific: "Unlimited use of our Barcode Scanner is included in a Basic account", along with the million-entry database and up to 95 nutrients (<a href="https://cronometer.com/features/free-nutrition-tracking-app.html">Cronometer</a>). Gold buys you no ads and long-term charts (<a href="https://support.cronometer.com/hc/en-us/articles/360028026971-Subscription-Types">Cronometer support</a>).</p>
+<p>MyNetDiary goes further on paper. Its free tier page claims the barcode scanner, voice logging, 13 charts, reports across your full history and 108 nutrients, with no ads (<a href="https://www.mynetdiary.com/free-calorie-tracker.html">MyNetDiary</a>).</p>
+<p>Lose It! is the surprise. Its App Store listing names three free basic features: calorie tracking, a weight loss plan and community groups. It puts the barcode scanner, photo logging, voice logging and macronutrients in Premium (<a href="https://apps.apple.com/us/app/lose-it-calorie-counter/id297368629">App Store</a>). A calorie counter whose free tier does not break out protein is a narrower product than the download button suggests.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>App</th>
+<th>Free tier keeps</th>
+<th>Paid tier adds</th>
+<th>Purchases Apple lists</th>
+<th>Advertising declared</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://apps.apple.com/us/app/cronometer-calorie-counter/id1145935738">Cronometer</a></td>
+<td>Barcode scanner, full database, 95 nutrients, 7 days of history</td>
+<td>No ads, long-term charts, fasting, recipe importer</td>
+<td>10, from $10.99 to $59.99</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><a href="https://apps.apple.com/us/app/calorie-counter-mynetdiary/id287529757">MyNetDiary</a></td>
+<td>Barcode scanner, voice logging, 13 charts, full history, no ads</td>
+<td>Meal plans and the PlateAI extras</td>
+<td>10, from $8.99 to $59.99</td>
+<td>No</td>
+</tr>
+<tr>
+<td><a href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718">MyFitnessPal</a></td>
+<td>Food and exercise logging, recipes, viewing macros, partner app links</td>
+<td>Barcode scanner, Meal Scan, Voice Log, no ads</td>
+<td>10, from $9.99 to $79.99</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><a href="https://apps.apple.com/us/app/calorie-counter-by-fatsecret/id347184248">FatSecret</a></td>
+<td>Logging, database, account sync on the web</td>
+<td>Dietitian meal plans, advanced planning, water tracking</td>
+<td>9, from $10.49 to $59.99</td>
+<td>No</td>
+</tr>
+<tr>
+<td><a href="https://apps.apple.com/us/app/ai-calorie-tracker-by-yazio/id946099227">Yazio</a></td>
+<td>Not stated; the listing calls the tracker itself free</td>
+<td>Pro, which the listing never separates from free</td>
+<td>10, from $11.90 to $47.90</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><a href="https://apps.apple.com/us/app/lifesum-ai-calorie-counter/id286906691">Lifesum</a></td>
+<td>Logging "with limited features", which the listing never names</td>
+<td>The full Lifesum experience, in its words</td>
+<td>10, from $21.99 to $119.99</td>
+<td>No</td>
+</tr>
+<tr>
+<td><a href="https://apps.apple.com/us/app/lose-it-calorie-counter/id297368629">Lose It!</a></td>
+<td>Calorie tracking, a weight loss plan, community groups</td>
+<td>Barcode scanner, photo and voice logging, macros, fasting</td>
+<td>10, from $9.99 to $79.99</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><a href="https://apps.apple.com/us/app/macrofactor-macro-tracker/id1553503471">MacroFactor</a></td>
+<td>Nothing past a 7 day trial</td>
+<td>Everything</td>
+<td>10, from $9.99 to $89.99</td>
+<td>No</td>
+</tr>
+<tr>
+<td><a href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616">Cal AI</a></td>
+<td>Nothing, a 3 day trial, scan results need a subscription</td>
+<td>Everything</td>
+<td>10, from $0.99 to $29.99</td>
+<td>No</td>
+</tr>
+<tr>
+<td>MealSaid</td>
+<td>Everything it does</td>
+<td>Nothing, there is no purchase screen</td>
+<td>None</td>
+<td>No</td>
+</tr>
+</tbody>
+</table></div>
+<p>MacroFactor is at least blunt. Its listing says: "MacroFactor has a free trial, but does not offer a free subscription tier" (<a href="https://apps.apple.com/us/app/macrofactor-macro-tracker/id1553503471">App Store</a>). Cal AI's listing carries one line in capitals at the bottom, that scanning results require a subscription, and its site offers a 3 day trial (<a href="https://www.calai.app/">Cal AI</a>). Its cheapest listed purchase, $0.99, is a Streak Restore, which buys back a logging streak you broke.</p>
+<h2 id="why-does-one-app-show-seven-different-prices">Why does one app show seven different prices?</h2>
+<p><strong>Because the panel lists what people buy, and the bigger apps run several price points at the same time. Lose It! shows seven of them under one name.</strong></p>
+<p>Seven separate purchases on the Lose It! listing are named exactly "Lose It! Premium", at $9.99, $11.99, $19.99, $23.99, $29.99, $39.99 and $79.99 (<a href="https://apps.apple.com/us/app/lose-it-calorie-counter/id297368629">App Store</a>). Its own help centre quotes one number: "$79.99 USD / Year" (<a href="https://loseit.zendesk.com/hc/en-us/articles/51906561286804-Lose-It-Membership-Tiers-Pricing">Lose It! help</a>).</p>
+<figure><img alt="Number line of seven in-app purchases all named Lose It! Premium, at $9.99, $11.99, $19.99, $23.99, $29.99, $39.99 and $79.99, a spread of $70.00" src="/blog/img/free-calorie-counter-without-subscription-2.webp"  width="1600" height="900" loading="lazy"><figcaption>Number line of seven in-app purchases all named Lose It! Premium, at $9.99, $11.99, $19.99, $23.99, $29.99, $39.99 and $79.99, a spread of $70.00</figcaption></figure>
+<p>The pattern repeats. MyFitnessPal shows Yearly Premium at $79.99 and at $49.99, Lifesum shows a one-year subscription at $119.99 and at $99.99, and Yazio shows 12 Months at $23.90 and at $47.90 (<a href="https://apps.apple.com/us/app/ai-calorie-tracker-by-yazio/id946099227">App Store</a>).</p>
+<p>The price you are shown in the app is one of several, and the renewal is the one that matters. The Lose It! help centre also sells a Lifetime unlock at $299.99, or $229.99 if you already pay for Premium (<a href="https://loseit.zendesk.com/hc/en-us/articles/51906561286804-Lose-It-Membership-Tiers-Pricing">Lose It! help</a>). I cannot reconcile that with the two Premium Lifetime purchases on the listing at $49.99 and $59.99.</p>
+<h2 id="which-free-calorie-counters-show-you-ads">Which free calorie counters show you ads?</h2>
+<p><strong>Four of the nine declare advertising to Apple: MyFitnessPal, Lose It!, Cronometer and Yazio. The other five do not.</strong></p>
+<p>The declaration sits in the age rating panel of each listing, under Contains. It is what the developer told Apple rather than a test I ran, so treat it as a minimum.</p>
+<p>MyFitnessPal is the only one that explains the trade in writing. The core of the app is free, it says, and "it stays that way because ads help pay for it" (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032273152-The-ad-free-experience-with-MyfitnessPal-Premium">MyFitnessPal support</a>). Premium removes banners, sponsored posts and ads in the forums.</p>
+<p>Cronometer sells the same thing, listing "No Advertisements" first among Gold benefits (<a href="https://support.cronometer.com/hc/en-us/articles/360028026971-Subscription-Types">Cronometer support</a>). So on the two best free tiers here, one of them is funded by ads and the other says it is not.</p>
+<h2 id="so-which-one-should-you-install">So which one should you install?</h2>
+<p><strong>If you want a free tracker that will still work in a year, install Cronometer or MyNetDiary. Everything else on this page is a trial with a database attached.</strong></p>
+<p>Pick by what you log. Packaged food means you need the barcode scanner, which rules out the free tiers of MyFitnessPal and Lose It!. Micronutrients mean Cronometer. No ads and free means MyNetDiary, on its own account.</p>
+<p>If you are leaving MyFitnessPal specifically, the paywall history and the full price comparison are in <a href="/blog/myfitnesspal-alternatives/">our MyFitnessPal alternatives post</a>.</p>
+<p>MealSaid, which I built, is free with no ads and no in-app purchases. That is the only claim on this page I cannot show you an App Store panel for, because the listing is not public yet.</p>
+<p>You say what you ate and it writes calories and macros to Apple Health, and at times you pick it calls your phone and asks. It has no barcode scanner, no photo logging, no database to search and no way to import food other apps wrote to Apple Health. It needs iOS 26 on an iPhone and it is English only. <a href="/blog/how-mealsaid-works/">How MealSaid works</a> has the detail.</p>
+<p>Free with nothing to buy is easy when an app does less. Cronometer gives you 95 nutrients for nothing, which is more generous than anything I have built.</p>
+<h2 id="how-i-checked-this">How I checked this</h2>
+<p>Checked 22 October 2026. I fetched the nine US App Store listings and read the In-App Purchases panel on each one, recording the purchase name and price exactly as Apple shows them, plus the advertising flag in the age rating panel. Counts are 10 for every app except FatSecret at 9, and ten is Apple's cap.</p>
+<p>Free tier contents come from each company's own page: Cronometer's free features page and Subscription Types article, MyNetDiary's free tier page, the MyFitnessPal plan comparison, and the App Store descriptions for Lose It!, MacroFactor, FatSecret, Lifesum, Yazio and Cal AI. The Lose It! lifetime prices are from its help centre.</p>
+<p>What I could not verify: FatSecret's own premium page returns 403 to anything scripted, so its free and paid split here comes from the App Store description instead. Lifesum and Yazio never name which features the free tier loses, so those two cells say so rather than guess.</p>
+<p>A third-party pricing blog puts Yazio's barcode scanner behind Pro, and I am not repeating a split Yazio itself does not publish. I installed none of these apps for this post, so every ad claim is a declaration rather than an observation. Corrections to ohmbrock42@gmail.com.</p>]]></content:encoded>
+  </item>
   <item>
     <title>Calorie tracker with voice input: what you actually get</title>
     <link>https://mealsaid.app/blog/calorie-tracker-voice-input/</link>
