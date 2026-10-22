@@ -258,6 +258,7 @@ if __name__ == "__main__":
     screenshot("home.png", "how-mealsaid-works-1.webp"); screenshot("call.png", "how-mealsaid-works-2.webp"); how_flow()
     voice_levels(); voice_prices()
     remind_matrix(); remind_response()
+    free_ranges(); free_loseit_ladder()
 
 
 # ------------------------------------------------------------ voice input
@@ -414,3 +415,78 @@ def remind_response():
     text(d, (700, 774), "The first two gaps were significant. The daily log rate gap was not.", 22, fill=INK3, anchor="lm")
     source(d, "Source: Chen et al., CHI 2024, n = 30, within-subjects, 4 weeks, weight-maintenance app paired with FatSecret.")
     save(im, "calorie-apps-that-remind-you-to-log-2.webp")
+
+
+# ------------------------------------------------------------ what is actually free
+# (app, number of in-app purchase SKUs Apple lists, lowest, highest), US App Store, 22 October 2026
+FREE_IAP = [
+    ("Lifesum", 10, 21.99, 119.99),
+    ("MacroFactor", 10, 9.99, 89.99),
+    ("MyFitnessPal", 10, 9.99, 79.99),
+    ("Lose It!", 10, 9.99, 79.99),
+    ("Cronometer", 10, 10.99, 59.99),
+    ("MyNetDiary", 10, 8.99, 59.99),
+    ("FatSecret", 9, 10.49, 59.99),
+    ("Yazio", 10, 11.90, 47.90),
+    ("Cal AI", 10, 0.99, 29.99),
+    ("MealSaid", 0, None, None),
+]
+
+
+def free_ranges():
+    im, d = canvas()
+    text(d, (80, 58), "What a free calorie counter can charge you", 38, "m")
+    text(d, (80, 112), "Lowest and highest in-app purchase price on each app's US App Store page", 24, fill=INK2)
+    x0, xmax, span = 600, 1430, 125.0
+    for g in (0, 25, 50, 75, 100, 125):
+        gx = x0 + g / span * (xmax - x0)
+        d.line([(gx, 190), (gx, 742)], fill="#1a2029", width=2)
+        text(d, (gx, 758), f"${g}", 20, fill=INK3, anchor="ma")
+    y = 222
+    for name, n, lo, hi in FREE_IAP:
+        acc = name == "MealSaid"
+        text(d, (80, y), name, 27, fill=ACC if acc else INK, anchor="lm")
+        if lo is None:
+            d.ellipse([x0 - 11, y - 11, x0 + 11, y + 11], fill=ACC)
+            text(d, (x0 + 30, y), "no in-app purchases, nothing to buy", 23, fill=INK2, anchor="lm")
+        else:
+            ax = x0 + lo / span * (xmax - x0)
+            bx = x0 + hi / span * (xmax - x0)
+            d.line([(ax, y), (bx, y)], fill="#39414f", width=5)
+            d.ellipse([ax - 10, y - 10, ax + 10, y + 10], fill="#8b94a4")
+            d.ellipse([bx - 10, y - 10, bx + 10, y + 10], fill=INK)
+            text(d, (ax - 24, y), f"${lo:,.2f}", 22, fill=INK2, anchor="rm")
+            text(d, (bx + 24, y), f"${hi:,.2f}", 23, fill=INK, anchor="lm")
+            text(d, (330, y), f"{n} listed", 22, fill=INK3, anchor="lm")
+        y += 58
+    text(d, (80, 806), "Apple shows at most ten purchases per listing, so these are floors, not full price lists.", 22, fill=INK3)
+    source(d, "Source: the In-App Purchases panel on each US App Store listing, read 22 October 2026.")
+    save(im, "free-calorie-counter-without-subscription-1.webp")
+
+
+LOSEIT_PRICES = [(9.99, 0, -28), (11.99, 1, 0), (19.99, 0, 0), (23.99, 1, 0), (29.99, 0, 0), (39.99, 0, 0), (79.99, 0, 0)]
+
+
+def free_loseit_ladder():
+    im, d = canvas()
+    text(d, (80, 70), "One product name, seven prices", 38, "m")
+    text(d, (80, 124), "Every purchase named exactly 'Lose It! Premium' on the US App Store listing", 24, fill=INK2)
+    x0, xmax, span = 140, 1420, 88.0
+    y = 480
+    d.line([(x0, y), (xmax, y)], fill=LINE, width=3)
+    for g in (0, 20, 40, 60, 80):
+        gx = x0 + g / span * (xmax - x0)
+        d.line([(gx, y - 10), (gx, y + 10)], fill=LINE, width=2)
+        text(d, (gx, y + 34), f"${g}", 22, fill=INK3, anchor="ma")
+    for p, tier, dx in LOSEIT_PRICES:
+        px = x0 + p / span * (xmax - x0)
+        lift = 104 + tier * 74
+        top = p == 79.99
+        d.line([(px, y - 20), (px, y - lift + 10)], fill="#39414f", width=2)
+        d.ellipse([px - 13, y - 13, px + 13, y + 13], fill=ACC if top else INK)
+        text(d, (px + dx, y - lift), f"${p:,.2f}", 28, "m" if top else "r", fill=INK, anchor="ms")
+    text(d, (80, 622), "The cheapest and the dearest differ by $70.00.", 32, fill=INK)
+    text(d, (80, 676), "The Lose It! help centre quotes one price for Premium, $79.99 a year.", 26, fill=INK2)
+    text(d, (80, 726), "Two more purchases on the same listing are named Premium Lifetime, at $49.99 and $59.99.", 24, fill=INK3)
+    source(d, "Source: Lose It! US App Store listing and Lose It! help centre, both read 22 October 2026.")
+    save(im, "free-calorie-counter-without-subscription-2.webp")
