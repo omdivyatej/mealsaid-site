@@ -259,6 +259,7 @@ if __name__ == "__main__":
     voice_levels(); voice_prices()
     remind_matrix(); remind_response()
     free_ranges(); free_loseit_ladder()
+    calai_error_bars(); calai_rating_vs_error()
 
 
 # ------------------------------------------------------------ voice input
@@ -490,3 +491,67 @@ def free_loseit_ladder():
     text(d, (80, 726), "Two more purchases on the same listing are named Premium Lifetime, at $49.99 and $59.99.", 24, fill=INK3)
     source(d, "Source: Lose It! US App Store listing and Lose It! help centre, both read 22 October 2026.")
     save(im, "free-calorie-counter-without-subscription-2.webp")
+
+
+# ------------------------------------------------------------ is cal ai accurate
+# (app, mean kcal underestimated, CI low, CI high, App Store rating, ratings count)
+CALAI_APPS = [
+    ("Cal AI", 345, 296, 392, 4.80, "372k"),
+    ("Lose It!", 333, 282, 383, 4.77, "782k"),
+    ("MyFitnessPal", 327, 269, 385, 4.71, "2.4M"),
+    ("Appediet", 252, 210, 295, 4.78, "48k"),
+]
+
+
+def calai_error_bars():
+    im, d = canvas()
+    text(d, (80, 58), "Calories each app missed, per meal", 38, "m")
+    text(d, (80, 112), "102 meals weighed to 0.1 g in an NIH metabolic kitchen, photographed and run through each app", 24, fill=INK2)
+    x0, xmax, span = 420, 1400, 420.0
+    for g in (0, 100, 200, 300, 400):
+        gx = x0 + g / span * (xmax - x0)
+        d.line([(gx, 210), (gx, 700)], fill="#1a2029", width=2)
+        text(d, (gx, 716), f"{g}", 20, fill=INK3, anchor="ma")
+    text(d, (x0 + 200 / span * (xmax - x0), 752), "calories under the measured value", 22, fill=INK3, anchor="ma")
+    y = 272
+    for name, mean, lo, hi, _r, _n in CALAI_APPS:
+        worst = name == "Cal AI"
+        text(d, (80, y - 17), name, 29, fill=ACC if worst else INK, anchor="lm")
+        bx = x0 + mean / span * (xmax - x0)
+        d.rounded_rectangle([x0, y - 36, bx, y + 2], 8, fill=ACC if worst else "#3a4252")
+        lx = x0 + lo / span * (xmax - x0)
+        hx = x0 + hi / span * (xmax - x0)
+        d.line([(lx, y + 28), (hx, y + 28)], fill="#8b94a4", width=3)
+        for wx in (lx, hx):
+            d.line([(wx, y + 18), (wx, y + 38)], fill="#8b94a4", width=3)
+        text(d, (bx + 26, y - 17), f"{mean} kcal", 28, "m" if worst else "r", fill=INK, anchor="lm")
+        y += 112
+    text(d, (80, 790), "Bars are the mean miss. The thin line under each bar is the 95% confidence interval.", 22, fill=INK3)
+    source(d, "Source: Charles and Hengist, NIDDK, presented at NUTRITION 2026, n = 102 meals. Per-app figures via Healio, 4 August 2026.")
+    save(im, "is-cal-ai-accurate-1.webp")
+
+
+def calai_rating_vs_error():
+    im, d = canvas()
+    text(d, (80, 58), "Star ratings say nothing about accuracy", 38, "m")
+    text(d, (80, 112), "US App Store rating against calories missed per meal, same four apps", 24, fill=INK2)
+    x0, xmax, xlo, xhi = 320, 1420, 230.0, 370.0
+    y0, y1, ylo, yhi = 660, 240, 4.68, 4.84
+    px = lambda v: x0 + (v - xlo) / (xhi - xlo) * (xmax - x0)
+    py = lambda v: y0 - (v - ylo) / (yhi - ylo) * (y0 - y1)
+    for g in (250, 275, 300, 325, 350):
+        d.line([(px(g), y1 - 20), (px(g), y0)], fill="#1a2029", width=2)
+        text(d, (px(g), y0 + 20), str(g), 20, fill=INK3, anchor="ma")
+    for g in (4.70, 4.75, 4.80):
+        d.line([(x0 - 20, py(g)), (xmax, py(g))], fill="#1a2029", width=2)
+        text(d, (x0 - 36, py(g)), f"{g:.2f}", 20, fill=INK3, anchor="rm")
+    text(d, (px(300), y0 + 58), "calories missed per meal (further right is worse)", 22, fill=INK3, anchor="ma")
+    text(d, (80, 180), "App Store rating", 22, fill=INK3)
+    for name, mean, _lo, _hi, rating, n in CALAI_APPS:
+        worst = name == "Cal AI"
+        cx, cy = px(mean), py(rating)
+        d.ellipse([cx - 14, cy - 14, cx + 14, cy + 14], fill=ACC if worst else INK)
+        text(d, (cx, cy - 34), f"{name}  {rating:.2f} from {n}", 25, "m" if worst else "r", fill=INK, anchor="ms")
+    text(d, (80, 782), "Ratings span 0.09 stars across a 93 calorie spread in error. The best rated app missed the most.", 24, fill=INK2)
+    source(d, "Sources: US App Store listings read 22 October 2026; error figures from the NIDDK abstract via Healio, 4 August 2026.")
+    save(im, "is-cal-ai-accurate-2.webp")
