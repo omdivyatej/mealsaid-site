@@ -260,6 +260,7 @@ if __name__ == "__main__":
     remind_matrix(); remind_response()
     free_ranges(); free_loseit_ladder()
     calai_error_bars(); calai_rating_vs_error()
+    off_gaps(); off_loa(); off_menu()
 
 
 # ------------------------------------------------------------ voice input
@@ -555,3 +556,103 @@ def calai_rating_vs_error():
     text(d, (80, 782), "Ratings span 0.09 stars across a 93 calorie spread in error. The best rated app missed the most.", 24, fill=INK2)
     source(d, "Sources: US App Store listings read 22 October 2026; error figures from the NIDDK abstract via Healio, 4 August 2026.")
     save(im, "is-cal-ai-accurate-2.webp")
+
+
+# ------------------------------------------------------------ how many calories off
+# (label, calories a day of difference, sample size note, is the database row)
+OFF_GAPS = [
+    ("Photographed food record vs measured", 579, "Boushey 2017, n = 45", False),
+    ("One 24 hour recall vs measured", 543, "Serra 2023, n = 30", False),
+    ("Photo recognition app vs measured", 330, "Serra 2023, n = 30", False),
+    ("App database vs reference database", 26, "Evenepoel 2020, n = 50", True),
+]
+
+
+def off_gaps():
+    im, d = canvas()
+    text(d, (80, 58), "Where a calorie tracker's error actually sits", 38, "m")
+    text(d, (80, 112), "Calories a day of difference, four published comparisons", 24, fill=INK2)
+    x0, xmax, span = 700, 1370, 620.0
+    for g in (0, 200, 400, 600):
+        gx = x0 + g / span * (xmax - x0)
+        d.line([(gx, 200), (gx, 640)], fill="#1a2029", width=2)
+        text(d, (gx, 656), str(g), 20, fill=INK3, anchor="ma")
+    text(d, (x0 + 300 / span * (xmax - x0), 692), "calories a day", 22, fill=INK3, anchor="ma")
+    y = 248
+    for label, v, note, db in OFF_GAPS:
+        text(d, (80, y - 14), label, 27, fill=ACC if db else INK, anchor="lm")
+        text(d, (80, y + 22), note, 21, fill=INK3, anchor="lm")
+        w = max(v / span * (xmax - x0), 4)
+        d.rounded_rectangle([x0, y - 34, x0 + w, y + 6], 8, fill=ACC if db else "#3a4252")
+        text(d, (x0 + w + 24, y - 14), f"{v}", 30, "m" if db else "r", fill=INK, anchor="lm")
+        y += 112
+    text(d, (80, 744), "The top three compare what people logged with energy expenditure measured by doubly labeled water.", 22, fill=INK3)
+    text(d, (80, 780), "The bottom one compares the app's own food values with a national food composition database.", 22, fill=INK3)
+    source(d, "Sources: Boushey, Nutrients 2017; Serra, Frontiers in Nutrition 2023; Evenepoel, JMIR 2020. Read 23 October 2026.")
+    save(im, "how-many-calories-off-is-a-calorie-tracker-1.webp")
+
+
+# (method, bias, lower limit of agreement, upper limit of agreement) in kcal/day
+OFF_LOA = [("Photo recognition app", -330, -1504, 845), ("One 24 hour recall", -543, -1803, 717)]
+
+
+def off_loa():
+    im, d = canvas()
+    text(d, (80, 58), "The average is not the error you get on a day", 38, "m")
+    text(d, (80, 112), "Mean gap and 95% limits of agreement against doubly labeled water, 30 women, 7 days", 24, fill=INK2)
+    x0, xmax, lo, hi = 300, 1460, -2000.0, 1000.0
+    px = lambda v: x0 + (v - lo) / (hi - lo) * (xmax - x0)
+    for g in (-2000, -1500, -1000, -500, 0, 500, 1000):
+        d.line([(px(g), 230), (px(g), 660)], fill="#1a2029", width=2)
+        text(d, (px(g), 678), f"{g:+,}".replace("+0", "0"), 20, fill=INK3, anchor="ma")
+    d.line([(px(0), 210), (px(0), 660)], fill=ACC, width=3)
+    text(d, (px(0) + 18, 196), "what they actually burned", 22, fill=ACC, anchor="la")
+    y = 330
+    for name, bias, llo, lhi in OFF_LOA:
+        text(d, (80, y - 54), name, 28, fill=INK, anchor="lm")
+        d.line([(px(llo), y), (px(lhi), y)], fill="#39414f", width=5)
+        for wx in (px(llo), px(lhi)):
+            d.line([(wx, y - 18), (wx, y + 18)], fill="#39414f", width=5)
+        d.ellipse([px(bias) - 15, y - 15, px(bias) + 15, y + 15], fill=INK)
+        text(d, (px(bias), y - 34), f"{bias:,}", 26, "m", fill=INK, anchor="ms")
+        text(d, (px(llo), y + 46), f"{llo:,}", 22, fill=INK3, anchor="ma")
+        text(d, (px(lhi), y + 46), f"+{lhi:,}", 22, fill=INK3, anchor="ma")
+        y += 190
+    text(d, (80, 730), "Calories a day. The bar is where 95% of individual days fall, so a 330 calorie average", 22, fill=INK3)
+    text(d, (80, 764), "covers days that are 1,504 low and days that are 845 high.", 22, fill=INK3)
+    source(d, "Source: Serra et al., Frontiers in Nutrition 2023, n = 30 women, Bland-Altman analysis, Table 3.")
+    save(im, "how-many-calories-off-is-a-calorie-tracker-2.webp")
+
+
+# (count, label, colour) for 269 restaurant items measured by bomb calorimetry
+OFF_MENU = [
+    (141, "At least 10 calories under the menu", "#2b323e"),
+    (20, "Within 10 calories either way", "#4c5566"),
+    (58, "10 to 99 calories over the menu", "#8b94a4"),
+    (50, "At least 100 calories over the menu", ACC),
+]
+
+
+def off_menu():
+    im, d = canvas()
+    text(d, (80, 58), "What 269 restaurant dishes really contained", 38, "m")
+    text(d, (80, 112), "Menu calories against bomb calorimetry, 42 randomly selected US restaurants", 24, fill=INK2)
+    x0, x1, top, bot = 80, 1520, 220, 340
+    total = sum(c for c, _l, _col in OFF_MENU)
+    x = x0
+    for c, _l, col in OFF_MENU:
+        w = c / total * (x1 - x0)
+        d.rectangle([x, top, x + w, bot], fill=col)
+        text(d, (x + w / 2, (top + bot) / 2), str(c), 34, "m", fill=BG if col == ACC else INK, anchor="mm")
+        x += w
+    y = 440
+    for c, label, col in OFF_MENU:
+        d.rounded_rectangle([80, y - 14, 108, y + 14], 6, fill=col)
+        text(d, (134, y), label, 28, fill=INK, anchor="lm")
+        text(d, (900, y), f"{c} items", 28, "m", fill=INK, anchor="lm")
+        text(d, (1120, y), f"{c / total * 100:.0f}% of 269", 26, fill=INK3, anchor="lm")
+        y += 76
+    text(d, (80, 756), "The overall mean gap was 10 calories a portion and was not statistically significant.", 23, fill=INK2)
+    text(d, (80, 792), "One side dish held 1,000 calories more than the menu said.", 23, fill=INK3)
+    source(d, "Source: Urban et al., JAMA 2011, 269 items (242 unique) bought January to June 2010 in Massachusetts, Arkansas and Indiana.")
+    save(im, "how-many-calories-off-is-a-calorie-tracker-3.webp")
