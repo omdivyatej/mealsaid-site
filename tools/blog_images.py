@@ -261,6 +261,7 @@ if __name__ == "__main__":
     free_ranges(); free_loseit_ladder()
     calai_error_bars(); calai_rating_vs_error()
     off_gaps(); off_loa(); off_menu()
+    lvm_ways(); lvm_free_count(); lvm_prices()
 
 
 # ------------------------------------------------------------ voice input
@@ -656,3 +657,117 @@ def off_menu():
     text(d, (80, 792), "One side dish held 1,000 calories more than the menu said.", 23, fill=INK3)
     source(d, "Source: Urban et al., JAMA 2011, 269 items (242 unique) bought January to June 2010 in Massachusetts, Arkansas and Indiana.")
     save(im, "how-many-calories-off-is-a-calorie-tracker-3.webp")
+
+
+# ------------------------------------------------------------ lose it vs myfitnesspal
+# (way of logging, Lose It tier, MyFitnessPal tier)
+LVM_WAYS = [
+    ("Search the food database", "Free", "Free"),
+    ("Barcode scanner", "Premium, mid transition", "Premium since Oct 2022"),
+    ("Photo logging", "Premium", "Premium"),
+    ("Voice logging", "Premium", "Premium"),
+    ("Logging a future day", "Premium", "Premium"),
+]
+
+
+def lvm_ways():
+    im, d = canvas()
+    text(d, (80, 58), "Five ways to log, and what each one costs", 38, "m")
+    text(d, (80, 112), "From each company's own help centre, read 23 October 2026", 24, fill=INK2)
+    c1, c2 = 740, 1130
+    text(d, (80, 196), "WAY OF LOGGING", 18, "m", fill=INK3)
+    text(d, (c1, 196), "LOSE IT!", 18, "m", fill=INK3)
+    text(d, (c2, 196), "MYFITNESSPAL", 18, "m", fill=INK3)
+    d.line([(80, 232), (1520, 232)], fill=LINE, width=2)
+    y = 292
+    for i, (way, a, b) in enumerate(LVM_WAYS):
+        free = a == "Free"
+        text(d, (80, y), way, 29, fill=ACC if free else INK, anchor="lm")
+        for cx, v in ((c1, a), (c2, b)):
+            head, _, tail = v.partition(", ")
+            if "since" in v:
+                head, tail = "Premium", v.split("Premium ")[1]
+            text(d, (cx, y - (10 if tail else 0)), head, 27, "m" if head == "Free" else "r",
+                 fill=ACC if head == "Free" else INK2, anchor="lm")
+            if tail:
+                text(d, (cx, y + 20), tail, 21, fill=INK3, anchor="lm")
+        y += 96
+        if i < len(LVM_WAYS) - 1:
+            d.line([(80, y - 48), (1520, y - 48)], fill=LINE, width=1)
+    text(d, (80, 760), "Green marks the only row a free account keeps in both apps.", 22, fill=INK3)
+    source(d, "Sources: Lose It! and MyFitnessPal help centre articles on Scan It, Snap It, Say It, Meal Scan, Voice Log and meal planning, read 23 October 2026.")
+    save(im, "lose-it-vs-myfitnesspal-1.webp")
+
+
+# (tier, number of rows in MyFitnessPal's own comparison grid, colour)
+LVM_TIERS = [(8, "Free", ACC), (21, "Premium", "#4c5566"), (4, "Premium+ only", "#2b323e")]
+
+
+def lvm_free_count():
+    im, d = canvas()
+    text(d, (80, 58), "What a free MyFitnessPal account gets", 38, "m")
+    text(d, (80, 112), "Every row in MyFitnessPal's own Free, Premium and Premium+ grid, counted", 24, fill=INK2)
+    x0, x1, top, bot = 80, 1520, 230, 360
+    total = sum(n for n, _t, _c in LVM_TIERS)
+    x = x0
+    for n, _t, col in LVM_TIERS:
+        w = n / total * (x1 - x0)
+        d.rectangle([x, top, x + w, bot], fill=col)
+        text(d, (x + w / 2, (top + bot) / 2), str(n), 40, "m", fill=BG if col == ACC else INK, anchor="mm")
+        x += w
+    y = 470
+    for n, tier, col in LVM_TIERS:
+        d.rounded_rectangle([80, y - 14, 108, y + 14], 6, fill=col)
+        text(d, (134, y), tier, 29, fill=INK, anchor="lm")
+        text(d, (700, y), f"{n} of 33 features", 29, "m", fill=INK, anchor="lm")
+        text(d, (1050, y), f"{n / total * 100:.0f}%", 27, fill=INK3, anchor="lm")
+        y += 78
+    text(d, (80, 740), "Free keeps logging, your own recipes, macro views and a printable report.", 23, fill=INK2)
+    text(d, (80, 776), "Premium takes the barcode scanner, photo logging, voice logging and the ad-free view.", 23, fill=INK3)
+    source(d, "Source: MyFitnessPal help centre, The difference between Free, Premium, and Premium +, updated 15 October 2026. Row count is mine.")
+    save(im, "lose-it-vs-myfitnesspal-2.webp")
+
+
+LVM_MFP = [9.99, 19.99, 49.99, 79.99]
+LVM_LI = [9.99, 11.99, 19.99, 23.99, 29.99, 39.99, 79.99]
+LVM_LI_LIFE = [49.99, 59.99]
+
+
+def lvm_prices():
+    im, d = canvas()
+    text(d, (80, 58), "Ten purchases each, and the same price at the top", 38, "m")
+    text(d, (80, 112), "Distinct in-app purchase prices on each US App Store listing, read 23 October 2026", 24, fill=INK2)
+    y0, y1, top = 690, 230, 85.0
+    py = lambda v: y0 - v / top * (y0 - y1)
+    for g in (0, 20, 40, 60, 80):
+        d.line([(260, py(g)), (1500, py(g))], fill="#1a2029", width=2)
+        text(d, (230, py(g)), f"${g}", 21, fill=INK3, anchor="rm")
+
+    def spread(vals, gap=36):
+        """Label positions, top price first, pushed apart so nothing overlaps."""
+        out = []
+        for v in sorted(vals, reverse=True):
+            ly = py(v)
+            if out and ly < out[-1][1] + gap:
+                ly = out[-1][1] + gap
+            out.append((v, ly))
+        return out
+
+    for cx, name, vals, note in ((640, "MyFitnessPal", LVM_MFP, "4 distinct prices"),
+                                 (1160, "Lose It!", LVM_LI, "7 distinct prices")):
+        text(d, (cx, 160), name, 30, "m", fill=INK, anchor="ma")
+        text(d, (cx, 198), note, 22, fill=INK3, anchor="ma")
+        d.line([(cx, py(min(vals))), (cx, py(max(vals)))], fill="#39414f", width=4)
+        for v, ly in spread(vals):
+            best = v == 79.99
+            d.ellipse([cx - 13, py(v) - 13, cx + 13, py(v) + 13], fill=ACC if best else INK)
+            if abs(ly - py(v)) > 2:
+                d.line([(cx + 16, py(v)), (cx + 34, ly)], fill="#39414f", width=2)
+            text(d, (cx + 42, ly), f"${v:.2f}", 24, "m" if best else "r", fill=INK, anchor="lm")
+    for v in LVM_LI_LIFE:
+        d.ellipse([1160 - 11, py(v) - 11, 1160 + 11, py(v) + 11], outline="#8b94a4", width=3)
+        text(d, (1160 - 28, py(v)), f"${v:.2f} lifetime", 22, fill=INK3, anchor="rm")
+    text(d, (80, 744), "Both listings stop at $79.99, the price each help centre quotes for a year.", 23, fill=INK2)
+    text(d, (80, 782), "Hollow rings are the two purchases named Premium Lifetime. Lose It's help centre prices Lifetime at $299.99.", 23, fill=INK3)
+    source(d, "Source: the In-App Purchases panel on each US App Store listing, read 23 October 2026. Apple shows at most ten purchases.")
+    save(im, "lose-it-vs-myfitnesspal-3.webp")
