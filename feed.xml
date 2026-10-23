@@ -5,8 +5,252 @@
   <link>https://mealsaid.app/blog/</link>
   <description>Notes from building MealSaid, the calorie tracker you talk to.</description>
   <language>en</language>
-  <lastBuildDate>Thu, 22 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 23 Oct 2026 00:00:00 +0000</lastBuildDate>
   <atom:link href="https://mealsaid.app/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>Lose It vs MyFitnessPal in 2026: same price, same paywall</title>
+    <link>https://mealsaid.app/blog/lose-it-vs-myfitnesspal/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/lose-it-vs-myfitnesspal/</guid>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Both charge $79.99 a year. MyFitnessPal paywalled the barcode scanner in 2022, and Lose It says it is moving its scanner to Premium now.</description>
+    <content:encoded><![CDATA[<p>Lose It! and MyFitnessPal both charge <a href="https://loseit.zendesk.com/hc/en-us/articles/51906561286804-Lose-It-Membership-Tiers-Pricing">$79.99 a year</a>, and in 2026 both put every fast way of logging behind that paywall. The thing that actually separates them is Apple Health: Lose It can read food back out of it, MyFitnessPal cannot.</p>
+<p>I checked this because the comparison posts I found were quoting barcode scanning as a free Lose It feature, and Lose It's own help centre says otherwise. Every row below comes from one of the two companies' own pages or their US App Store listing, read on 23 October 2026.</p>
+<figure><img alt="Grid of five ways to log food in Lose It and MyFitnessPal: barcode scanning, photo logging, voice logging and future day logging are Premium in both apps, and only searching the food database is free" src="/blog/img/lose-it-vs-myfitnesspal-1.webp"  width="1600" height="900" loading="lazy"><figcaption>Grid of five ways to log food in Lose It and MyFitnessPal: barcode scanning, photo logging, voice logging and future day logging are Premium in both apps, and only searching the food database is free</figcaption></figure>
+<h2 id="what-does-each-one-cost-in-october-2026">What does each one cost in October 2026?</h2>
+<p><strong>The same: <a href="https://loseit.zendesk.com/hc/en-us/articles/51906561286804-Lose-It-Membership-Tiers-Pricing">$79.99 a year</a>. The difference is how many other prices each one shows you.</strong></p>
+<p>Lose It's membership article gives one number for Premium, "$79.99 USD / Year (Auto-renews annually)", plus a Lifetime unlock at $299.99, or $229.99 for an active Premium member (<a href="https://loseit.zendesk.com/hc/en-us/articles/51906561286804-Lose-It-Membership-Tiers-Pricing">Lose It! help centre</a>). New users get a 7 day Premium trial.</p>
+<p>MyFitnessPal's US App Store listing shows ten purchases at four distinct prices: $9.99, $19.99, $49.99 and $79.99, with $79.99 attached to three separate yearly SKUs (<a href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718">App Store</a>).</p>
+<p>Lose It's listing shows ten purchases at seven distinct prices for subscriptions, from $9.99 to $79.99, plus two more named Premium Lifetime at $49.99 and $59.99 (<a href="https://apps.apple.com/us/app/lose-it-calorie-counter/id297368629">App Store</a>). Those two do not match the $299.99 in the help centre, and I cannot reconcile them.</p>
+<figure><img alt="Two price ladders from the US App Store listings: MyFitnessPal shows four distinct in-app purchase prices from 9.99 to 79.99 and Lose It shows seven, plus two Lifetime purchases at 49.99 and 59.99" src="/blog/img/lose-it-vs-myfitnesspal-3.webp"  width="1600" height="900" loading="lazy"><figcaption>Two price ladders from the US App Store listings: MyFitnessPal shows four distinct in-app purchase prices from 9.99 to 79.99 and Lose It shows seven, plus two Lifetime purchases at 49.99 and 59.99</figcaption></figure>
+<h2 id="lose-it-and-myfitnesspal-line-by-line">Lose It and MyFitnessPal, line by line</h2>
+<p><strong>Eleven things people actually ask about, each cell read off a <a href="https://support.myfitnesspal.com/hc/en-us/articles/34889191368077-The-difference-between-Free-Premium-and-Premium">MyFitnessPal</a> or <a href="https://loseit.zendesk.com/hc/en-us/articles/51906561286804-Lose-It-Membership-Tiers-Pricing">Lose It</a> page on 23 October 2026.</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>What you get</th>
+<th>Lose It!</th>
+<th>MyFitnessPal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annual paid tier</td>
+<td>$79.99</td>
+<td>$79.99</td>
+</tr>
+<tr>
+<td>One-time purchase</td>
+<td>Lifetime, $299.99</td>
+<td>None offered</td>
+</tr>
+<tr>
+<td>Free trial of the paid tier</td>
+<td>7 days</td>
+<td>No length stated in the help centre</td>
+</tr>
+<tr>
+<td>Barcode scanner</td>
+<td>Moving to Premium, mid transition</td>
+<td>Premium since 1 October 2022</td>
+</tr>
+<tr>
+<td>Photo logging</td>
+<td>Snap It, Premium, English only</td>
+<td>Meal Scan, Premium, English only</td>
+</tr>
+<tr>
+<td>Voice logging</td>
+<td>Say It, Premium, English only</td>
+<td>Voice Log, Premium, English only</td>
+</tr>
+<tr>
+<td>Logging a future day</td>
+<td>Premium</td>
+<td>Premium</td>
+</tr>
+<tr>
+<td>Food out to Apple Health</td>
+<td>Yes</td>
+<td>Yes, minus caffeine and vitamin A</td>
+</tr>
+<tr>
+<td>Food back in from Apple Health</td>
+<td>Yes, dietary energy</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Logging reminders</td>
+<td>None in the help centre</td>
+<td>Push, one per meal</td>
+</tr>
+<tr>
+<td>Free tier pays with</td>
+<td>Promos only Premium can switch off</td>
+<td>Banner and sponsored ads</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="can-you-still-scan-a-barcode-without-paying">Can you still scan a barcode without paying?</h2>
+<p><strong>Not in <a href="https://support.myfitnesspal.com/hc/en-us/articles/360032624771-How-to-use-the-Barcode-Scanner">MyFitnessPal since 1 October 2022</a>, and <a href="https://loseit.zendesk.com/hc/en-us/articles/47773984823700-Unlocking-the-Barcode-Scanner-Scan-It">Lose It</a> is in the middle of making the same change.</strong></p>
+<p>MyFitnessPal states it flatly: as of 1 October 2022, Barcode Scan requires a Premium subscription (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032624771-How-to-use-the-Barcode-Scanner">MyFitnessPal help centre</a>). That one is old news.</p>
+<p>Lose It is the new part. Its article on unlocking the scanner says Scan It and the nutrition label scanner are becoming Premium features, and that "some free members will still have access as we transition, while others will not" (<a href="https://loseit.zendesk.com/hc/en-us/articles/47773984823700-Unlocking-the-Barcode-Scanner-Scan-It">Lose It! help centre</a>, read 23 October 2026).</p>
+<p>So your Lose It free account may still scan today and stop next month, and the roundups that list barcode scanning as a free Lose It feature are describing a state that is being retired. I had it that way in <a href="/blog/myfitnesspal-alternatives/">the MyFitnessPal alternatives table</a> too, and that row needs correcting.</p>
+<aside class="note">
+<p>Snap It is Premium-only and English-only, per <a href="https://loseit.zendesk.com/hc/en-us/articles/47771695186580-How-to-Use-Snap-It">Lose It's own article</a>. Meal Scan is Premium-only and English-only, per <a href="https://support.myfitnesspal.com/hc/en-us/articles/360045761612-How-to-use-the-Meal-Scanner">MyFitnessPal's</a>. Neither company charges less for the photo feature than for the rest of Premium.</p>
+</aside>
+<h2 id="how-much-of-myfitnesspal-is-actually-free">How much of MyFitnessPal is actually free?</h2>
+<p><strong>Eight features out of the 33 in <a href="https://support.myfitnesspal.com/hc/en-us/articles/34889191368077-The-difference-between-Free-Premium-and-Premium">its own comparison table</a>, by my count.</strong></p>
+<p>MyFitnessPal publishes a Free, Premium and Premium+ grid. I counted the rows on 23 October 2026: 33 features listed, 8 ticked for Free, 21 starting at Premium, 4 exclusive to Premium+ (<a href="https://support.myfitnesspal.com/hc/en-us/articles/34889191368077-The-difference-between-Free-Premium-and-Premium">MyFitnessPal help centre</a>).</p>
+<p>The eight free ones are the boring essentials: food and exercise logging, weights and measurements, your own recipes, macronutrient views, goals by percentage, diary sharing, partner app links and a printable report.</p>
+<figure><img alt="Stacked bar of MyFitnessPal's own feature comparison table: 8 of 33 features are free, 21 start at Premium and 4 are Premium plus only" src="/blog/img/lose-it-vs-myfitnesspal-2.webp"  width="1600" height="900" loading="lazy"><figcaption>Stacked bar of MyFitnessPal's own feature comparison table: 8 of 33 features are free, 21 start at Premium and 4 are Premium plus only</figcaption></figure>
+<p>Lose It publishes no equivalent grid, which is why this count exists for one app and not both. Its membership article describes Premium in a sentence rather than a table.</p>
+<p>Both free tiers are paid for by promotion. MyFitnessPal is unusually direct about it: the core is free and "it stays that way because ads help pay for it" (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032273152-The-ad-free-experience-with-MyfitnessPal-Premium">MyFitnessPal help centre</a>). Lose It runs in-app pop-ups instead, and the toggle to switch them off is a Premium control (<a href="https://loseit.zendesk.com/hc/en-us/articles/51380469154324-Managing-In-App-Promotions-and-Ads">Lose It! help centre</a>).</p>
+<h2 id="which-one-fits-apple-health-better">Which one fits Apple Health better?</h2>
+<p><strong>Lose It, and it is not close, because it reads food back.</strong></p>
+<p>MyFitnessPal's Apple Health article gives a four-row sync table. Food goes one way only, out to Apple Health, minus caffeine and vitamin A and minus timestamps. Exercise, sleep and weight come in (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032271092-Apple-Health-connection-and-syncing">MyFitnessPal help centre</a>).</p>
+<p>Lose It moves weight, food and exercise in both directions. Food written to Apple Health by another app shows up in your Lose It log with a heart icon, once you grant Dietary Energy read permission (<a href="https://loseit.zendesk.com/hc/en-us/articles/47773580085140-Using-Apple-Health-With-Lose-It">Lose It! help centre</a>).</p>
+<p>That is the one row here with a real consequence. If you ever log from a second app, a watch or a Shortcut, Lose It will show you the total and MyFitnessPal will not. The full read and write matrix across six apps is in <a href="/blog/calorie-apps-apple-health/">our Apple Health comparison</a>.</p>
+<h2 id="does-either-one-remind-you-to-log">Does either one remind you to log?</h2>
+<p><strong>MyFitnessPal does, per meal, only when you have not logged. I could find no reminder feature in Lose It's help centre.</strong></p>
+<p>MyFitnessPal's reminders screen lets you add a notification per meal, and the setting is literally worded "Remind me if I haven't logged" (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032622391-How-to-set-up-logging-reminders">MyFitnessPal help centre</a>). It is free, not Premium.</p>
+<p>Searching Lose It's help centre for reminders on 23 October 2026 returned subscription renewal notices and fasting guides, nothing about logging prompts. Absence from a help centre is weaker evidence than a documented feature, so treat that cell as unconfirmed rather than proven false.</p>
+<h2 id="so-which-should-you-pick">So which should you pick?</h2>
+<p><strong>Lose It if your food total in Apple Health has to be real. MyFitnessPal if you want a logging reminder that costs nothing.</strong></p>
+<p>At an identical $79.99 a year, the paid tiers are close enough that the free tiers decide it, and both free tiers are now a search box with promotions attached. That is the honest state of play, and it is the reason this blog exists.</p>
+<p>My own app, MealSaid, is the footnote here: free with no in-app purchases, you say what you ate and it writes calories and macros to Apple Health. It has no barcode scanner, no photo logging, no food database to search and no Android build. It needs iOS 26 and it is English only. For what is genuinely free across the wider market, see <a href="/blog/free-calorie-counter-without-subscription/">the free calorie counter breakdown</a>.</p>
+<h2 id="how-i-checked-this">How I checked this</h2>
+<p>Checked 23 October 2026. Every feature row came from a MyFitnessPal or Lose It help centre article read through each site's public Help Center API, because both sit behind a bot wall that returns 403 to scripted page fetches. Article update dates ranged from 1 April 2026 (Lose It's barcode notice) to 20 October 2026 (MyFitnessPal's cancellation article).</p>
+<p>Prices came from two places: each company's own help article, and the In-App Purchases panel on each US App Store listing, which shows at most ten purchases. The count of 8 free features out of 33 is mine, made by counting rows in MyFitnessPal's published grid.</p>
+<p>What I could not verify: MyFitnessPal's own pricing page, which returns a Cloudflare challenge to everything I tried, so there is no trial length in the table. I also could not reconcile Lose It's $299.99 Lifetime price with the $49.99 and $59.99 Premium Lifetime purchases on its App Store listing. Corrections to ohmbrock42@gmail.com.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title>How many calories off is a calorie tracker? 330 to 579</title>
+    <link>https://mealsaid.app/blog/how-many-calories-off-is-a-calorie-tracker/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/how-many-calories-off-is-a-calorie-tracker/</guid>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Three doubly labeled water studies put logged intake 330 to 579 calories a day under measured expenditure. The food database was off by 26.</description>
+    <content:encoded><![CDATA[<p>A calorie tracker's food database is off by about <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7641788/">26 calories a day</a>. What you tell it is off by <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10556674/">330</a> to <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5372975/">579</a>. Every published measurement I could open says the same thing: the numbers in the app are close, and the gap between what you log and what you actually eat is the whole problem.</p>
+<p>I went looking for this because people keep asking me whether a bigger food database would make MealSaid more accurate. The honest answer is no, and the research is not subtle about it. Checked 23 October 2026. Every figure below links to the paper it came from.</p>
+<figure><img alt="Bar chart of calories a day between logged intake and measured expenditure: 579 for an image based food record, 543 for a 24 hour recall, 330 for a photo recognition app, and 26 for an app database against a reference database" src="/blog/img/how-many-calories-off-is-a-calorie-tracker-1.webp"  width="1600" height="900" loading="lazy"><figcaption>Bar chart of calories a day between logged intake and measured expenditure: 579 for an image based food record, 543 for a 24 hour recall, 330 for a photo recognition app, and 26 for an app database against a reference database</figcaption></figure>
+<h2 id="how-many-calories-a-day-is-the-gap-really">How many calories a day is the gap, really?</h2>
+<p><strong>Between <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10556674/">330</a> and <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5372975/">579</a> calories a day, in the three studies that measured real energy expenditure rather than asking people a second time.</strong></p>
+<p>Doubly labeled water is the reference method. You drink isotope-labeled water, researchers track how fast the labels leave your body, and that gives total energy expenditure without anyone reporting anything. In weight-stable people it is the closest thing to a true intake number.</p>
+<p>Boushey and colleagues dosed 45 adults, had them photograph every eating occasion for 7.5 days, and had trained analysts estimate the calories. Measured expenditure averaged 2,932 calories a day. Reported intake averaged 2,353, "a resulting difference of 579 kcal/day" (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5372975/">Nutrients 2017</a>).</p>
+<p>Serra and colleagues ran 30 women through seven days of doubly labeled water in Zurich while they logged with SNAQ, a food-recognition app. The gap was 330 calories a day, or 12.8% low. A one-day 24 hour recall in the same 30 women was 543 calories low, 22.9% (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10556674/">Frontiers in Nutrition 2023</a>).</p>
+<p>Foster and colleagues checked Intake24, an online recall tool, against doubly labeled water in 98 UK adults aged 40 to 65. People under-reported by 25% on a first recall and 25% again on the average of three (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6722486/">Journal of Nutritional Science 2019</a>).</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Study</th>
+<th>What was compared</th>
+<th>n</th>
+<th>Mean gap</th>
+<th>95% limits or spread</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5372975/">Boushey 2017</a></td>
+<td>Photographed food record vs doubly labeled water</td>
+<td>45 adults, 7.5 days</td>
+<td>579 kcal/day under</td>
+<td>53% underreported, by 1,000 kcal/day</td>
+</tr>
+<tr>
+<td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10556674/">Serra 2023</a></td>
+<td>Food-recognition app vs doubly labeled water</td>
+<td>30 women, 7 days</td>
+<td>330 kcal/day under (12.8%)</td>
+<td>1,504 under to 845 over</td>
+</tr>
+<tr>
+<td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10556674/">Serra 2023</a></td>
+<td>One 24 hour recall vs doubly labeled water</td>
+<td>30 women, 1 day</td>
+<td>543 kcal/day under (22.9%)</td>
+<td>1,803 under to 717 over</td>
+</tr>
+<tr>
+<td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6722486/">Foster 2019</a></td>
+<td>Intake24 recall vs doubly labeled water</td>
+<td>98 adults</td>
+<td>25% under</td>
+<td>73% under to 68% over</td>
+</tr>
+<tr>
+<td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7641788/">Evenepoel 2020</a></td>
+<td>MyFitnessPal vs the Nubel reference database</td>
+<td>50 adults, 4 day records</td>
+<td>26 kcal/day over</td>
+<td>Not significant, p = .26</td>
+</tr>
+<tr>
+<td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4363942/">Urban 2011</a></td>
+<td>Restaurant menu calories vs bomb calorimetry</td>
+<td>269 items, 42 restaurants</td>
+<td>10 kcal/portion over</td>
+<td>50 items at least 100 kcal over</td>
+</tr>
+<tr>
+<td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2838242/">Urban 2010</a></td>
+<td>Low-calorie restaurant and frozen meals vs calorimetry</td>
+<td>29 restaurant foods, 10 frozen meals</td>
+<td>18% and 8% over stated</td>
+<td>One item 200% of stated</td>
+</tr>
+<tr>
+<td><a href="https://www.eurekalert.org/news-releases/1136415">NIDDK 2026</a></td>
+<td>Four photo apps vs meals weighed to 0.1 g</td>
+<td>102 meals</td>
+<td>250 to 345 kcal/meal under</td>
+<td>Abstract, not peer reviewed</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="is-it-the-apps-database-or-is-it-you">Is it the app's database, or is it you?</h2>
+<p><strong>It is you, by roughly thirteen to one. The database gap is <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7641788/">26 calories a day</a> and the reporting gap is 330.</strong></p>
+<p>Evenepoel and colleagues took 50 people's four-day food records and ran them through MyFitnessPal and through Nubel, the Belgian national food composition database. Energy came out at 1,984 calories a day in MyFitnessPal against 1,958 in Nubel, with a correlation of 0.96 (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7641788/">JMIR 2020</a>).</p>
+<p>That is a 26 calorie difference, my own subtraction on <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7641788/">their Table 1</a>. Put it next to the 330 calorie gap Serra measured and the database accounts for about 8% of the problem.</p>
+<p>The same paper found the database is not uniformly fine. Sodium came out at 1,293 mg a day against the reference 2,638, cholesterol at 55 mg against 242, and fiber at 15 g against 19 (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7641788/">Table 1</a>). If you track sodium, that matters a lot; if you track calories, it does not.</p>
+<h2 id="why-does-a-128-average-still-ruin-a-week">Why does a 12.8% average still ruin a week?</h2>
+<p><strong>Because the average is not the error you get. Serra's 95% limits of agreement ran from 1,504 calories under to 845 calories over (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10556674/">Table 3</a>).</strong></p>
+<p>A Bland-Altman limit of agreement says where 95% of individual measurements fall. For the photo app, a given woman's day could plausibly be 1,504 calories low or 845 calories high, and the midpoint of 330 describes nobody in particular.</p>
+<figure><img alt="Dot and range chart showing the mean gap and 95 percent limits of agreement against doubly labeled water: the photo app at 330 calories low with a range from 1,504 under to 845 over, and the 24 hour recall at 543 low with a range from 1,803 under to 717 over" src="/blog/img/how-many-calories-off-is-a-calorie-tracker-2.webp"  width="1600" height="900" loading="lazy"><figcaption>Dot and range chart showing the mean gap and 95 percent limits of agreement against doubly labeled water: the photo app at 330 calories low with a range from 1,504 under to 845 over, and the 24 hour recall at 543 low with a range from 1,803 under to 717 over</figcaption></figure>
+<p>Foster's numbers say the same thing in percentages. The point estimate was 25% under, and the limits ran from 73% under to 68% over (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6722486/">Foster 2019</a>).</p>
+<div class="stat"><strong>73% under to 68% over</strong><span>the 95% limits of agreement for one online recall against doubly labeled water, n = 98</span><small><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6722486/">Foster et al., 2019</a></small></div>
+
+<p>Boushey put the same thing in people rather than intervals. Of the 45 adults, 53% were classified as underreporters, and that group was off by a mean of 1,000 calories a day (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5372975/">Boushey 2017</a>).</p>
+<h2 id="are-the-numbers-on-the-menu-any-better">Are the numbers on the menu any better?</h2>
+<p><strong>On average yes, per item no. Of 269 restaurant foods burned in a calorimeter, 50 held at least 100 calories more than the menu claimed (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4363942/">Urban 2011</a>).</strong></p>
+<p>Urban and colleagues bought food from 42 randomly selected quick-serve and sit-down restaurants in three US states and measured the energy by bomb calorimetry (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4363942/">JAMA 2011</a>). The overall gap was 10 calories a portion, nowhere near significant.</p>
+<p>Then the detail: 108 items (40%) were at least 10 calories over the stated value, 141 (52%) were at least 10 calories under, 20 were within 10 either way, and 50 (19%) were at least 100 calories over (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4363942/">JAMA 2011</a>). One side dish was over by 1,000 calories.</p>
+<figure><img alt="Stacked bar splitting 269 restaurant items by how far measured calories fell from the menu value: 141 at least 10 under, 20 within 10, 58 from 10 to 99 over, and 50 at least 100 over" src="/blog/img/how-many-calories-off-is-a-calorie-tracker-3.webp"  width="1600" height="900" loading="lazy"><figcaption>Stacked bar splitting 269 restaurant items by how far measured calories fell from the menu value: 141 at least 10 under, 20 within 10, 58 from 10 to 99 over, and 50 at least 100 over</figcaption></figure>
+<p>Their earlier paper picked the lowest-calorie items on each menu. Those 29 restaurant foods measured 18% above the stated value, and 10 supermarket frozen meals measured 8% above (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2838242/">J Am Diet Assoc 2010</a>).</p>
+<p>Packaged food has a legal tolerance, and it is wide. A food is misbranded only if the composite is "greater than 20 percent in excess of the value" declared (<a href="https://www.law.cornell.edu/cfr/text/21/101.9">21 CFR 101.9(g)(5)</a>). The same rule calls reasonable deficiencies acceptable, so there is no stated floor at all.</p>
+<div class="stat"><strong>20%</strong><span>how far above its stated calories a US packaged food may legally sit before it counts as misbranded</span><small><a href="https://www.law.cornell.edu/cfr/text/21/101.9">21 CFR 101.9(g)(5)</a></small></div>
+
+<h2 id="do-photo-apps-fix-any-of-this">Do photo apps fix any of this?</h2>
+<p><strong>No. The one controlled test I can find had four of them 250 to 345 calories low per meal (<a href="https://www.eurekalert.org/news-releases/1136415">NIDDK, 2026</a>).</strong></p>
+<p>Researchers at the NIDDK prepared 102 meals in a metabolic kitchen, weighed every ingredient to 0.1 g, photographed them, and ran the photos through MyFitnessPal, Lose It!, Cal AI and Appediet. The apps came in 250 to 345 calories under per meal and about 30 g under on fat (<a href="https://www.eurekalert.org/news-releases/1136415">American Society for Nutrition, July 2026</a>).</p>
+<p>It is a conference abstract, so treat it as preliminary. I pulled the per-app breakdown apart in <a href="/blog/is-cal-ai-accurate/">the Cal AI accuracy post</a>, where the worst performer was also the best rated.</p>
+<h2 id="what-do-you-do-with-a-330-calorie-error">What do you do with a 330 calorie error?</h2>
+<p><strong>Use the tracker as a consistent ruler, not as a scale. Set your target from your own logged average and your weight trend, and stop comparing it to a formula.</strong></p>
+<p>If you log 1,800 and the truth is 2,100, and you lose weight on that, then 1,800 in your app is your maintenance minus a deficit. The absolute number never needed to be right. What has to be stable is how you log, which is why the spread in those limits of agreement matters more than the bias.</p>
+<p>Four things that actually shrink the gap, each one from a study above:</p>
+<ol>
+<li>Log the meal as you eat it. Foster's single recall was 25% under, and a recall is what you do when you log at bedtime.</li>
+<li>Log the forgotten things first. Boushey's underreporters missed 1,000 calories a day, and the items people photographed outside their provided meals were sugar sweetened beverages, coffee, tea and alcohol.</li>
+<li>Distrust the menu before you distrust the app. The calorimeter found 50 of 269 restaurant items over by 100 calories or more.</li>
+<li>Keep one logging habit rather than one accurate day. The limits of agreement are wide, so your average over a fortnight carries more information than any single total.</li>
+</ol>
+<p>MealSaid is my attempt at the first of those. You say what you ate, it writes calories and macros to Apple Health, and it calls your phone at times you pick if you have not logged.</p>
+<p>It has no barcode scanner, no photo logging, no food database to search and no Android build. It is English only and needs iOS 26. None of the portion-estimation problem above goes away, because you are still the one guessing how much rice was on the plate.</p>
+<p>If you want a curated database and a long micronutrient list, <a href="https://cronometer.com/features/free-nutrition-tracking-app.html">Cronometer</a> does that better than anything I have built. Why people stop logging at all is a separate problem, covered in <a href="/blog/why-people-quit-calorie-tracking/">the dropout research post</a>.</p>
+<h2 id="how-i-checked-this">How I checked this</h2>
+<p>Checked 23 October 2026. I read each paper at PubMed Central and took the numbers from the results text or the tables, not from abstracts alone or from secondary coverage. Sample sizes: 45, 30, 98 and 50 adults for the four validation studies, and 269 food items from 42 restaurants for the calorimetry work.</p>
+<p>The 26 calorie database gap and the 13 to 1 ratio are my arithmetic on Evenepoel's Table 1 and Serra's Table 5, not figures either paper prints. The NIDDK meal study is a NUTRITION 2026 conference abstract and has not been peer reviewed, so it sits apart from the rest.</p>
+<p>What I could not verify: any controlled comparison of two consumer calorie apps against the same weighed meals with the database held constant, which is the test that would settle the database question properly. The eCFR site refuses scripted fetches, so the regulation link goes to the Cornell copy of 21 CFR 101.9. Corrections to ohmbrock42@gmail.com.</p>]]></content:encoded>
+  </item>
   <item>
     <title>Is Cal AI accurate? It missed 345 calories a meal</title>
     <link>https://mealsaid.app/blog/is-cal-ai-accurate/</link>
