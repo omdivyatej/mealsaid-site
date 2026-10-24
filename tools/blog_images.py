@@ -249,6 +249,116 @@ def how_flow():
     save(im, "how-mealsaid-works-3.webp")
 
 
+# ------------------------------------------------------------ macrofactor vs cronometer
+# (app, annual US price, nutrients documented, source of the nutrient count)
+MVC_VALUE = [
+    ("MacroFactor", 71.99, 56, "56 reference pages I counted in its help centre"),
+    ("Cronometer Gold", 59.99, 95, "95 nutrients and compounds, on their own site"),
+    ("Cronometer Basic", 0.00, 95, "the same 95 nutrients, with ads and two charts"),
+]
+
+
+def mvc_per_nutrient():
+    im, d = canvas()
+    text(d, (80, 58), "A year of each app, divided by the nutrients it documents", 38, "m")
+    text(d, (80, 112), "Annual US price over the number of nutrients each company says it tracks", 24, fill=INK2)
+    x0, xmax, span = 620, 1340, 1.40
+    for g in (0, 0.25, 0.50, 0.75, 1.00, 1.25):
+        gx = x0 + g / span * (xmax - x0)
+        d.line([(gx, 200), (gx, 700)], fill="#1a2029", width=2)
+        text(d, (gx, 716), f"${g:.2f}", 20, fill=INK3, anchor="ma")
+    text(d, (x0 + 0.70 / span * (xmax - x0), 754), "cost per nutrient, per year", 22, fill=INK3, anchor="ma")
+    y = 262
+    for name, price, n, note in MVC_VALUE:
+        free = price == 0
+        per = price / n
+        text(d, (80, y - 20), name, 31, fill=ACC if free else INK, anchor="lm")
+        text(d, (80, y + 18), f"${price:.2f} a year over {n} nutrients", 24, fill=INK2, anchor="lm")
+        text(d, (80, y + 54), note, 21, fill=INK3, anchor="lm")
+        w = per / span * (xmax - x0)
+        if free:
+            d.rounded_rectangle([x0, y - 44, x0 + 10, y + 4], 4, fill=ACC)
+            text(d, (x0 + 30, y - 20), "$0.00, nothing to pay", 30, "m", fill=ACC, anchor="lm")
+        else:
+            d.rounded_rectangle([x0, y - 44, x0 + w, y + 4], 8, fill="#3a4252")
+            text(d, (x0 + w + 24, y - 20), f"${per:.2f}", 34, fill=INK, anchor="lm")
+        y += 170
+    d.line([(x0, 200), (x0, 700)], fill=LINE, width=2)
+    text(d, (80, 792), "The two counts are not measured the same way, so read this as value, not as a nutrient audit.", 22, fill=INK3)
+    source(d, "Sources: MacroFactor help centre, cronometer.com feature pages and both US App Store listings, read 24 October 2026.")
+    save(im, "macrofactor-vs-cronometer-1.webp")
+
+
+# (category, number of reference articles in MacroFactor's Nutrients collection, colour)
+MVC_NUTRIENTS = [
+    (9, "Calories and the macro breakdown", "#2b323e"),
+    (11, "Amino acids", "#39414f"),
+    (9, "Kinds of fat", "#4c5566"),
+    (12, "Vitamins", "#6f7889"),
+    (10, "Minerals", "#8b94a4"),
+    (5, "Cholesterol, caffeine, alcohol, water, choline", "#aeb6c4"),
+]
+
+
+def mvc_nutrient_count():
+    im, d = canvas()
+    text(d, (80, 58), "What MacroFactor's 56 documented nutrients are", 38, "m")
+    text(d, (80, 112), "One reference page per nutrient in its help centre, counted on 24 October 2026", 24, fill=INK2)
+    x0, x1, top, bot = 80, 1380, 220, 324
+    total = 95.0
+    x = x0
+    for n, _l, col in MVC_NUTRIENTS:
+        w = n / total * (x1 - x0)
+        d.rectangle([x, top, x + w, bot], fill=col)
+        text(d, (x + w / 2, (top + bot) / 2), str(n), 30, "m", fill=INK if col != "#aeb6c4" else BG, anchor="mm")
+        x += w
+    d.line([(x1, top - 30), (x1, bot + 30)], fill=ACC, width=4)
+    text(d, (x1 - 16, top - 44), "Cronometer says up to 95", 25, "m", fill=ACC, anchor="rs")
+    text(d, (x + 22, (top + bot) / 2), "56", 30, "m", fill=INK, anchor="lm")
+    y = 418
+    for n, label, col in MVC_NUTRIENTS:
+        d.rounded_rectangle([80, y - 14, 108, y + 14], 6, fill=col)
+        text(d, (134, y), label, 27, fill=INK, anchor="lm")
+        text(d, (1000, y), f"{n} pages", 27, "m", fill=INK, anchor="lm")
+        y += 62
+    text(d, (80, 792), "Cronometer publishes no list I could count the same way, so 95 is their number and 56 is mine.", 22, fill=INK3)
+    source(d, "Sources: help.macrofactorapp.com Nutrients collection and cronometer.com/features/track-food.html, read 24 October 2026.")
+    save(im, "macrofactor-vs-cronometer-2.webp")
+
+
+# (label, foods with a full nutrient profile, note)
+MVC_DEPTH = [
+    ("MacroFactor standard database", 26500, "micronutrient complete common foods", "26,500"),
+    ("Cronometer, NCC database", 17000, "lab analysed, 70 nutrients", "over 17,000"),
+    ("Cronometer, USDA SR28", 8000, "lab analysed, over 70 nutrients", "over 8,000"),
+]
+
+
+def mvc_depth():
+    im, d = canvas()
+    text(d, (80, 58), "Foods that actually carry a full nutrient profile", 38, "m")
+    text(d, (80, 112), "Counted from each company's own description of its database", 24, fill=INK2)
+    x0, xmax, span = 620, 1360, 30000.0
+    for g in (0, 10000, 20000, 30000):
+        gx = x0 + g / span * (xmax - x0)
+        d.line([(gx, 210), (gx, 620)], fill="#1a2029", width=2)
+        text(d, (gx, 636), f"{g:,}", 20, fill=INK3, anchor="ma")
+    y = 282
+    for label, v, note, shown in MVC_DEPTH:
+        mf = label.startswith("MacroFactor")
+        text(d, (80, y - 18), label, 28, fill=ACC if mf else INK, anchor="lm")
+        text(d, (80, y + 18), note, 21, fill=INK3, anchor="lm")
+        w = v / span * (xmax - x0)
+        d.rounded_rectangle([x0, y - 40, x0 + w, y + 2], 8, fill=ACC if mf else "#3a4252")
+        text(d, (x0 + w + 24, y - 19), shown, 30, "m" if mf else "r", fill=INK, anchor="lm")
+        y += 120
+    d.line([(80, 690), (1520, 690)], fill=LINE, width=1)
+    text(d, (80, 726), "MacroFactor's full search index holds about 1,360,000 items, so 26,500 is 1.9% of it.", 25, fill=INK2)
+    text(d, (80, 764), "Cronometer's whole database runs to over a million entries; it does not break out the lab analysed share.", 23, fill=INK3)
+    source(d, "Sources: MacroFactor Food Search Database article, Cronometer Data Sources article and cronometer.com free tier page, read 24 October 2026.")
+    save(im, "macrofactor-vs-cronometer-3.webp")
+
+
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     quit_logins(); quit_waffle(); quit_bars()
@@ -262,6 +372,7 @@ if __name__ == "__main__":
     calai_error_bars(); calai_rating_vs_error()
     off_gaps(); off_loa(); off_menu()
     lvm_ways(); lvm_free_count(); lvm_prices()
+    mvc_per_nutrient(); mvc_nutrient_count(); mvc_depth()
 
 
 # ------------------------------------------------------------ voice input
