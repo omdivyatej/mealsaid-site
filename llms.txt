@@ -14,6 +14,8 @@
 
 ## Blog posts
 
+- [MacroFactor vs Cronometer: price, nutrients and Health sync](https://mealsaid.app/blog/macrofactor-vs-cronometer/): Cronometer Gold is $59.99 a year, MacroFactor $71.99, and only Cronometer has a free tier. Nutrient counts and Apple Health, checked 24 Oct 2026.
+- [6 Cal AI alternatives that do not need a photo](https://mealsaid.app/blog/cal-ai-alternatives-no-photo/): Six calorie apps that log a meal with no camera, with prices read on 24 October 2026. MyNetDiary gives voice logging away free. Cal AI publishes no price.
 - [Lose It vs MyFitnessPal in 2026: same price, same paywall](https://mealsaid.app/blog/lose-it-vs-myfitnesspal/): Both charge $79.99 a year. MyFitnessPal paywalled the barcode scanner in 2022, and Lose It says it is moving its scanner to Premium now.
 - [How many calories off is a calorie tracker? 330 to 579](https://mealsaid.app/blog/how-many-calories-off-is-a-calorie-tracker/): Three doubly labeled water studies put logged intake 330 to 579 calories a day under measured expenditure. The food database was off by 26.
 - [Is Cal AI accurate? It missed 345 calories a meal](https://mealsaid.app/blog/is-cal-ai-accurate/): Cal AI says it is about 80% accurate. In an NIH test of 102 weighed meals it came in 345 calories low, the biggest miss of the four photo apps tested.

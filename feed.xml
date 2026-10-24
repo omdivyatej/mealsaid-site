@@ -5,8 +5,231 @@
   <link>https://mealsaid.app/blog/</link>
   <description>Notes from building MealSaid, the calorie tracker you talk to.</description>
   <language>en</language>
-  <lastBuildDate>Fri, 23 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Sat, 24 Oct 2026 00:00:00 +0000</lastBuildDate>
   <atom:link href="https://mealsaid.app/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>MacroFactor vs Cronometer: price, nutrients and Health sync</title>
+    <link>https://mealsaid.app/blog/macrofactor-vs-cronometer/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/macrofactor-vs-cronometer/</guid>
+    <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Cronometer Gold is $59.99 a year, MacroFactor $71.99, and only Cronometer has a free tier. Nutrient counts and Apple Health, checked 24 Oct 2026.</description>
+    <content:encoded><![CDATA[<p>Cronometer Gold costs $59.99 a year against MacroFactor's $71.99, and Cronometer's free tier tracks every nutrient it has while MacroFactor has none at all. MacroFactor is the only one of the two that reads nutrition back out of Apple Health, which is the thing that matters if you ever log in a second app.</p>
+<p>I read both help centres and both US App Store listings on 24 October 2026. Every price and feature below comes off those pages.</p>
+<p>I build a calorie tracker myself, so treat the last section as the biased one and the rest as what the documents say.</p>
+<h2 id="which-one-costs-less-in-2026">Which one costs less in 2026?</h2>
+<p><strong>Cronometer Gold at $59.99 a year, against $71.99 for MacroFactor.</strong></p>
+<p>Cronometer's US App Store listing shows two Gold purchases, Gold Monthly at $10.99 and Gold Annual at $59.99 (<a href="https://apps.apple.com/us/app/cronometer-calorie-counter/id1145935738">App Store</a>).</p>
+<p>MacroFactor's help centre lists $11.99 a month, $47.99 for half a year and $71.99 a year for a single app, and the same three prices appear on its App Store page (<a href="https://help.macrofactorapp.com/en/articles/393-how-macrofactor-subscriptions-and-bundles-work">MacroFactor</a>).</p>
+<p>There is a fourth MacroFactor price. A bundle covering the separate MacroFactor Workouts app is $89.99 a year, and anyone who subscribed before 1 January 2026 keeps Workouts free until 12 January 2027 (<a href="https://help.macrofactorapp.com/en/articles/393-how-macrofactor-subscriptions-and-bundles-work">MacroFactor</a>).</p>
+<figure><img alt="Three bars of annual price divided by nutrients tracked: MacroFactor 1.29 dollars per nutrient, Cronometer Gold 63 cents, and Cronometer's free Basic account zero for the same 95 nutrients" src="/blog/img/macrofactor-vs-cronometer-1.webp"  width="1600" height="900" loading="lazy"><figcaption>Three bars of annual price divided by nutrients tracked: MacroFactor 1.29 dollars per nutrient, Cronometer Gold 63 cents, and Cronometer's free Basic account zero for the same 95 nutrients</figcaption></figure>
+<h2 id="is-either-one-actually-free">Is either one actually free?</h2>
+<p><strong>Only Cronometer, and its free account is not a stub.</strong></p>
+<p>A Basic account covers all 95 nutrients, the whole database of over a million entries, unlimited barcode scanning, custom meals and recipes, and device syncing (<a href="https://cronometer.com/features/free-nutrition-tracking-app.html">Cronometer</a>). The limits are the advertising and a seven day window on your nutrition history, with two charts in place of the full library.</p>
+<p>Gold buys the ad-free view, long term charts and reports, the Oracle food suggestions, fasting, custom biometrics and the recipe importer (<a href="https://support.cronometer.com/hc/en-us/articles/360028026971-Subscription-Types">Cronometer support</a>, updated 17 October 2026).</p>
+<p>MacroFactor does not do free. Its App Store listing is unusually blunt about it: the app "has a free trial, but does not offer a free subscription tier", and the same listing describes a seven day trial (<a href="https://apps.apple.com/us/app/macrofactor-macro-tracker/id1553503471">App Store</a>).</p>
+<div class="stat"><strong>7 days</strong><span>of MacroFactor before the paywall, against no time limit on Cronometer Basic</span><small><a href="https://apps.apple.com/us/app/macrofactor-macro-tracker/id1553503471">App Store</a></small></div>
+
+<h2 id="macrofactor-and-cronometer-side-by-side">MacroFactor and Cronometer side by side</h2>
+<p><strong>MacroFactor costs more and hands you every logging method on day one. Cronometer goes deeper on nutrients and lets you stay free forever.</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>What people ask</th>
+<th>MacroFactor</th>
+<th>Cronometer</th>
+<th>Source, read 24 Oct 2026</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cheapest year, US</td>
+<td>$71.99</td>
+<td>$59.99 (Gold)</td>
+<td><a href="https://help.macrofactorapp.com/en/articles/393-how-macrofactor-subscriptions-and-bundles-work">MF</a>, <a href="https://apps.apple.com/us/app/cronometer-calorie-counter/id1145935738">Cron</a></td>
+</tr>
+<tr>
+<td>Monthly</td>
+<td>$11.99</td>
+<td>$10.99</td>
+<td><a href="https://apps.apple.com/us/app/macrofactor-macro-tracker/id1553503471">MF</a>, <a href="https://apps.apple.com/us/app/cronometer-calorie-counter/id1145935738">Cron</a></td>
+</tr>
+<tr>
+<td>Free tier</td>
+<td>None, 7 day trial</td>
+<td>Basic, no expiry, with ads</td>
+<td><a href="https://apps.apple.com/us/app/macrofactor-macro-tracker/id1553503471">MF</a>, <a href="https://cronometer.com/features/free-nutrition-tracking-app.html">Cron</a></td>
+</tr>
+<tr>
+<td>Nutrients documented</td>
+<td>56 reference pages</td>
+<td>"up to 95 nutrients and compounds"</td>
+<td><a href="https://help.macrofactorapp.com/en/collections/37-nutrients">MF</a>, <a href="https://cronometer.com/features/track-food.html">Cron</a></td>
+</tr>
+<tr>
+<td>Barcode scanner</td>
+<td>Yes, paid only</td>
+<td>Yes, free and unlimited</td>
+<td><a href="https://help.macrofactorapp.com/en/articles/46-food-search-database">MF</a>, <a href="https://cronometer.com/features/free-nutrition-tracking-app.html">Cron</a></td>
+</tr>
+<tr>
+<td>Spoken or typed meal</td>
+<td>Describe, any plan</td>
+<td>Voice Logging, Gold only</td>
+<td><a href="https://help.macrofactorapp.com/en/articles/216-log-foods-with-describe">MF</a>, <a href="https://support.cronometer.com/hc/en-us/articles/47549391461780-Mobile-Voice-Logging">Cron</a></td>
+</tr>
+<tr>
+<td>Photo logging</td>
+<td>AI photo, any plan</td>
+<td>Photo Logging, Gold only</td>
+<td><a href="https://help.macrofactorapp.com/en/articles/258-ai-food-logging">MF</a>, <a href="https://support.cronometer.com/hc/en-us/articles/39013533811092-Mobile-Photo-Logging">Cron</a></td>
+</tr>
+<tr>
+<td>Siri, app stays closed</td>
+<td>Not documented</td>
+<td>Yes, Gold only</td>
+<td><a href="https://support.cronometer.com/hc/en-us/articles/47664884315412-Mobile-Siri-Voice-Logging">Cron</a></td>
+</tr>
+<tr>
+<td>Reads nutrition from Health</td>
+<td>Yes, with a priority rule</td>
+<td>Not in its docs</td>
+<td><a href="https://help.macrofactorapp.com/en/articles/102-integrations">MF</a>, <a href="https://support.cronometer.com/hc/en-us/articles/360020734212-Apple-Health-Apple-Watch">Cron</a></td>
+</tr>
+<tr>
+<td>App Store rating</td>
+<td>4.8 from 23K ratings</td>
+<td>4.8 from 100K ratings</td>
+<td><a href="https://apps.apple.com/us/app/macrofactor-macro-tracker/id1553503471">MF</a>, <a href="https://apps.apple.com/us/app/cronometer-calorie-counter/id1145935738">Cron</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="how-many-nutrients-does-each-one-track">How many nutrients does each one track?</h2>
+<p><strong>Cronometer says up to 95. MacroFactor's help centre documents 56, and I counted them one page at a time.</strong></p>
+<p>MacroFactor publishes a Nutrients collection with one reference article per nutrient it tracks. On 24 October 2026 that collection held 56 articles: 9 on calories and the macro breakdown, 11 amino acids, 9 kinds of fat, 12 vitamins, 10 minerals, and 5 others covering cholesterol, caffeine, alcohol, water and choline (<a href="https://help.macrofactorapp.com/en/collections/37-nutrients">MacroFactor</a>).</p>
+<p>Cronometer's Track Food page promises "up to 95 nutrients and compounds" (<a href="https://cronometer.com/features/track-food.html">Cronometer</a>), and its free tier page repeats the 95. Its own home page says 84 in the paragraph about Cronometer Pro, so their marketing does not agree with itself. Either way there is no list I could count, so 95 is their figure and 56 is mine.</p>
+<figure><img alt="Stacked bar of MacroFactor's 56 documented nutrients split into 9 calorie and macro pages, 11 amino acids, 9 fats, 12 vitamins, 10 minerals and 5 others, against a marker at Cronometer's stated 95" src="/blog/img/macrofactor-vs-cronometer-2.webp"  width="1600" height="900" loading="lazy"><figcaption>Stacked bar of MacroFactor's 56 documented nutrients split into 9 calorie and macro pages, 11 amino acids, 9 fats, 12 vitamins, 10 minerals and 5 others, against a marker at Cronometer's stated 95</figcaption></figure>
+<p>Both warn you that the number is a ceiling, not what you will actually see. MacroFactor says most branded products do not report deep micronutrient data, so anything beyond calories, macros and "some major micronutrients" will be undercounted unless you log common foods (<a href="https://help.macrofactorapp.com/en/articles/101-view-your-micronutrient-intake-and-more-detailed-information-about-your-macronutrient-intake">MacroFactor</a>).</p>
+<p>Cronometer hides some nutrients by default for the same reason, and warns that tracked values "may be significantly lower than they actually are" (<a href="https://support.cronometer.com/hc/en-us/articles/360000329986-Are-there-nutrients-missing-from-Cronometer">Cronometer support</a>, updated 14 August 2026).</p>
+<p>So the real question is how many foods in each database carry a full nutrient profile. MacroFactor says 26,500 of roughly 1,360,000 searchable items are micronutrient complete, which is 1.9% (<a href="https://help.macrofactorapp.com/en/articles/46-food-search-database">MacroFactor</a>). Cronometer's lab analysed core is the NCC database at over 17,000 entries with data on 70 nutrients, plus USDA SR28 at over 8,000 (<a href="https://support.cronometer.com/hc/en-us/articles/360018239472-Data-Sources">Cronometer support</a>, updated 21 October 2026). Its whole database runs past a million entries and it does not say how much of that is lab analysed (<a href="https://cronometer.com/features/free-nutrition-tracking-app.html">Cronometer</a>).</p>
+<figure><img alt="Bar chart of foods with a full nutrient profile: MacroFactor 26,500 micronutrient complete items, Cronometer NCC database over 17,000 and USDA SR28 over 8,000, with MacroFactor's full search index at 1.36 million noted" src="/blog/img/macrofactor-vs-cronometer-3.webp"  width="1600" height="900" loading="lazy"><figcaption>Bar chart of foods with a full nutrient profile: MacroFactor 26,500 micronutrient complete items, Cronometer NCC database over 17,000 and USDA SR28 over 8,000, with MacroFactor's full search index at 1.36 million noted</figcaption></figure>
+<p>Cronometer does this part better. It also sells a Pro tier aimed at dietitians and research teams, which is not a market MacroFactor is chasing (<a href="https://support.cronometer.com/hc/en-us/articles/360028026971-Subscription-Types">Cronometer support</a>).</p>
+<h2 id="which-one-gets-your-food-into-apple-health">Which one gets your food into Apple Health?</h2>
+<p><strong>Both write. Only MacroFactor reads nutrition back in.</strong></p>
+<p>MacroFactor's integrations page spells out a priority order: manual entry, then its own food log, then Apple Health. A MacroFactor food entry for a day blocks the Health import for that day (<a href="https://help.macrofactorapp.com/en/articles/102-integrations">MacroFactor</a>).</p>
+<p>Cronometer's Apple Health article covers activity, exercise, biometrics and sleep coming in, and tells you to pick read and write permissions, but nothing in it describes importing food logged elsewhere (<a href="https://support.cronometer.com/hc/en-us/articles/360020734212-Apple-Health-Apple-Watch">Cronometer support</a>, updated 22 October 2026).</p>
+<p>One thing changed while I was writing. When I read that article on 20 October 2026 for <a href="/blog/calorie-apps-apple-health/">our Apple Health comparison</a>, it named the nutrient fields Cronometer writes. The 22 October version does not, and no other article in their help centre lists them now. Treat the write list as undocumented until they put it back.</p>
+<h2 id="which-one-should-you-pick">Which one should you pick?</h2>
+<p><strong>Cronometer if you care about micronutrients or want to pay nothing. MacroFactor if you want the coaching algorithm and do not mind the $71.99.</strong></p>
+<p>MacroFactor's pitch is its expenditure algorithm, which reads your weight trend against your logged intake and updates your targets. It needs food logged "at least four times per week, but ideally every day" to keep running (<a href="https://help.macrofactorapp.com/en/articles/110-how-frequently-do-i-need-to-log-my-nutrition-for-the-expenditure-algorithm-and-weekly-coaching-updates">MacroFactor</a>).</p>
+<p>Cronometer's pitch is depth, and it charges for the fast logging paths; <a href="/blog/calorie-tracker-voice-input/">our voice input comparison</a> has the detail on that.</p>
+<p>Mine is the third option and the narrow one. You say what you ate and MealSaid writes calories and macros into Apple Health. If you forget, it calls your phone and asks.</p>
+<p>It also has no barcode scanner, no food database to search, no Android app, no web app, no vitamins or minerals at all, and it needs iOS 26. If you want 95 nutrients, Cronometer Basic gives you them for nothing. You can read <a href="/blog/how-mealsaid-works/">how MealSaid works</a> before deciding.</p>
+<h2 id="how-i-checked-this">How I checked this</h2>
+<p>Checked 24 October 2026. Prices came from the In App Purchases panel on each US App Store listing and from MacroFactor's own subscription article; Apple shows at most ten purchases per listing, so those are floors.</p>
+<p>The 56 nutrient count is my own count of the articles in MacroFactor's public Nutrients collection on that date, so it will drift as they add pages. The 95 is Cronometer's claim on two of its own feature pages and I could not verify it item by item. Their home page says 84 for Cronometer Pro, and I did not find any page that reconciles the two.</p>
+<p>Cronometer's help centre returns 403 to scripted fetches, so those articles were read through the public help centre API and their "updated" dates are the ones the API reports. Corrections to ohmbrock42@gmail.com.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title>6 Cal AI alternatives that do not need a photo</title>
+    <link>https://mealsaid.app/blog/cal-ai-alternatives-no-photo/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/cal-ai-alternatives-no-photo/</guid>
+    <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Six calorie apps that log a meal with no camera, with prices read on 24 October 2026. MyNetDiary gives voice logging away free. Cal AI publishes no price.</description>
+    <content:encoded><![CDATA[<p>If you want Cal AI without pointing a camera at your dinner, the shortest answers are MyNetDiary, which gives voice logging away on its free tier, and MealSaid, which is my own app and takes a spoken sentence. Both cost nothing.</p>
+<p>Cal AI itself is not camera-only. Its site says "Snap a photo, scan a barcode, or describe your meal", so the description route exists (<a href="https://www.calai.app/">Cal AI</a>). Two of those three routes still need the camera, and all of them need a subscription.</p>
+<p>I read every price and feature below on each company's own site or US App Store listing on 24 October 2026.</p>
+<h2 id="does-cal-ai-work-without-the-camera">Does Cal AI work without the camera?</h2>
+<p><strong>Yes, through the describe route, but the app is built around the photo and says so.</strong></p>
+<p>The App Store listing gives three steps to use Cal AI, and step two is "Snap a photo of your meal" (<a href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616">App Store</a>).</p>
+<p>The feature Cal AI sells hardest is the one that cannot work without a lens: "your phone's depth sensor calculates food volume" (<a href="https://www.calai.app/">Cal AI</a>).</p>
+<p>The same listing carries a line in capitals saying food scanning analysis requires a subscription, so the camera-free route is not a free route either.</p>
+<h2 id="what-does-cal-ai-cost">What does Cal AI cost?</h2>
+<p><strong>Nobody can tell you, including Cal AI. Apple lists one purchase named Unlimited at five different prices between $2.99 and $29.99.</strong></p>
+<p>Cal AI's website has no pricing page. What it has is a FAQ about cancelling, a FAQ about refunds, a FAQ about restoring a purchase and a button offering a three day free trial (<a href="https://www.calai.app/">Cal AI</a>).</p>
+<p>The In App Purchases panel on its US listing shows Unlimited at $2.99, $5.99, $9.99, $19.99 and $29.99, plus a $0.99 Streak Restore (<a href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616">App Store</a>). Apple never says what period any of them buys.</p>
+<figure><img alt="Price ladder of Cal AI in-app purchases named Unlimited: 2.99, 5.99, 9.99, 19.99 and 29.99 dollars, a ten times spread, with a 0.99 dollar Streak Restore marked separately" src="/blog/img/cal-ai-alternatives-no-photo-2.webp"  width="1600" height="900" loading="lazy"><figcaption>Price ladder of Cal AI in-app purchases named Unlimited: 2.99, 5.99, 9.99, 19.99 and 29.99 dollars, a ten times spread, with a 0.99 dollar Streak Restore marked separately</figcaption></figure>
+<p>The top price is ten times the bottom one for a product with one name. You find out which one you were shown after the trial starts.</p>
+<h2 id="which-apps-log-a-meal-without-a-camera">Which apps log a meal without a camera?</h2>
+<p><strong>All six alternatives do, and so does Cal AI. Four of them let you type into a search box for free, and only MealSaid turns a whole spoken sentence into a meal at no cost.</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>App</th>
+<th>Camera free route</th>
+<th>What it costs</th>
+<th>Source, read 24 Oct 2026</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://apps.apple.com/us/app/calorie-counter-mynetdiary/id287529757">MyNetDiary</a></td>
+<td>Search, favorites, voice logging</td>
+<td>Free. AI Voice Logging is Premium Plus, $99.99 a year</td>
+<td><a href="https://www.mynetdiary.com/free-calorie-tracker.html">MyNetDiary</a></td>
+</tr>
+<tr>
+<td>MealSaid</td>
+<td>Say the whole meal, or answer the call</td>
+<td>Free, no in-app purchases</td>
+<td><a href="/blog/how-mealsaid-works/">How it works</a></td>
+</tr>
+<tr>
+<td><a href="https://apps.apple.com/us/app/cronometer-calorie-counter/id1145935738">Cronometer</a></td>
+<td>Search free; Voice Logging and a Siri phrase</td>
+<td>$59.99 a year for Gold</td>
+<td><a href="https://support.cronometer.com/hc/en-us/articles/47549391461780-Mobile-Voice-Logging">Cronometer</a></td>
+</tr>
+<tr>
+<td><a href="https://apps.apple.com/us/app/macrofactor-macro-tracker/id1553503471">MacroFactor</a></td>
+<td>Describe, typed or dictated</td>
+<td>$71.99 a year, no free tier</td>
+<td><a href="https://help.macrofactorapp.com/en/articles/216-log-foods-with-describe">MacroFactor</a></td>
+</tr>
+<tr>
+<td><a href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718">MyFitnessPal</a></td>
+<td>Search free; Voice Log for a spoken meal</td>
+<td>$79.99 a year for Premium</td>
+<td><a href="https://support.myfitnesspal.com/hc/en-us/articles/30332897072269-How-to-log-food-with-your-voice">MyFitnessPal</a></td>
+</tr>
+<tr>
+<td><a href="https://apps.apple.com/us/app/lose-it-calorie-counter/id297368629">Lose It!</a></td>
+<td>Search free; Say It finds one food by voice</td>
+<td>$79.99 a year for Premium</td>
+<td><a href="https://loseit.zendesk.com/hc/en-us/articles/51906561286804-Lose-It-Membership-Tiers-Pricing">Lose It!</a></td>
+</tr>
+<tr>
+<td><a href="https://apps.apple.com/us/app/cal-ai-calorie-tracker/id6480417616">Cal AI</a></td>
+<td>Describe the meal instead of shooting it</td>
+<td>Subscription, price not published</td>
+<td><a href="https://www.calai.app/">Cal AI</a></td>
+</tr>
+</tbody>
+</table></div>
+<figure><img alt="Matrix of seven calorie apps against three camera free ways to log, showing typed search free in four apps, one food by voice free only in MyNetDiary, and a whole spoken meal free only in MealSaid" src="/blog/img/cal-ai-alternatives-no-photo-1.webp"  width="1600" height="900" loading="lazy"><figcaption>Matrix of seven calorie apps against three camera free ways to log, showing typed search free in four apps, one food by voice free only in MyNetDiary, and a whole spoken meal free only in MealSaid</figcaption></figure>
+<p>Two rows need a footnote. MyFitnessPal's Voice Logging is Premium only, on iOS and Android, English only, app version 24.35.0 or higher (<a href="https://support.myfitnesspal.com/hc/en-us/articles/30332897072269-How-to-log-food-with-your-voice">MyFitnessPal</a>, updated 21 September 2026). And Lose It's Say It searches for one food at a time rather than taking a sentence (<a href="https://loseit.zendesk.com/hc/en-us/articles/49210381551380-How-to-Log-Food-in-Lose-It">Lose It!</a>).</p>
+<h2 id="which-free-tier-actually-does-the-most">Which free tier actually does the most?</h2>
+<p><strong>MyNetDiary, and it is not close.</strong></p>
+<p>Its own feature table marks the staff verified database, unlimited search, the barcode scanner, voice logging, exercise and water tracking, up to 108 nutrient fields and the charts as free, with no ads and no account required to start (<a href="https://www.mynetdiary.com/free-calorie-tracker.html">MyNetDiary</a>).</p>
+<div class="stat"><strong>108 nutrients</strong><span>tracked on MyNetDiary&#x27;s free tier, with no ads and no account needed</span><small><a href="https://www.mynetdiary.com/free-calorie-tracker.html">MyNetDiary</a></small></div>
+
+<p>The catch is what "voice logging" means there. Free voice logging finds foods; the version that turns a spoken meal description into structured diary entries sits under Premium Plus, at $14.99 a month or $99.99 a year (<a href="https://www.mynetdiary.com/free-calorie-tracker.html">MyNetDiary</a>).</p>
+<p>Cronometer's free tier is the other strong one: all 95 nutrients, the whole database and unlimited barcode scanning, with ads (<a href="https://cronometer.com/features/free-nutrition-tracking-app.html">Cronometer</a>). Its voice route costs $59.99 a year.</p>
+<p>If free is the whole requirement, start with MyNetDiary and read <a href="/blog/free-calorie-counter-without-subscription/">what is actually free in each app</a> before you install anything.</p>
+<h2 id="is-describing-a-meal-more-accurate-than-photographing-it">Is describing a meal more accurate than photographing it?</h2>
+<p><strong>Nobody knows, and anyone who tells you otherwise is guessing.</strong></p>
+<p>Photos have been measured once properly. Researchers at the NIH weighed 102 meals to 0.1 g, photographed them and ran them through four apps; Cal AI came in 345 calories low per meal, the worst of the four, and Appediet came in 252 low (<a href="https://www.healio.com/news/primary-care/20260804/ai-photobased-calorietracking-tools-underestimate-them-by-33">Healio</a>). Our <a href="/blog/is-cal-ai-accurate/">full write up of that study</a> has the confidence intervals.</p>
+<p>There is no equivalent test for spoken or typed descriptions. Not for MyFitnessPal, not for Cronometer, not for mine.</p>
+<p>What I can say is where the error comes from in both cases: portion size. A photograph does not show the oil absorbed into the food, and neither does the sentence "chicken and rice".</p>
+<h2 id="which-one-would-i-use">Which one would I use?</h2>
+<p><strong>MyNetDiary if I wanted a food database and a barcode scanner for nothing. MealSaid if I just wanted the meal logged and gone.</strong></p>
+<p>Cronometer Gold sits between them: $59.99 a year buys the spoken meal plus the deepest nutrient data of the six, which is covered in <a href="/blog/macrofactor-vs-cronometer/">our MacroFactor and Cronometer comparison</a>.</p>
+<p>Mine is the narrow one. You say what you ate and MealSaid writes calories, protein, carbs, fat and fiber into Apple Health. At times you pick, your phone rings and a voice asks what you ate.</p>
+<p>It has no camera features at all, which is the point of this post, but that also means no barcode scanner, no nutrition label scanner, no food database to search and no photo logging. It is iPhone only and needs iOS 26. English only, too. On raw features MyNetDiary beats it, free, and I would say so to anyone who asked.</p>
+<h2 id="how-i-checked-this">How I checked this</h2>
+<p>Checked 24 October 2026. Prices came from the In App Purchases panel on each US App Store listing and from each company's own pricing or feature page where one exists. Apple lists at most ten purchases per app, so those ranges are floors.</p>
+<p>Cal AI is the one app here with no published price. I did not start its trial to find out which of the five Unlimited prices I would be shown, so that gap stays open.</p>
+<p>The MyFitnessPal, Lose It and Cronometer help centres return 403 to scripted fetches, so those articles were read through each help centre's public API, and the "updated" dates quoted are the ones the API reports. Corrections to ohmbrock42@gmail.com.</p>]]></content:encoded>
+  </item>
   <item>
     <title>Lose It vs MyFitnessPal in 2026: same price, same paywall</title>
     <link>https://mealsaid.app/blog/lose-it-vs-myfitnesspal/</link>
