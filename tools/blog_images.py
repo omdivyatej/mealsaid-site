@@ -359,6 +359,92 @@ def mvc_depth():
     save(im, "macrofactor-vs-cronometer-3.webp")
 
 
+# ------------------------------------------------------------ cal ai alternatives, no photo
+# (app, typed search, one food by voice, a whole spoken or typed meal); "f" free, "p" paid, "-" not offered
+CAN_ROWS = [
+    ("MyNetDiary", "f", "f", ("p", "$99.99 a year")),
+    ("MealSaid", "-", "-", "f"),
+    ("Cronometer", "f", "-", ("p", "$59.99 a year")),
+    ("MacroFactor", ("p", "$71.99 a year"), "-", ("p", "$71.99 a year")),
+    ("MyFitnessPal", "f", "-", ("p", "$79.99 a year")),
+    ("Lose It!", "f", ("p", "$79.99 a year"), "-"),
+    ("Cal AI", "-", "-", ("p", "price not published")),
+]
+CAN_COLS = ("Type into a search box", "Say one food", "Say or type a whole meal")
+
+
+def can_matrix():
+    im, d = canvas()
+    text(d, (80, 58), "Logging a meal with the camera off, and what it costs", 38, "m")
+    text(d, (80, 112), "Every camera free route each app documents, and the tier it sits on", 24, fill=INK2)
+    xs = (620, 960, 1270)
+    for cx, label in zip(xs, CAN_COLS):
+        text(d, (cx, 190), label.upper(), 18, fill=INK3, anchor="la")
+    d.line([(80, 224), (1520, 224)], fill=LINE, width=2)
+    y = 274
+
+    def mark(cx, cy, cell):
+        kind, note = cell if isinstance(cell, tuple) else (cell, "")
+        if kind == "f":
+            d.ellipse([cx - 13, cy - 13, cx + 13, cy + 13], fill=INK)
+            text(d, (cx + 30, cy), note or "free", 22, fill=INK2, anchor="lm")
+        elif kind == "p":
+            d.ellipse([cx - 13, cy - 13, cx + 13, cy + 13], outline="#6f7889", width=3)
+            text(d, (cx + 30, cy), note or "paid", 22, fill=INK3, anchor="lm")
+        else:
+            d.line([(cx - 13, cy), (cx + 13, cy)], fill="#39414f", width=4)
+
+    for i, (name, a, b, c) in enumerate(CAN_ROWS):
+        best = name == "MyNetDiary"
+        text(d, (80, y), name, 29, fill=ACC if best else INK, anchor="lm")
+        for cx, cell in zip(xs, (a, b, c)):
+            mark(cx, y, cell)
+        y += 76
+        if i < len(CAN_ROWS) - 1:
+            d.line([(80, y - 38), (1520, y - 38)], fill=LINE, width=1)
+    d.ellipse([80, 778, 106, 804], fill=INK)
+    text(d, (120, 791), "included free", 22, fill=INK2, anchor="lm")
+    d.ellipse([340, 778, 366, 804], outline="#6f7889", width=3)
+    text(d, (380, 791), "paid, cheapest yearly price shown", 22, fill=INK2, anchor="lm")
+    d.line([(900, 791), (926, 791)], fill="#39414f", width=4)
+    text(d, (942, 791), "not documented", 22, fill=INK2, anchor="lm")
+    source(d, "Sources: each app's own help centre, feature page or US App Store listing, all read 24 October 2026.")
+    save(im, "cal-ai-alternatives-no-photo-1.webp")
+
+
+# every distinct in-app purchase price Apple lists for Cal AI, and the one name they share
+CAN_UNLIMITED = [2.99, 5.99, 9.99, 19.99, 29.99]
+
+
+def can_prices():
+    im, d = canvas()
+    text(d, (80, 70), "One product name, five prices, no price page", 38, "m")
+    text(d, (80, 124), "Every distinct purchase named 'Unlimited' on Cal AI's US App Store listing", 24, fill=INK2)
+    x0, xmax, span = 160, 1420, 33.0
+    y = 470
+    d.line([(x0, y), (xmax, y)], fill=LINE, width=3)
+    for g in (0, 5, 10, 15, 20, 25, 30):
+        gx = x0 + g / span * (xmax - x0)
+        d.line([(gx, y - 10), (gx, y + 10)], fill=LINE, width=2)
+        text(d, (gx, y + 34), f"${g}", 22, fill=INK3, anchor="ma")
+    for i, v in enumerate(CAN_UNLIMITED):
+        px = x0 + v / span * (xmax - x0)
+        lift = 104 + (i % 2) * 74
+        top = v == 29.99
+        d.line([(px, y - 20), (px, y - lift + 10)], fill="#39414f", width=2)
+        d.ellipse([px - 13, y - 13, px + 13, y + 13], fill=ACC if top else INK)
+        text(d, (px, y - lift), f"${v:.2f}", 28, "m" if top else "r", fill=INK, anchor="ms")
+    sx = x0 + 0.99 / span * (xmax - x0)
+    d.ellipse([sx - 10, y - 10, sx + 10, y + 10], outline="#8b94a4", width=3)
+    text(d, (sx - 8, y + 86), "$0.99 Streak Restore,", 21, fill=INK3, anchor="la")
+    text(d, (sx - 8, y + 116), "the only purchase with a different name", 21, fill=INK3, anchor="la")
+    text(d, (80, 630), "The dearest Unlimited is ten times the cheapest.", 32, fill=INK)
+    text(d, (80, 684), "Cal AI's website has no pricing page, and Apple does not say what period any of these buys.", 26, fill=INK2)
+    text(d, (80, 730), "You are shown one of them after starting the three day trial.", 24, fill=INK3)
+    source(d, "Source: the In-App Purchases panel on Cal AI's US App Store listing and calai.app, both read 24 October 2026.")
+    save(im, "cal-ai-alternatives-no-photo-2.webp")
+
+
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     quit_logins(); quit_waffle(); quit_bars()
@@ -373,6 +459,7 @@ if __name__ == "__main__":
     off_gaps(); off_loa(); off_menu()
     lvm_ways(); lvm_free_count(); lvm_prices()
     mvc_per_nutrient(); mvc_nutrient_count(); mvc_depth()
+    can_matrix(); can_prices()
 
 
 # ------------------------------------------------------------ voice input

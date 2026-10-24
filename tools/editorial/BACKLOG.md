@@ -21,7 +21,7 @@ One rule above all: every post needs one original element that exists nowhere el
 | 13 | How many calories off is a calorie tracker, on average? | how many calories off is a calorie tracker | accuracy | answer | every published error figure with sample size, one table | published | https://mealsaid.app/blog/how-many-calories-off-is-a-calorie-tracker/ |
 | 14 | Lose It vs MyFitnessPal in 2026 | Lose It vs MyFitnessPal | switching | table | verified free-tier and Premium feature table, dated; MealSaid is a footnote | published | https://mealsaid.app/blog/lose-it-vs-myfitnesspal/ |
 | 15 | MacroFactor vs Cronometer | MacroFactor vs Cronometer | switching | table | verified price, micronutrient count, Apple Health read/write; MealSaid is a footnote | published | https://mealsaid.app/blog/macrofactor-vs-cronometer/ |
-| 16 | Cal AI alternatives that do not need a photo | Cal AI alternative | switching | table | verified price and input method per app, dated | todo | |
+| 16 | Cal AI alternatives that do not need a photo | Cal AI alternative | switching | table | verified price and input method per app, dated | published | https://mealsaid.app/blog/cal-ai-alternatives-no-photo/ |
 | 17 | A simpler Cronometer alternative | Cronometer alternative simpler | switching | answer | taps-to-log count from each app's own flow description | todo | |
 | 18 | Best free calorie tracker for iPhone only | best calorie tracker iPhone only free | Apple Health | table | iPhone-only features (Siri, widgets, Health write) verified per app | todo | |
 | 19 | Hands-free calorie tracking while cooking or driving | hands-free calorie tracking | voice | answer | which apps work with the screen off or via Siri, verified | todo | |
