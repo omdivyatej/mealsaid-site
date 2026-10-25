@@ -1023,6 +1023,89 @@ def sca_choices():
     save(im, "simpler-cronometer-alternative-2.webp")
 
 
+# ------------------------------------------------------------ best free calorie tracker for iphone
+# (app, home screen widget, lock screen, Siri that logs food, Apple Watch app) f = free, p = paid, n = not documented
+BFC_COLS = ("HOME SCREEN WIDGET", "LOCK SCREEN", "SIRI THAT LOGS FOOD", "APPLE WATCH APP")
+BFC_ROWS = [
+    ("MyNetDiary", ("f", "4 types"), ("f", "12 widgets"), ("f", "saved meals"), ("f", "logs food")),
+    ("Cronometer", ("f", "5 types"), ("n", ""), ("p", "Gold, $59.99 a year"), ("f", "logs food")),
+    ("MyFitnessPal", ("f", "3 named"), ("n", ""), ("n", ""), ("f", "water, quick add")),
+    ("Lose It!", ("f", "3 types"), ("n", ""), ("n", ""), ("f", "calories only")),
+    ("MealSaid", ("f", "1, opens listening"), ("f", "control"), ("f", "any meal"), ("n", "")),
+]
+
+
+def bfc_matrix():
+    im, d = canvas()
+    text(d, (80, 58), "What each free tier gives you on an iPhone", 38, "m")
+    text(d, (80, 112), "Only what each company documents itself, read 25 October 2026", 24, fill=INK2)
+    xs = (560, 830, 1060, 1340)
+    for cx, label in zip(xs, BFC_COLS):
+        text(d, (cx, 196), label, 17, fill=INK3, anchor="la")
+    d.line([(80, 230), (1520, 230)], fill=LINE, width=2)
+    y = 290
+
+    def mark(cx, cy, cell):
+        kind, note = cell
+        if kind == "f":
+            d.ellipse([cx - 13, cy - 13, cx + 13, cy + 13], fill=INK)
+        elif kind == "p":
+            d.ellipse([cx - 13, cy - 13, cx + 13, cy + 13], outline="#6f7889", width=3)
+        else:
+            d.line([(cx - 13, cy), (cx + 13, cy)], fill="#39414f", width=4)
+            return
+        if note:
+            text(d, (cx, cy + 26), note, 20, fill=INK3, anchor="ma")
+
+    for i, (name, *cells) in enumerate(BFC_ROWS):
+        best = name == "MyNetDiary"
+        text(d, (80, y), name, 30, "m" if best else "r", fill=ACC if best else INK, anchor="lm")
+        for cx, cell in zip(xs, cells):
+            mark(cx, y, cell)
+        y += 104
+        if i < len(BFC_ROWS) - 1:
+            d.line([(80, y - 52), (1520, y - 52)], fill=LINE, width=1)
+    d.ellipse([80, 790, 106, 816], fill=INK)
+    text(d, (120, 803), "free", 22, fill=INK2, anchor="lm")
+    d.ellipse([240, 790, 266, 816], outline="#6f7889", width=3)
+    text(d, (280, 803), "paid tier", 22, fill=INK2, anchor="lm")
+    d.line([(470, 803), (496, 803)], fill="#39414f", width=4)
+    text(d, (512, 803), "not documented", 22, fill=INK2, anchor="lm")
+    source(d, "Sources: MyNetDiary's iPhone page and help centre, Cronometer, MyFitnessPal and Lose It help articles, read 25 October 2026.")
+    save(im, "best-free-calorie-tracker-iphone-1.webp")
+
+
+# (app, home screen widget types, lock screen widget types)
+BFC_WIDGETS = [("MyNetDiary", 4, 12), ("Cronometer", 5, 0), ("Lose It!", 3, 0), ("MyFitnessPal", 3, 0), ("MealSaid", 1, 1)]
+
+
+def bfc_widget_count():
+    im, d = canvas()
+    text(d, (80, 58), "Widgets each app names in its own iPhone documentation", 38, "m")
+    text(d, (80, 112), "Counted from the widget pages themselves, read 25 October 2026", 24, fill=INK2)
+    x0, unit, y = 480, 54, 230
+    for app, home, lock in BFC_WIDGETS:
+        mine = app == "MealSaid"
+        text(d, (80, y), app, 30, "m" if mine else "r", fill=ACC if mine else INK, anchor="lm")
+        for i in range(home + lock):
+            bx = x0 + i * unit
+            on_lock = i >= home
+            col = ACC if mine else ("#4c5566" if on_lock else "#8b94a4")
+            d.rounded_rectangle([bx, y - 22, bx + unit - 12, y + 22], 8, fill=col)
+        tail = f"{home} home screen"
+        if lock:
+            tail += ", 1 lock screen control" if mine else f", {lock} lock screen"
+        text(d, (x0, y + 44), tail, 21, fill=INK3, anchor="lm")
+        y += 100
+    d.rounded_rectangle([80, 742, 126, 784], 8, fill="#8b94a4")
+    text(d, (144, 763), "home screen", 22, fill=INK2, anchor="lm")
+    d.rounded_rectangle([380, 742, 426, 784], 8, fill="#4c5566")
+    text(d, (444, 763), "lock screen", 22, fill=INK2, anchor="lm")
+    text(d, (80, 800), "MyFitnessPal's page names three widgets and says there are more, so three is a floor.", 22, fill=INK3)
+    source(d, "Sources: MyNetDiary iPhone page, Cronometer iOS Home Screen Widgets, Lose It widget articles, MyFitnessPal widget article, read 25 October 2026.")
+    save(im, "best-free-calorie-tracker-iphone-2.webp")
+
+
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     quit_logins(); quit_waffle(); quit_bars()
@@ -1039,3 +1122,4 @@ if __name__ == "__main__":
     mvc_per_nutrient(); mvc_nutrient_count(); mvc_depth()
     can_matrix(); can_prices()
     sca_steps(); sca_choices()
+    bfc_matrix(); bfc_widget_count()
