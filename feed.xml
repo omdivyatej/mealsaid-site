@@ -5,8 +5,213 @@
   <link>https://mealsaid.app/blog/</link>
   <description>Notes from building MealSaid, the calorie tracker you talk to.</description>
   <language>en</language>
-  <lastBuildDate>Sat, 24 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Sun, 25 Oct 2026 00:00:00 +0000</lastBuildDate>
   <atom:link href="https://mealsaid.app/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>A simpler Cronometer alternative: I counted the steps</title>
+    <link>https://mealsaid.app/blog/simpler-cronometer-alternative/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/simpler-cronometer-alternative/</guid>
+    <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Cronometer&#x27;s own help page lists 4 steps to log a food, Lose It lists 9. Five simpler alternatives with prices and step counts, checked 25 Oct 2026.</description>
+    <content:encoded><![CDATA[<p>Cronometer's own instructions for logging one food are four steps long, shorter than MyFitnessPal's six and Lose It's nine. The simpler swap most people are looking for is <a href="https://www.mynetdiary.com/help/plans-billing-and-subscriptions/which-features-available-in-free-tier">MyNetDiary</a>, whose core version is "free and ad-free", tracks 108 nutrients and takes a spoken sentence in five published steps.</p>
+<p>The weight in Cronometer sits inside those four steps: seven category tabs, a Sort By menu, a database filter and a Better Alternative swap, all described on the same help page.</p>
+<p>Cronometer has its own fast route, a spoken sentence, and it costs $59.99 a year.</p>
+<p>I read five help centres and four App Store listings on 25 October 2026 and counted the steps each company publishes. I build a calorie tracker, so treat the second to last section as the biased one.</p>
+<h2 id="how-many-steps-does-cronometer-take-to-log-one-food">How many steps does Cronometer take to log one food?</h2>
+<p><strong>Four, by its own count: tap the plus icon, tap Add Food, type the name, tap the food to open serving size and diary group.</strong></p>
+<p>That is the whole numbered list on Cronometer's Mobile Add a Food page (<a href="https://support.cronometer.com/hc/en-us/articles/360018955211-Mobile-Add-a-Food">Cronometer</a>, updated 24 October 2026).</p>
+<p>MyFitnessPal publishes six steps for iOS (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032274592-How-to-log-food-to-your-diary">MyFitnessPal</a>, updated 23 October 2026). Lose It publishes nine (<a href="https://loseit.zendesk.com/hc/en-us/articles/49210381551380-How-to-Log-Food-in-Lose-It">Lose It!</a>, updated 25 August 2026).</p>
+<p>So on the published numbers, Cronometer is already the short one. I went in expecting the opposite and had to redo the chart.</p>
+<figure><img alt="Step counts for logging one food from each app's own help page: Lose It nine, MyFitnessPal six, MacroFactor Describe six, MyNetDiary Describe five, Cronometer four, MealSaid one" src="/blog/img/simpler-cronometer-alternative-1.webp"  width="1600" height="900" loading="lazy"><figcaption>Step counts for logging one food from each app's own help page: Lose It nine, MyFitnessPal six, MacroFactor Describe six, MyNetDiary Describe five, Cronometer four, MealSaid one</figcaption></figure>
+<h2 id="so-why-does-cronometer-feel-slow">So why does Cronometer feel slow?</h2>
+<p><strong>Because step three hides a screen full of decisions, and the page documents every one of them.</strong></p>
+<p>The food search carries seven category tabs: All, Favorites, Common, Supplements, Brands, Custom and Restaurants. Above them sits a Sort By menu and a database filter that can be pointed at one source such as NCCDB or a combination.</p>
+<p>Some brand foods are then tagged with a Better Alternative, a curated swap with fuller data, and a Multi-Add toggle turns the list into tick boxes with a Review Items step (<a href="https://support.cronometer.com/hc/en-us/articles/360018955211-Mobile-Add-a-Food">Cronometer</a>).</p>
+<p>Every one of those is there for a reason. Cronometer even keeps a Crono-Hacks page for people who want more of this, with recipes built out of daily supplements and custom biometrics for nutrients it does not track (<a href="https://support.cronometer.com/hc/en-us/articles/360020618211-Crono-Hacks-for-Power-Users">Cronometer</a>, updated 4 October 2026).</p>
+<figure><img alt="The Cronometer food search surface from its own help page: seven category tabs named All, Favorites, Common, Supplements, Brands, Custom and Restaurants, plus a Sort By menu, a database filter, a Better Alternative swap and a Multi-Add toggle" src="/blog/img/simpler-cronometer-alternative-2.webp"  width="1600" height="900" loading="lazy"><figcaption>The Cronometer food search surface from its own help page: seven category tabs named All, Favorites, Common, Supplements, Brands, Custom and Restaurants, plus a Sort By menu, a database filter, a Better Alternative swap and a Multi-Add toggle</figcaption></figure>
+<p>That is a nutrition instrument. If you want one, nothing below replaces it.</p>
+<h2 id="which-app-asks-you-for-the-least">Which app asks you for the least?</h2>
+<p><strong>MyNetDiary, once you use its Describe box: five published steps, on a tier that is free and ad-free.</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>App</th>
+<th>Steps in its own instructions</th>
+<th>Free tier</th>
+<th>Whole spoken meal</th>
+<th>Price for that route</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://support.cronometer.com/hc/en-us/articles/360018955211-Mobile-Add-a-Food">Cronometer</a></td>
+<td>4, search</td>
+<td>Yes, ads, up to 95 nutrients</td>
+<td>Voice Logging, Gold only</td>
+<td><a href="https://apps.apple.com/us/app/cronometer-calorie-counter/id1145935738">$59.99 a year</a></td>
+</tr>
+<tr>
+<td><a href="https://www.mynetdiary.com/help/ai-features/how-to-log-food-by-description">MyNetDiary</a></td>
+<td>5, Describe</td>
+<td>Yes, no ads, 108 nutrients</td>
+<td>Describe, 3 free tries then Premium</td>
+<td><a href="https://apps.apple.com/us/app/calorie-counter-mynetdiary/id287529757">$59.99 Premium</a></td>
+</tr>
+<tr>
+<td><a href="https://support.myfitnesspal.com/hc/en-us/articles/360032274592-How-to-log-food-to-your-diary">MyFitnessPal</a></td>
+<td>6, search</td>
+<td>Yes, ads</td>
+<td>Voice Log, Premium only</td>
+<td><a href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718">$79.99 a year</a></td>
+</tr>
+<tr>
+<td><a href="https://help.macrofactorapp.com/en/articles/216-log-foods-with-describe">MacroFactor</a></td>
+<td>6, Describe, written as prose</td>
+<td>No, 7 day trial</td>
+<td>Describe, any paid plan</td>
+<td><a href="https://apps.apple.com/us/app/macrofactor-macro-tracker/id1553503471">$71.99 a year</a></td>
+</tr>
+<tr>
+<td><a href="https://loseit.zendesk.com/hc/en-us/articles/49210381551380-How-to-Log-Food-in-Lose-It">Lose It!</a></td>
+<td>9, search</td>
+<td>Yes, Basic</td>
+<td>No, Say It finds one food</td>
+<td><a href="https://loseit.zendesk.com/hc/en-us/articles/51906561286804-Lose-It-Membership-Tiers-Pricing">$79.99 a year</a></td>
+</tr>
+<tr>
+<td>MealSaid</td>
+<td>1, say the meal</td>
+<td>Free, no purchases</td>
+<td>Yes</td>
+<td><a href="/blog/how-mealsaid-works/">Free</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Four notes on that table. A step in a help page is not a tap on a phone, and favourites, recents and saved meals shorten every one of these counts.</p>
+<p>Free means with ads in two cases. Cronometer puts "No Advertisements" on its Gold list (<a href="https://support.cronometer.com/hc/en-us/articles/360028026971-Subscription-Types">Cronometer</a>, updated 24 October 2026), and MyFitnessPal says plainly that ads pay for its free core (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032273152-The-ad-free-experience-with-MyfitnessPal-Premium">MyFitnessPal</a>, updated 15 September 2026).</p>
+<p>Apple also never says what period MyNetDiary's $59.99 Premium purchase buys, so that row is the one price here I cannot date to a billing cycle.</p>
+<p>MacroFactor calls its logger the "fastest food logger on the market" and writes its instructions as prose rather than a numbered list, so its six is my count of the actions in order (<a href="https://help.macrofactorapp.com/en/articles/215-how-to-log-food-in-macrofactor">MacroFactor</a>).</p>
+<h2 id="can-you-just-talk-to-cronometer-instead">Can you just talk to Cronometer instead?</h2>
+<p><strong>Yes, and both voice routes sit behind Gold at $59.99 a year.</strong></p>
+<p>The help page is blunt about it: "Gold users can take advantage of our AI Voice-Logging feature". You open the orange plus menu, describe the food, tap Match Foods, then tap Add To Diary (<a href="https://support.cronometer.com/hc/en-us/articles/47549391461780-Mobile-Voice-Logging">Cronometer</a>, updated 24 October 2026).</p>
+<p>The Siri route is the one to read before you buy. Cronometer's own getting started list runs to eleven sub-steps across three stages: install Shortcuts, enable Siri on the Cronometer shortcut, then turn on voice activation in iOS Settings (<a href="https://support.cronometer.com/hc/en-us/articles/47664884315412-Mobile-Siri-Voice-Logging">Cronometer</a>, updated 24 October 2026).</p>
+<div class="stat"><strong>11 setup steps</strong><span>in Cronometer&#x27;s own instructions before Siri logs anything, and it needs Gold</span><small><a href="https://support.cronometer.com/hc/en-us/articles/47664884315412-Mobile-Siri-Voice-Logging">Cronometer</a></small></div>
+
+<p>MyNetDiary's Describe costs nothing for the first three tries, then needs Premium, and it is five steps including the review (<a href="https://www.mynetdiary.com/help/ai-features/how-to-log-food-by-description">MyNetDiary</a>, updated 21 October 2026). Our <a href="/blog/calorie-tracker-voice-input/">post on what each voice feature actually means</a> has the rest.</p>
+<h2 id="what-do-you-lose-by-leaving-cronometer">What do you lose by leaving Cronometer?</h2>
+<p><strong>The data quality, and most of your history.</strong></p>
+<p>Cronometer's free Basic account already covers up to 95 nutrients, over a million food entries and unlimited barcode scanning (<a href="https://cronometer.com/features/free-nutrition-tracking-app.html">Cronometer</a>). MyNetDiary's free tier matches it on nutrient count, at 108.</p>
+<p>What it does not match is the bookkeeping. Cronometer shows a Data Confidence figure on a nutrient target, because a branded food often carries only the fifteen or so values a US label requires (<a href="https://support.cronometer.com/hc/en-us/articles/360042550452-Data-Confidence-Scores">Cronometer</a>, updated 16 October 2026).</p>
+<p>Then there is the history. MyNetDiary's own migration page tells you to move Cronometer data through Apple Health, and lists weight, exercise and other health data (<a href="https://www.mynetdiary.com/help/getting-started/migrating-your-data-from-the-cronometer-app">MyNetDiary</a>, updated 3 August 2025). Your food diary is not on that list.</p>
+<p>If depth is why you are on Cronometer, read our <a href="/blog/macrofactor-vs-cronometer/">MacroFactor and Cronometer comparison</a> before switching to anything.</p>
+<h2 id="which-one-would-i-use">Which one would I use?</h2>
+<p><strong>MyNetDiary, if I wanted a database and a free account. Mine, if I wanted the meal logged and forgotten.</strong></p>
+<p>MealSaid is the narrow option here. You say the whole meal and it writes calories, protein, carbs, fat and fiber to Apple Health, and at times you pick your phone rings and a voice asks what you ate.</p>
+<p>What it does not do is most of this post. No barcode scanner, no food database to search, no photo logging, no micronutrients beyond those five fields, iPhone only on iOS 26, English only.</p>
+<p>Anyone who tracks vitamins, minerals or a medical diet should stay on Cronometer. The case for a simpler app is for people whose diary is empty by Thursday, which is the failure mode <a href="/blog/why-people-quit-calorie-tracking/">the research keeps finding</a>.</p>
+<h2 id="how-i-checked-this">How I checked this</h2>
+<p>Checked 25 October 2026. I read eleven pages for the step counts: Cronometer's Add a Food, Voice Logging, Siri Voice Logging and Crono-Hacks articles, MyFitnessPal's logging article, Lose It's logging and pricing articles, MyNetDiary's Describe and free tier pages, and MacroFactor's two logging articles.</p>
+<p>Prices came off each US App Store listing on the same day, where Cronometer shows Gold Annual at $59.99 and Gold Monthly at $10.99. Apple lists at most ten purchases per app, so treat those as a floor rather than a full price list.</p>
+<p>The step counts are counts of published instructions, not timed runs on a phone. My own timed test across six apps is still unpublished, so MealSaid's one step in the table is a description of the flow and not a measurement. The Cronometer, MyFitnessPal and Lose It help centres return 403 to scripts, so those articles were read through each help centre's public API and the updated dates are the ones the API reports. Corrections to ohmbrock42@gmail.com.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title>Best free calorie tracker for iPhone: widgets, Siri, Watch</title>
+    <link>https://mealsaid.app/blog/best-free-calorie-tracker-iphone/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/best-free-calorie-tracker-iphone/</guid>
+    <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+    <description>MyNetDiary&#x27;s free tier documents 4 home screen widgets, 12 lock screen widgets and a Watch app that logs food. Five iPhone trackers, checked 25 Oct 2026.</description>
+    <content:encoded><![CDATA[<p>If you want the most iPhone for nothing, install <a href="https://www.mynetdiary.com/iPhone.html">MyNetDiary</a>. Its own iPhone page claims a native Apple Watch app that logs food, 4 home screen widgets and 12 lock screen widgets, all on a free tier with no ads and no account needed.</p>
+<p>Cronometer is the runner up with 5 home screen widgets and a Watch app that adds food, but its Siri route is locked behind Gold at $59.99 a year.</p>
+<p>I checked what each company documents on 25 October 2026, not what the App Store screenshots suggest. I build one of these apps, so the second to last section is the one to discount.</p>
+<h2 id="which-free-tracker-does-the-most-on-an-iphone">Which free tracker does the most on an iPhone?</h2>
+<p><strong>MyNetDiary, by a wide margin on documented iPhone features.</strong></p>
+<p>Its free tier page lists the barcode scanner, voice input, 108 nutrients, Apple Health sync, the Apple Watch app and Siri, describing the core version as "free and ad-free" (<a href="https://www.mynetdiary.com/help/plans-billing-and-subscriptions/which-features-available-in-free-tier">MyNetDiary</a>, updated 15 October 2026).</p>
+<p>The Watch app is the part other apps do not match. MyNetDiary says it logs foods, meals, water and quick calories from the wrist and can show any tracked nutrient (<a href="https://www.mynetdiary.com/iPhone.html">MyNetDiary</a>).</p>
+<p>That iPhone page is MyNetDiary selling MyNetDiary, so read its counts as the company's claim. Everything on the other four rows below comes from a help article instead.</p>
+<figure><img alt="Matrix of five calorie apps against four iPhone surfaces showing MyNetDiary free on all four, Cronometer paying for Siri, and MyFitnessPal and Lose It with no lock screen or Siri route documented" src="/blog/img/best-free-calorie-tracker-iphone-1.webp"  width="1600" height="900" loading="lazy"><figcaption>Matrix of five calorie apps against four iPhone surfaces showing MyNetDiary free on all four, Cronometer paying for Siri, and MyFitnessPal and Lose It with no lock screen or Siri route documented</figcaption></figure>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>App</th>
+<th>Widgets named for iPhone</th>
+<th>Siri that logs food</th>
+<th>Apple Watch app</th>
+<th>Widget source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MyNetDiary</td>
+<td>4 home screen, 12 lock screen</td>
+<td>Saved My Meals, free</td>
+<td>Logs foods, meals, water</td>
+<td><a href="https://www.mynetdiary.com/iPhone.html">MyNetDiary</a></td>
+</tr>
+<tr>
+<td>Cronometer</td>
+<td>5 home screen</td>
+<td>Gold only, $59.99 a year</td>
+<td>Add Food from recent items</td>
+<td><a href="https://support.cronometer.com/hc/en-us/articles/4407693442324-iOS-Home-Screen-Widgets">Cronometer</a></td>
+</tr>
+<tr>
+<td>MyFitnessPal</td>
+<td>3 named, water one is interactive</td>
+<td>None documented</td>
+<td>Water and quick add calories</td>
+<td><a href="https://support.myfitnesspal.com/hc/en-us/articles/6886354417165-How-to-add-a-Widget-to-mobile-Home-Screen">MyFitnessPal</a></td>
+</tr>
+<tr>
+<td>Lose It!</td>
+<td>3, including Log Foods</td>
+<td>None documented</td>
+<td>Calorie bonus only, free</td>
+<td><a href="https://loseit.zendesk.com/hc/en-us/articles/51045662344212-Can-I-Add-a-Different-Kind-of-Widget">Lose It!</a></td>
+</tr>
+<tr>
+<td>MealSaid</td>
+<td>1 widget, 1 Lock Screen control</td>
+<td>Any meal, free</td>
+<td>Nothing I have published</td>
+<td><a href="/blog/how-mealsaid-works/">How it works</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Each Siri and Watch claim in that table is linked in the section that covers it.</p>
+<p>MacroFactor is missing on purpose. Its App Store listing says it "does not offer a free subscription tier" and describes a seven day trial, so nothing it does on an iPhone is free (<a href="https://apps.apple.com/us/app/macrofactor-macro-tracker/id1553503471">App Store</a>).</p>
+<h2 id="how-many-widgets-does-each-app-actually-have">How many widgets does each app actually have?</h2>
+<p><strong>Sixteen for MyNetDiary, five for Cronometer, three each for Lose It and MyFitnessPal.</strong></p>
+<p>Cronometer names Energy Consumed, Energy Remaining, Fasting, Water Tracking and Streaks. The water widget adds and removes glasses from the home screen, and the Energy Remaining widget carries an add food button (<a href="https://support.cronometer.com/hc/en-us/articles/4407693442324-iOS-Home-Screen-Widgets">Cronometer</a>, updated 22 October 2026).</p>
+<p>Lose It names three iOS widgets: Goal Ring Calorie Countdown, Macros Breakdown and Log Foods (<a href="https://loseit.zendesk.com/hc/en-us/articles/51045662344212-Can-I-Add-a-Different-Kind-of-Widget">Lose It!</a>, updated 6 July 2026).</p>
+<p>MyFitnessPal's widget page names Today's Calories and Today's Macros, then adds an Interactive Water Widget for iOS 18 or later, which is the only one of its widgets that writes anything (<a href="https://support.myfitnesspal.com/hc/en-us/articles/6886354417165-How-to-add-a-Widget-to-mobile-Home-Screen">MyFitnessPal</a>, updated 27 August 2026).</p>
+<figure><img alt="Widget counts named in each app's own iPhone documentation: MyNetDiary four home screen plus twelve lock screen, Cronometer five, Lose It three, MyFitnessPal three, MealSaid one widget and one lock screen control" src="/blog/img/best-free-calorie-tracker-iphone-2.webp"  width="1600" height="900" loading="lazy"><figcaption>Widget counts named in each app's own iPhone documentation: MyNetDiary four home screen plus twelve lock screen, Cronometer five, Lose It three, MyFitnessPal three, MealSaid one widget and one lock screen control</figcaption></figure>
+<p>Two of those counts are floors. MyFitnessPal's page says there are "a few options to choose from such as" the two it names, and I counted what was named.</p>
+<h2 id="can-you-log-a-meal-with-siri-for-free">Can you log a meal with Siri for free?</h2>
+<p><strong>Only a meal you already saved. Of the five apps here, open ended Siri logging is paid everywhere except MealSaid.</strong></p>
+<p>MyNetDiary's Siri page describes built in shortcuts for calorie checks, the daily deficit, water logging and My Meals logging, added from Add to Siri buttons on the matching screens (<a href="https://www.mynetdiary.com/iphelp_siri.html">MyNetDiary</a>). Say the phrase and a saved meal goes in; a sandwich you invented at lunch does not.</p>
+<p>Cronometer does take any food by voice, and it is a Gold feature at <a href="https://apps.apple.com/us/app/cronometer-calorie-counter/id1145935738">$59.99 a year</a>. The setup list runs to eleven sub-steps across three stages before the first log (<a href="https://support.cronometer.com/hc/en-us/articles/47664884315412-Mobile-Siri-Voice-Logging">Cronometer</a>, updated 24 October 2026).</p>
+<p>I could find no Siri phrase that logs food in MyFitnessPal or Lose It. Both put voice behind a button inside the app, which is the whole point of <a href="/blog/log-food-without-opening-the-app/">the post on logging without opening the app</a>.</p>
+<h2 id="does-anything-reach-the-lock-screen">Does anything reach the Lock Screen?</h2>
+<p><strong>MyNetDiary, with 12 lock screen widgets by its own count.</strong></p>
+<p>Cronometer, MyFitnessPal and Lose It all document home screen widgets only, and searching all three help centres for lock screen articles returned nothing about widgets or controls.</p>
+<p>MealSaid has a Lock Screen control, which is a different iOS thing: a button in the control picker that opens the app already listening, rather than a widget that displays numbers.</p>
+<h2 id="is-the-free-apple-watch-app-worth-anything">Is the free Apple Watch app worth anything?</h2>
+<p><strong>It depends what you call logging. Two of the four will take a food, two will take a number.</strong></p>
+<p>Cronometer's Watch app shows the Energy Summary and has an Add Food widget that lists your most recent items (<a href="https://support.cronometer.com/hc/en-us/articles/26644592588692-Apple-Watch-App">Cronometer</a>, updated 19 October 2026).</p>
+<p>MyFitnessPal's Watch app lets you add water or quick add calories, and feeds step data back to your goal (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032625731-Apple-Watch-App">MyFitnessPal</a>, updated 27 August 2026). Lose It does not take food on the wrist at all: its Watch support is a free calorie bonus from resting and active calories, and no food entry is described (<a href="https://loseit.zendesk.com/hc/en-us/articles/47273244741396-Using-Apple-Watch-with-Lose-It">Lose It!</a>, updated 9 September 2026).</p>
+<div class="stat"><strong>51 data types</strong><span>that MyNetDiary says it writes to Apple Health, plus 14 it reads back</span><small><a href="https://www.mynetdiary.com/iPhone.html">MyNetDiary</a></small></div>
+
+<p>That read figure matters more than it looks. An app that reads nutrition back can pick up meals you logged elsewhere, which is the test in our <a href="/blog/calorie-apps-apple-health/">Apple Health comparison</a>.</p>
+<h2 id="which-would-i-put-on-my-own-iphone">Which would I put on my own iPhone?</h2>
+<p><strong>MyNetDiary first, then mine for the meals I would otherwise skip.</strong></p>
+<p>MealSaid is one surface done one way. You say the whole meal, it writes calories, protein, carbs, fat and fiber to Apple Health, and at times you pick your phone rings and a voice asks what you ate.</p>
+<p>Against the table above it is thin. No barcode scanner, no food database, no Apple Watch app I can point you to, no nutrients beyond those five, iPhone only on iOS 26, English only.</p>
+<p>MyNetDiary beats it on everything a feature list can measure, free, and anyone comparing <a href="/blog/free-calorie-counter-without-subscription/">what each free tier keeps</a> should start there. The narrower pitch is for people who have installed three of these and logged in none of them.</p>
+<h2 id="how-i-checked-this">How I checked this</h2>
+<p>Checked 25 October 2026. The widget, Watch and Siri claims come from each company's own help article or iPhone page, read on that date through the public help centre API where the site returns 403 to scripts. MyNetDiary's widget and Watch numbers come from its marketing page rather than a help article, so they are the company's claim, not a count I made from a phone.</p>
+<p>I did not install five apps and photograph their widget pickers. A count of named widgets is a floor, since a company can ship one and not document it, and MyFitnessPal's page openly says there are more than the two home screen widgets it names.</p>
+<p>MealSaid's row describes my own app. Its Siri phrase, Lock Screen control and widget are described in <a href="/blog/log-food-without-opening-the-app/">the earlier post</a>, and the step counts behind the other apps' logging flows are in <a href="/blog/simpler-cronometer-alternative/">the Cronometer alternative post</a>. Corrections to ohmbrock42@gmail.com.</p>]]></content:encoded>
+  </item>
   <item>
     <title>MacroFactor vs Cronometer: price, nutrients and Health sync</title>
     <link>https://mealsaid.app/blog/macrofactor-vs-cronometer/</link>
