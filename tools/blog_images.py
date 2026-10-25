@@ -445,23 +445,6 @@ def can_prices():
     save(im, "cal-ai-alternatives-no-photo-2.webp")
 
 
-if __name__ == "__main__":
-    OUT.mkdir(exist_ok=True)
-    quit_logins(); quit_waffle(); quit_bars()
-    mfp_table(); mfp_timeline()
-    health_matrix(); health_macros_card()
-    log_strip()
-    screenshot("home.png", "how-mealsaid-works-1.webp"); screenshot("call.png", "how-mealsaid-works-2.webp"); how_flow()
-    voice_levels(); voice_prices()
-    remind_matrix(); remind_response()
-    free_ranges(); free_loseit_ladder()
-    calai_error_bars(); calai_rating_vs_error()
-    off_gaps(); off_loa(); off_menu()
-    lvm_ways(); lvm_free_count(); lvm_prices()
-    mvc_per_nutrient(); mvc_nutrient_count(); mvc_depth()
-    can_matrix(); can_prices()
-
-
 # ------------------------------------------------------------ voice input
 VOICE_LEVELS = [
     ("1", "Dictation", [
@@ -969,3 +952,90 @@ def lvm_prices():
     text(d, (80, 782), "Hollow rings are the two purchases named Premium Lifetime. Lose It's help centre prices Lifetime at $299.99.", 23, fill=INK3)
     source(d, "Source: the In-App Purchases panel on each US App Store listing, read 23 October 2026. Apple shows at most ten purchases.")
     save(im, "lose-it-vs-myfitnesspal-3.webp")
+
+# ------------------------------------------------------------ simpler cronometer alternative
+# (app, route, steps the app's own help article lists, numbered in the doc)
+SCA_STEPS = [
+    ("Lose It!", "Search, in the app", 9, ""),
+    ("MyFitnessPal", "Search, iOS", 6, ""),
+    ("MacroFactor", "Describe", 6, "steps written as prose"),
+    ("MyNetDiary", "Describe", 5, ""),
+    ("Cronometer", "Search, Add a Food", 4, ""),
+    ("Cronometer", "Voice Logging, Gold only", 4, "steps written as prose"),
+    ("MealSaid", "Say the whole meal", 1, "my own app"),
+]
+
+
+def sca_steps():
+    im, d = canvas()
+    text(d, (80, 58), "Steps to log one food, counted in each app's own help page", 38, "m")
+    text(d, (80, 112), "The in-app route each company documents, read 25 October 2026", 24, fill=INK2)
+    x0, unit, y = 640, 78, 210
+    for app, route, n, note in SCA_STEPS:
+        mine = app == "MealSaid"
+        text(d, (80, y), app, 30, "m" if mine else "r", fill=ACC if mine else INK, anchor="lm")
+        text(d, (80, y + 30), route, 21, fill=INK3, anchor="lm")
+        for i in range(n):
+            bx = x0 + i * unit
+            d.rounded_rectangle([bx, y - 20, bx + unit - 12, y + 20], 8, fill=ACC if mine else "#3a4252")
+            text(d, (bx + (unit - 12) / 2, y + 1), str(i + 1), 22, fill=BG if mine else INK2, anchor="mm")
+        text(d, (x0 + n * unit + 16, y), f"{n} step" + ("s" if n > 1 else ""), 24, fill=INK2, anchor="lm")
+        if note:
+            text(d, (x0 + n * unit + 16, y + 28), note, 19, fill=INK3, anchor="lm")
+        y += 80
+    text(d, (80, 772), "Counted from the numbered instructions, or the actions in order where the page is prose.", 22, fill=INK2)
+    text(d, (80, 806), "Favourites, recents and saved meals cut every count, in every app.", 22, fill=INK3)
+    source(d, "Sources: Cronometer, MyFitnessPal, Lose It!, MyNetDiary and MacroFactor help pages, read 25 October 2026.")
+    save(im, "simpler-cronometer-alternative-1.webp")
+
+
+SCA_TABS = ["All", "Favorites", "Common", "Supplements", "Brands", "Custom", "Restaurants"]
+SCA_MORE = [
+    ("Sort By menu", "sets the order of the list before you type"),
+    ("Database filter", "one source such as NCCDB, or a combination"),
+    ("Better Alternative", "a swap offered on some brand name foods"),
+    ("Multi-Add toggle", "tick boxes, Review Items, then Add to Diary"),
+]
+
+
+def sca_choices():
+    im, d = canvas()
+    text(d, (80, 58), "What Cronometer's food search offers before you pick", 38, "m")
+    text(d, (80, 112), "Everything the Mobile Add a Food page describes inside one entry", 24, fill=INK2)
+    text(d, (80, 206), "7", 92, "b", fill=ACC)
+    text(d, (152, 242), "category tabs above the results", 30, fill=INK, anchor="lm")
+    x, y = 80, 336
+    for tab in SCA_TABS:
+        w = d.textlength(tab, font=F(26)) + 52
+        if x + w > 1520:
+            x, y = 80, y + 72
+        d.rounded_rectangle([x, y, x + w, y + 54], 27, outline="#39414f", width=2)
+        text(d, (x + w / 2, y + 28), tab, 26, fill=INK2, anchor="mm")
+        x += w + 18
+    y += 146
+    for name, note in SCA_MORE:
+        d.line([(80, y), (120, y)], fill="#39414f", width=4)
+        text(d, (144, y), name, 29, fill=INK, anchor="lm")
+        text(d, (520, y), note, 24, fill=INK3, anchor="lm")
+        y += 70
+    text(d, (80, 790), "Then the food page itself: serving size, diary group and the full nutrient profile.", 23, fill=INK2)
+    source(d, "Source: Cronometer help centre, Mobile Add a Food, updated 24 October 2026.")
+    save(im, "simpler-cronometer-alternative-2.webp")
+
+
+if __name__ == "__main__":
+    OUT.mkdir(exist_ok=True)
+    quit_logins(); quit_waffle(); quit_bars()
+    mfp_table(); mfp_timeline()
+    health_matrix(); health_macros_card()
+    log_strip()
+    screenshot("home.png", "how-mealsaid-works-1.webp"); screenshot("call.png", "how-mealsaid-works-2.webp"); how_flow()
+    voice_levels(); voice_prices()
+    remind_matrix(); remind_response()
+    free_ranges(); free_loseit_ladder()
+    calai_error_bars(); calai_rating_vs_error()
+    off_gaps(); off_loa(); off_menu()
+    lvm_ways(); lvm_free_count(); lvm_prices()
+    mvc_per_nutrient(); mvc_nutrient_count(); mvc_depth()
+    can_matrix(); can_prices()
+    sca_steps(); sca_choices()
