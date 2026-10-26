@@ -3,7 +3,7 @@ title: Calorie tracker with voice input: what you actually get
 slug: calorie-tracker-voice-input
 description: Voice input means three different things in calorie apps. Seven iPhone trackers compared on 21 October 2026, and five charge a median of $79.99 a year.
 date: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-26
 author: Om Divyatej
 tags: [voice, calorie tracking, myfitnesspal, cronometer, mealsaid]
 image: blog/img/calorie-tracker-voice-input-1.webp
@@ -54,7 +54,7 @@ Level three is the one people picture when they imagine talking to a tracker. Yo
 | Cronometer | Voice-Logging matches a spoken description, and a Siri phrase logs from outside | Yes, by Siri | Gold, $10.99 a month or $59.99 a year | [Gold](https://cronometer.com/gold/index.html) |
 | MyNetDiary | Plain voice logging is free, AI voice logging parses a spoken meal | Not documented | Premium Plus, $14.99 a month or $99.99 a year | [Free tier](https://www.mynetdiary.com/free-calorie-tracker.html), [Prices](https://www.mynetdiary.com/myfitnesspal-vs-mynetdiary.html) |
 | MacroFactor | Describe takes a typed or spoken description and matches foods to it | No | Subscription only, $11.99 a month or $71.99 a year | [Help](https://help.macrofactorapp.com/en/articles/215-how-to-log-food-in-macrofactor), [App Store](https://apps.apple.com/us/app/macrofactor-macro-tracker/id1553503471) |
-| Lifesum | AI Tracking accepts voice, typed text or a photo, from the plus button | No | Premium, cheapest annual SKU $99.99 | [Help](https://help.lifesum.com/en/article/ai-tracking-explained-android-28mp0b), [App Store](https://apps.apple.com/us/app/lifesum-food-tracker-fasting/id286906691) |
+| Lifesum | AI Tracking accepts voice, typed text or a photo, from the plus button | No | Premium, cheapest annual SKU $99.99 | [Help](https://help.lifesum.com/en/article/ai-tracking-how-does-it-work-15sw7rk), [App Store](https://apps.apple.com/us/app/lifesum-food-tracker-fasting/id286906691) |
 | MealSaid | You say the meal and it writes calories and macros to Apple Health | Yes, by Siri | Free, no in-app purchases | [How it works](/blog/how-mealsaid-works/) |
 
 MyFitnessPal is the clearest writer of the group. Its help page says "Voice Logging searches the same food database you'd search by typing", then lists what is not supported yet: saved foods, recipes, meals, Quick Add, weight, exercise and water ([MyFitnessPal](https://support.myfitnesspal.com/hc/en-us/articles/30332897072269-How-to-log-food-with-your-voice)).
@@ -104,6 +104,8 @@ MealSaid is my answer to the same three tests, for free. You say what you ate, i
 ## How I checked this
 
 Checked 21 October 2026. I read each company's own help article or US App Store listing on that date and took the prices from the listing or the pricing page, not from a roundup. MyFitnessPal's help article was last updated 21 September 2026 and Cronometer's voice-logging article on 20 October 2026, per their help centres.
+
+Re-checked 26 October 2026: Lifesum's AI Tracking help link returned a 404, so I replaced it with Lifesum's current "AI Tracking - How does it work?" article, which still says voice, text and photo input run from the plus button and need Premium. Prices and other claims in this post were unchanged.
 
 Apple's current iPhone guide page renders its body only with JavaScript, so the Dictate key link above points at the archived iOS 12 copy of the same article, which still loads as plain text.
 
