@@ -1175,6 +1175,76 @@ def hf_carplay():
     save(im, "hands-free-calorie-tracking-2.webp")
 
 
+# ------------------------------------------------------------ calorie tracker for adhd
+# (label, odds ratio, low, high, note)
+ADHD_OR = [
+    ("Obesity in adults with ADHD", 1.55, 1.32, 1.81, "42 studies, 728,136 people"),
+    ("Any eating disorder in people with ADHD", 3.82, 2.34, 6.24, "12 studies, 4,013 vs 29,404"),
+    ("Binge eating disorder in people with ADHD", 4.13, 3.00, 5.67, "subgroup of the same 12 studies"),
+    ("ADHD in people with an eating disorder", 2.57, 1.30, 5.11, "5 studies, 1,044 vs 11,292"),
+]
+
+
+def adhd_forest():
+    im, d = canvas()
+    text(d, (80, 58), "How often ADHD and eating problems travel together", 38, "m")
+    text(d, (80, 112), "Pooled odds ratios with 95% intervals, from two meta-analyses", 24, fill=INK2)
+    x0, x1, top = 700, 1480, 7.0
+    px = lambda v: x0 + v / top * (x1 - x0)
+    for g in (0, 1, 2, 3, 4, 5, 6, 7):
+        if g:
+            d.line([(px(g), 190), (px(g), 690)], fill="#161c25", width=2)
+        text(d, (px(g), 716), str(g), 22, fill=INK3, anchor="ma")
+    d.line([(px(1), 170), (px(1), 700)], fill=ACC, width=3)
+    text(d, (px(1), 158), "no association", 22, fill=ACC, anchor="ma")
+    y = 248
+    for label, orr, lo, hi, note in ADHD_OR:
+        text(d, (80, y - 10), label, 27, fill=INK, anchor="lm")
+        text(d, (80, y + 22), note, 21, fill=INK3, anchor="lm")
+        d.line([(px(lo), y), (px(hi), y)], fill="#4a5363", width=5)
+        for v in (lo, hi):
+            d.line([(px(v), y - 14), (px(v), y + 14)], fill="#4a5363", width=5)
+        d.ellipse([px(orr) - 13, y - 13, px(orr) + 13, y + 13], fill=INK)
+        text(d, (px(orr), y - 30), f"{orr}", 25, "m", fill=INK, anchor="ms")
+        y += 120
+    text(d, (80, 762), "An odds ratio of 3.82 means the odds are about four times higher, not that four in five people are affected.", 22, fill=INK2)
+    text(d, (80, 796), "These are associations across populations. Neither review shows that one condition causes the other.", 22, fill=INK3)
+    source(d, "Sources: Cortese et al., Am J Psychiatry 2016; Nazar et al., Int J Eat Disord 2016. Read 26 October 2026.")
+    save(im, "calorie-tracker-for-adhd-1.webp")
+
+
+# (app, route, the choices the app's own help page asks you to make)
+ADHD_DECISIONS = [
+    ("Lose It!", "Search, in the app", ["meal", "tab", "search words", "food", "serving unit", "quantity"]),
+    ("MyFitnessPal", "Search, iOS", ["meal", "search words", "result", "serving size", "servings"]),
+    ("Cronometer", "Add a Food, mobile", ["search words", "food", "serving size", "diary group"]),
+    ("MealSaid", "Say the whole meal", ["what to say"]),
+]
+
+
+def adhd_decisions():
+    im, d = canvas()
+    text(d, (80, 58), "Choices you make to log one food, per the app's own help page", 38, "m")
+    text(d, (80, 112), "Counted as decisions, not taps. Read 26 October 2026", 24, fill=INK2)
+    y = 220
+    for app, route, choices in ADHD_DECISIONS:
+        mine = app == "MealSaid"
+        text(d, (80, y + 6), app, 30, "m" if mine else "r", fill=INK, anchor="lm")
+        text(d, (80, y + 44), route, 21, fill=INK3, anchor="lm")
+        x = 440
+        for c in choices:
+            w = d.textlength(c, font=F(25)) + 48
+            d.rounded_rectangle([x, y - 14, x + w, y + 32], 23, fill=ACC if mine else "#232935")
+            text(d, (x + 24, y + 9), c, 25, fill=BG if mine else INK, anchor="lm")
+            x += w + 16
+        text(d, (x + 8, y + 9), f"{len(choices)}", 34, "b", fill=INK2, anchor="lm")
+        y += 128
+    text(d, (80, 740), "Saved meals, favourites and recents cut every one of these counts, in every app.", 22, fill=INK2)
+    text(d, (80, 774), "MealSaid still asks you to check the estimate, which is a decision I have not counted.", 22, fill=INK3)
+    source(d, "Sources: Lose It, MyFitnessPal and Cronometer help articles, read 26 October 2026. MealSaid is my own app.")
+    save(im, "calorie-tracker-for-adhd-2.webp")
+
+
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     quit_logins(); quit_waffle(); quit_bars()
@@ -1193,3 +1263,4 @@ if __name__ == "__main__":
     sca_steps(); sca_choices()
     bfc_matrix(); bfc_widget_count()
     hf_touches(); hf_carplay()
+    adhd_forest(); adhd_decisions()
