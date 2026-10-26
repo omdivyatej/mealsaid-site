@@ -1106,6 +1106,75 @@ def bfc_widget_count():
     save(im, "best-free-calorie-tracker-iphone-2.webp")
 
 
+# ------------------------------------------------------------ hands-free calorie tracking
+# (app, route, touches before you speak, touches after you stop speaking)
+HF_TOUCHES = [
+    ("MealSaid", "Siri phrase, free", 0, 0),
+    ("Cronometer", "Siri voice logging, Gold", 0, 0),
+    ("MacrosFirst", "Siri Log Food, Premium", 0, 0),
+    ("MyFitnessPal", "Voice Log, Premium", 3, 2),
+    ("Cronometer", "In-app voice logging, Gold", 3, 2),
+    ("Lose It!", "Say It, in the app", 4, 4),
+]
+
+
+def hf_touches():
+    im, d = canvas()
+    text(d, (80, 58), "Touches to log one meal by voice, from a locked phone", 38, "m")
+    text(d, (80, 112), "Counted from each app's own step list, read 26 October 2026", 24, fill=INK2)
+    x0, unit, y = 660, 62, 208
+    for app, route, before, after in HF_TOUCHES:
+        total = before + after
+        text(d, (80, y), app, 30, "m" if total == 0 else "r", fill=INK, anchor="lm")
+        text(d, (80, y + 30), route, 21, fill=INK3, anchor="lm")
+        if total == 0:
+            d.rounded_rectangle([x0, y - 18, x0 + 42, y + 18], 8, outline="#39414f", width=3)
+            text(d, (x0 + 21, y + 1), "0", 24, "m", fill=INK, anchor="mm")
+            text(d, (x0 + 62, y), "you never touch the phone", 24, fill=INK2, anchor="lm")
+        else:
+            for i in range(total):
+                bx = x0 + i * unit
+                d.rounded_rectangle([bx, y - 18, bx + unit - 12, y + 18], 8,
+                                    fill=ACC if i >= before else "#3a4252")
+                text(d, (bx + (unit - 12) / 2, y + 1), str(i + 1), 21,
+                     fill=BG if i >= before else INK2, anchor="mm")
+            text(d, (x0 + total * unit + 14, y), f"{total} touches", 24, fill=INK2, anchor="lm")
+        y += 86
+    ly = 742
+    d.rounded_rectangle([80, ly - 16, 116, ly + 16], 8, fill="#3a4252")
+    text(d, (130, ly), "before you speak", 23, fill=INK2, anchor="lm")
+    d.rounded_rectangle([400, ly - 16, 436, ly + 16], 8, fill=ACC)
+    text(d, (450, ly), "after you stop speaking, the ones greasy hands cannot do", 23, fill=INK2, anchor="lm")
+    text(d, (80, 792), "Opening the app counts as one touch. Permission prompts and corrections are not counted.", 22, fill=INK3)
+    source(d, "Sources: MyFitnessPal, Lose It! and Cronometer help articles and the MacrosFirst Siri page, read 26 October 2026.")
+    save(im, "hands-free-calorie-tracking-1.webp")
+
+
+HF_CARPLAY = ["Audio", "Video", "Messaging and VoIP", "Navigation", "EV charging", "Fueling",
+              "Parking", "Public safety", "Quick food ordering", "Voice based conversational", "Driving task"]
+
+
+def hf_carplay():
+    im, d = canvas()
+    text(d, (80, 58), "The app categories Apple names for CarPlay", 38, "m")
+    text(d, (80, 112), "From Apple's own CarPlay developer page, read 26 October 2026", 24, fill=INK2)
+    x, y, rowh = 80, 220, 92
+    for name in HF_CARPLAY:
+        w = d.textlength(name, font=F(30)) + 64
+        if x + w > 1520:
+            x, y = 80, y + rowh
+        d.rounded_rectangle([x, y, x + w, y + 64], 32, fill="#1a2029")
+        text(d, (x + 32, y + 32), name, 30, fill=INK, anchor="lm")
+        x += w + 20
+    y += 210
+    text(d, (80, y), "Food logging is not one of them.", 52, "b", fill=ACC)
+    text(d, (80, y + 82), "Quick food ordering is for buying a meal, not for recording one you ate.", 27, fill=INK2)
+    text(d, (80, y + 124), "So no calorie tracker can draw a screen in the car. While driving the only route", 27, fill=INK2)
+    text(d, (80, y + 166), "is Siri on the phone, or parking first.", 27, fill=INK2)
+    source(d, "Source: developer.apple.com/carplay, Apps section, read 26 October 2026. Eleven categories named in one paragraph.")
+    save(im, "hands-free-calorie-tracking-2.webp")
+
+
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     quit_logins(); quit_waffle(); quit_bars()
@@ -1123,3 +1192,4 @@ if __name__ == "__main__":
     can_matrix(); can_prices()
     sca_steps(); sca_choices()
     bfc_matrix(); bfc_widget_count()
+    hf_touches(); hf_carplay()

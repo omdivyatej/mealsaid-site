@@ -24,7 +24,7 @@ One rule above all: every post needs one original element that exists nowhere el
 | 16 | Cal AI alternatives that do not need a photo | Cal AI alternative | switching | table | verified price and input method per app, dated | published | https://mealsaid.app/blog/cal-ai-alternatives-no-photo/ |
 | 17 | A simpler Cronometer alternative | Cronometer alternative simpler | switching | answer | taps-to-log count from each app's own flow description | published | https://mealsaid.app/blog/simpler-cronometer-alternative/ |
 | 18 | Best free calorie tracker for iPhone only | best calorie tracker iPhone only free | Apple Health | table | iPhone-only features (Siri, widgets, Health write) verified per app | published | https://mealsaid.app/blog/best-free-calorie-tracker-iphone/ |
-| 19 | Hands-free calorie tracking while cooking or driving | hands-free calorie tracking | voice | answer | which apps work with the screen off or via Siri, verified | todo | |
+| 19 | Hands-free calorie tracking while cooking or driving | hands-free calorie tracking | voice | answer | which apps work with the screen off or via Siri, verified | published | https://mealsaid.app/blog/hands-free-calorie-tracking/ |
 | 20 | Calorie tracking when you hate logging (ADHD and the rest of us) | calorie tracker for ADHD | adherence | answer | self-monitoring research with sample sizes, friction count per app | todo | |
 | 21 | How to stay consistent with calorie tracking | how to stay consistent with calorie tracking | adherence | guide | research on habit cues, plus our adherence numbers once #8 exists | todo | |
 | 22 | Can I log food by talking to an app? | can I log food by talking to an app | voice | answer | list of every iOS app with real voice logging, verified, dated | todo | |
