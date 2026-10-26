@@ -14,6 +14,8 @@
 
 ## Blog posts
 
+- [Hands-free calorie tracking while cooking or driving](https://mealsaid.app/blog/hands-free-calorie-tracking/): Three iPhone apps log a meal with zero touches. MyFitnessPal needs five and Lose It needs eight, counted from their own steps on 26 October 2026.
+- [Calorie tracker for ADHD, counted by decisions per meal](https://mealsaid.app/blog/calorie-tracker-for-adhd/): No app treats ADHD. Logging one food takes 6 choices in Lose It, 5 in MyFitnessPal, 4 in Cronometer and 1 if you say the meal out loud.
 - [A simpler Cronometer alternative: I counted the steps](https://mealsaid.app/blog/simpler-cronometer-alternative/): Cronometer's own help page lists 4 steps to log a food, Lose It lists 9. Five simpler alternatives with prices and step counts, checked 25 Oct 2026.
 - [Best free calorie tracker for iPhone: widgets, Siri, Watch](https://mealsaid.app/blog/best-free-calorie-tracker-iphone/): MyNetDiary's free tier documents 4 home screen widgets, 12 lock screen widgets and a Watch app that logs food. Five iPhone trackers, checked 25 Oct 2026.
 - [MacroFactor vs Cronometer: price, nutrients and Health sync](https://mealsaid.app/blog/macrofactor-vs-cronometer/): Cronometer Gold is $59.99 a year, MacroFactor $71.99, and only Cronometer has a free tier. Nutrient counts and Apple Health, checked 24 Oct 2026.

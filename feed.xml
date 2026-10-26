@@ -8,6 +8,212 @@
   <lastBuildDate>Mon, 26 Oct 2026 00:00:00 +0000</lastBuildDate>
   <atom:link href="https://mealsaid.app/feed.xml" rel="self" type="application/rss+xml"/>
   <item>
+    <title>Hands-free calorie tracking while cooking or driving</title>
+    <link>https://mealsaid.app/blog/hands-free-calorie-tracking/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/hands-free-calorie-tracking/</guid>
+    <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Three iPhone apps log a meal with zero touches. MyFitnessPal needs five and Lose It needs eight, counted from their own steps on 26 October 2026.</description>
+    <content:encoded><![CDATA[<p>Three iPhone calorie apps log a meal without you touching the phone at all: Cronometer on Gold, MacrosFirst on Premium, and MealSaid, which I built and which is free. All three work through a Siri phrase, so the app never opens. Every other voice feature I checked makes you tap at least twice after you stop talking.</p>
+<p>I counted the touches in each app's own step list on 26 October 2026. MyFitnessPal's Voice Log takes five touches from a locked phone to a saved entry, Cronometer's in-app voice logging takes five, and Lose It's Say It takes eight.</p>
+<p>None of them work through the car screen, mine included. Apple's CarPlay category list has no slot for food logging.</p>
+<figure><img alt="Horizontal chart of touches needed to log one meal by voice from a locked phone: MealSaid, Cronometer with Siri and MacrosFirst need zero, MyFitnessPal and Cronometer in app need five, Lose It needs eight" src="/blog/img/hands-free-calorie-tracking-1.webp"  width="1600" height="900" loading="lazy"><figcaption>Horizontal chart of touches needed to log one meal by voice from a locked phone: MealSaid, Cronometer with Siri and MacrosFirst need zero, MyFitnessPal and Cronometer in app need five, Lose It needs eight</figcaption></figure>
+<h2 id="what-counts-as-hands-free">What counts as hands-free?</h2>
+<p><strong>Two moments decide it: whether you can start without touching the phone, and whether you can finish without touching it.</strong> Most voice features only solve the middle.</p>
+<p>Turning speech into text is the easy part. Every app below does that well enough once you are already on its logging screen.</p>
+<p>The cost sits at the two ends. You tap your way in, then you tap to confirm the match, and both taps want a dry finger and a look at the screen.</p>
+<h2 id="which-apps-log-a-meal-with-zero-touches">Which apps log a meal with zero touches?</h2>
+<p><strong>Three, and all three use a Siri phrase instead of a button inside the app.</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>App</th>
+<th>Start without touching the phone</th>
+<th>Finish without touching the phone</th>
+<th>Documented to work when locked</th>
+<th>What it costs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/blog/how-mealsaid-works/">MealSaid</a></td>
+<td>Yes, "log in MealSaid" plus the meal</td>
+<td>Yes, Siri shows a card</td>
+<td>Yes, in <a href="/blog/log-food-without-opening-the-app/">my step by step post</a></td>
+<td>Free</td>
+</tr>
+<tr>
+<td><a href="https://support.cronometer.com/hc/en-us/articles/47664884315412-Mobile-Siri-Voice-Logging">Cronometer</a></td>
+<td>Yes, "Log food in Cronometer"</td>
+<td>Yes, Siri asks which foods, a banner confirms</td>
+<td>Not stated</td>
+<td>Gold</td>
+</tr>
+<tr>
+<td><a href="https://help.macrosfirst.com/en/articles/75-siri-shortcuts">MacrosFirst</a></td>
+<td>Yes, "Log food in MacrosFirst"</td>
+<td>Yes, serving and meal handled in Siri</td>
+<td>Not stated</td>
+<td>Premium</td>
+</tr>
+<tr>
+<td><a href="https://support.myfitnesspal.com/hc/en-us/articles/30332897072269-How-to-log-food-with-your-voice">MyFitnessPal</a></td>
+<td>No, three touches before you speak</td>
+<td>No, the arrow and then Log</td>
+<td>No</td>
+<td>Premium</td>
+</tr>
+<tr>
+<td><a href="https://loseit.zendesk.com/hc/en-us/articles/49210381551380-How-to-Log-Food-in-Lose-It">Lose It!</a></td>
+<td>No, four touches before you speak</td>
+<td>No, four touches after</td>
+<td>No</td>
+<td>Not stated in the article</td>
+</tr>
+<tr>
+<td><a href="https://help.macrofactorapp.com/en/articles/215-how-to-log-food-in-macrofactor">MacroFactor</a></td>
+<td>No, Describe lives inside the app</td>
+<td>No, you confirm the plate</td>
+<td>No</td>
+<td>Paid app</td>
+</tr>
+</tbody>
+</table></div>
+<p>Cronometer is the one to look at if you want this on a mature tracker. Its article says Gold iOS users can log "without having to open the app", and that a banner confirms the item (<a href="https://support.cronometer.com/hc/en-us/articles/47664884315412-Mobile-Siri-Voice-Logging">Cronometer support, updated 24 October 2026</a>).</p>
+<p>MacrosFirst does the same for Premium users and handles serving size and meal in the Siri conversation, "all through Siri without ever opening the app" (<a href="https://help.macrosfirst.com/en/articles/75-siri-shortcuts">MacrosFirst help</a>). Its Log Food shortcut rides on AI Search, which its page calls a Premium feature.</p>
+<p>Whether a phrase survives a locked phone is a choice the developer makes, not luck. Apple's App Intents framework has an authentication policy per action, and the <code>alwaysAllowed</code> case lets an action "run at any time, including when the device is locked" (<a href="https://developer.apple.com/documentation/appintents/intentauthenticationpolicy">Apple developer documentation</a>).</p>
+<h2 id="why-does-the-tap-after-you-speak-matter">Why does the tap after you speak matter?</h2>
+<p><strong>Because that is the tap you cannot make with oil on your fingers.</strong> It is also the one that pulls your eyes back to the screen.</p>
+<p>MyFitnessPal's iOS steps are open the app, tap the plus, tap Voice Log, speak, tap the blue arrow, tap Log. Voice Log is Premium, English only, and needs app version 24.35.0 or higher (<a href="https://support.myfitnesspal.com/hc/en-us/articles/30332897072269-How-to-log-food-with-your-voice">MyFitnessPal help, updated 21 September 2026</a>).</p>
+<p>Cronometer's in-app route is shorter at five: the plus menu, Voice-Logging, speak, Match Foods, Add To Diary (<a href="https://support.cronometer.com/hc/en-us/articles/47549391461780-Mobile-Voice-Logging">Cronometer support, updated 24 October 2026</a>).</p>
+<p>Lose It is the longest of the group. Its article runs Log, Add Food, Say It, pick the food, pick a serving unit and quantity, Add or Save, then Done, and notes that Say It is English only (<a href="https://loseit.zendesk.com/hc/en-us/articles/49210381551380-How-to-Log-Food-in-Lose-It">Lose It help, updated 25 August 2026</a>).</p>
+<p>MacroFactor's Describe accepts speech, in one parenthesis: "Just type (or speak) a description of your food or meal" (<a href="https://help.macrofactorapp.com/en/articles/215-how-to-log-food-in-macrofactor">MacroFactor help</a>). I found no Siri phrase for it in their help centre.</p>
+<p>I searched the Lose It and MyFitnessPal help centres for "Siri" on 26 October 2026 and both returned zero articles. For a route comparison that includes widgets and the Lock Screen, see <a href="/blog/log-food-without-opening-the-app/">the post on logging without opening an app</a>.</p>
+<h2 id="can-i-log-calories-while-driving">Can I log calories while driving?</h2>
+<p><strong>Not through the car screen. Apple's CarPlay page names eleven kinds of app, and food logging is not one of them.</strong></p>
+<figure><img alt="Chart listing the eleven app categories Apple names for CarPlay including audio, navigation and quick food ordering, with a line saying food logging is not one of them" src="/blog/img/hands-free-calorie-tracking-2.webp"  width="1600" height="900" loading="lazy"><figcaption>Chart listing the eleven app categories Apple names for CarPlay including audio, navigation and quick food ordering, with a line saying food logging is not one of them</figcaption></figure>
+<p>Apple's wording is about tasks you do on the way somewhere: EV charging, fueling, parking, public safety and quick food ordering "can help people accomplish important tasks without taking out their phone" (<a href="https://developer.apple.com/carplay/">Apple CarPlay for developers</a>). Ordering a burrito is a category. Recording that you ate one is not.</p>
+<p>That leaves Siri on the phone, and it is worth being honest about what that costs. AAA had 120 drivers use the built-in systems of 30 model year 2017 cars, and rated 23 of the 30 at high or very high demand (<a href="https://aaafoundation.org/research/visual-cognitive-demands-using-vehicle-information-systems/">AAA Foundation, 2017</a>).</p>
+<div class="stat"><strong>23 of 30</strong><span>cars whose built-in systems rated high or very high demand with 120 drivers</span><small><a href="https://aaafoundation.org/research/visual-cognitive-demands-using-vehicle-information-systems/">AAA Foundation 2017</a></small></div>
+
+<p>The useful detail for us is the direction. Voice lowered visual demand against the other modes, but the interactions ran longer, and the longer time cancelled the gain. A one-sentence log is near the short end of that range; anything that makes you read a list of matches is not, and should wait until you park.</p>
+<h2 id="what-works-when-my-hands-are-covered-in-oil">What works when my hands are covered in oil?</h2>
+<p><strong>A spoken Siri phrase, and after that the accessibility settings.</strong> Cooking is the easier case because you can look at the screen, you just cannot touch it.</p>
+<p>Four things to set up once, in this order:</p>
+<ol>
+<li>Settings, then Apple Intelligence &amp; Siri, then Talk to Siri, so the phrase works without the side button. Cronometer's article walks through the same screens.</li>
+<li>Settings, Accessibility, Siri. <a href="https://support.cronometer.com/hc/en-us/articles/47664884315412-Mobile-Siri-Voice-Logging">Cronometer's page</a> points here for pause time and for the Always Listen option, which it says lets Siri listen while the phone is locked.</li>
+<li>AirPods, if the phone is across the kitchen. The phrase is the same and the microphone is nearer your mouth.</li>
+<li>For an app with no Siri phrase at all, Voice Control. Apple's page describes speaking commands "just like you would perform an action by touch", and the Show names command puts labels on everything tappable (<a href="https://support.apple.com/en-us/111778">Apple Support</a>).</li>
+</ol>
+<p>Voice Control is the slow option because you say the name of every button, and it is the only one that works on apps that shipped no voice support. It was built for people who cannot use a touchscreen, which is also the situation you are in with flour on both hands.</p>
+<h2 id="where-mealsaid-is-the-wrong-answer">Where MealSaid is the wrong answer</h2>
+<p><strong>It is a talking app with nothing behind it to browse.</strong> My own gaps, in the same spirit as the table.</p>
+<ul>
+<li>No CarPlay app, for the reason above, and no Android.</li>
+<li>No barcode scanner, no photo logging, no food database to search and no restaurant menus.</li>
+<li>iOS 26 and English only, and the phrase needs a connection, because the understanding happens on our server rather than on the phone.</li>
+</ul>
+<p>Cronometer is the better choice if you want a verified database and a confirmation step before anything lands in your diary. Its own note recommends reviewing Siri-logged foods the next time you open the app, which is a fair warning that every app in this category should print.</p>
+<h2 id="how-i-checked-this">How I checked this</h2>
+<p>Checked 26 October 2026. I read each company's own help article and counted the touches in its numbered steps, treating "open the app" as one touch and ignoring permission prompts and anything a saved meal would let you skip. The Cronometer, MyFitnessPal and Lose It articles are dated inside their help centres and I have quoted those dates above. The MacrosFirst and MacroFactor pages carry no visible date.</p>
+<p>Two things I could not verify. Lose It's App Store description no longer mentions Say It at all, so I am not repeating the Premium label I used for it in an earlier post, and its logging article does not say which tier Say It belongs to. Neither Cronometer nor MacrosFirst states whether its Siri action runs on a locked phone, so those cells say "not stated" rather than "no".</p>
+<p>I did not install the competitors for this post, and I did not time anything on a real phone; these are document counts. Corrections to ohmbrock42@gmail.com.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title>Calorie tracker for ADHD, counted by decisions per meal</title>
+    <link>https://mealsaid.app/blog/calorie-tracker-for-adhd/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/calorie-tracker-for-adhd/</guid>
+    <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+    <description>No app treats ADHD. Logging one food takes 6 choices in Lose It, 5 in MyFitnessPal, 4 in Cronometer and 1 if you say the meal out loud.</description>
+    <content:encoded><![CDATA[<p>There is no calorie tracker built for ADHD, and no app is a treatment for it. What an app can change is the number of decisions one entry costs, and that varies more than the marketing does: logging a single food takes six choices in Lose It, five in MyFitnessPal, four in Cronometer, and one if you say the whole meal out loud.</p>
+<p>I counted those from each company's own help page on 26 October 2026. Then I read the research on why decisions, rather than taps, are the part that breaks.</p>
+<p>One thing up front. The research below is about populations, not about you, and none of it shows that ADHD causes anything about weight.</p>
+<figure><img alt="Forest plot of pooled odds ratios: obesity in adults with ADHD 1.55, any eating disorder in people with ADHD 3.82, binge eating disorder 4.13, ADHD in people with an eating disorder 2.57" src="/blog/img/calorie-tracker-for-adhd-1.webp"  width="1600" height="900" loading="lazy"><figcaption>Forest plot of pooled odds ratios: obesity in adults with ADHD 1.55, any eating disorder in people with ADHD 3.82, binge eating disorder 4.13, ADHD in people with an eating disorder 2.57</figcaption></figure>
+<h2 id="is-there-a-calorie-tracker-made-for-adhd">Is there a calorie tracker made for ADHD?</h2>
+<p><strong>No, and I would be wary of one that said it was.</strong> None of the apps I checked claims a clinical result, and none has been tested in an ADHD population.</p>
+<p>What you can compare is friction, and four things carry most of it.</p>
+<ol>
+<li>How many separate choices one entry costs.</li>
+<li>Whether anything reaches you before the meal is forgotten.</li>
+<li>Whether a missed day or a bad number punishes you when you open the app.</li>
+<li>Whether you can log at 11pm for a lunch that happened at 1pm.</li>
+</ol>
+<p>The numbers below cover the first two, which are the ones I could count from documents.</p>
+<h2 id="what-does-the-research-show-about-adhd-and-eating">What does the research show about ADHD and eating?</h2>
+<p><strong>A steady association with weight, a stronger one with eating disorders, and no evidence of cause in either direction.</strong></p>
+<p>The obesity figure comes from Cortese and colleagues, who pooled 42 studies covering 728,136 people. For adults the odds ratio was 1.55 (95% CI 1.32 to 1.81), and pooled obesity prevalence was 28.2% in adults with ADHD against 16.4% in those without (<a href="https://pubmed.ncbi.nlm.nih.gov/26315982">Am J Psychiatry 2016</a>).</p>
+<div class="stat"><strong>28.2% vs 16.4%</strong><span>pooled obesity prevalence in adults with and without ADHD, 42 studies</span><small><a href="https://pubmed.ncbi.nlm.nih.gov/26315982">Cortese et al., 2016</a></small></div>
+
+<p>The same review reports that "individuals medicated for ADHD were not at higher risk of obesity", which is a useful brake on any story that treats this as a willpower gap (<a href="https://pubmed.ncbi.nlm.nih.gov/26315982">Am J Psychiatry 2016</a>).</p>
+<p>The eating disorder numbers are larger and matter more for how you use a tracker. Nazar and colleagues pooled 12 studies (4,013 people with ADHD against 29,404 controls) and found odds of 3.82 for any eating disorder, 4.13 for binge eating disorder, and 2.57 the other way round in 5 studies of eating disorder cohorts (<a href="https://pubmed.ncbi.nlm.nih.gov/27859581">Int J Eat Disord 2016</a>).</p>
+<p>That is my reason for saying something uncomfortable about my own category. If counting makes you restrict, a calorie app is the wrong tool, and the odds above say that applies to more people here than average. For scale, the CDC estimated 15.5 million US adults (6.0%) had a current ADHD diagnosis in 2023, from 7,046 interviews (<a href="https://www.cdc.gov/mmwr/volumes/73/wr/mm7340a1.htm">MMWR, 10 October 2024</a>).</p>
+<h2 id="how-many-decisions-does-one-food-entry-take">How many decisions does one food entry take?</h2>
+<p><strong>Six in Lose It, five in MyFitnessPal, four in Cronometer, one if you say the meal.</strong></p>
+<figure><img alt="Chart of choices required to log one food: Lose It six, MyFitnessPal five, Cronometer four, MealSaid one, with each choice named" src="/blog/img/calorie-tracker-for-adhd-2.webp"  width="1600" height="900" loading="lazy"><figcaption>Chart of choices required to log one food: Lose It six, MyFitnessPal five, Cronometer four, MealSaid one, with each choice named</figcaption></figure>
+<p>I counted a decision as any point where the app's own instructions ask you to pick between alternatives for this one food. Tapping a fixed button is not a decision. Picking which search result is your yoghurt is.</p>
+<p>Lose It's article runs meal, tab (Search, My Foods, Meals or Recipes), search words, food, serving unit, quantity (<a href="https://loseit.zendesk.com/hc/en-us/articles/49210381551380-How-to-Log-Food-in-Lose-It">Lose It help, updated 25 August 2026</a>).</p>
+<p>MyFitnessPal's runs meal, search words, result, serving size, number of servings (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032274592-How-to-log-food-to-your-diary">MyFitnessPal help, updated 23 October 2026</a>).</p>
+<p>Cronometer is the lightest of the three at four, because meal and quantity live on one screen: search words, food, serving size, diary group (<a href="https://support.cronometer.com/hc/en-us/articles/360018955211-Mobile-Add-a-Food">Cronometer support, updated 25 October 2026</a>). Cronometer does this better than the two bigger apps, and it is free for that route.</p>
+<p>This is a different count from the one in <a href="/blog/simpler-cronometer-alternative/">my post on Cronometer's step list</a>, which counted steps. Steps include the taps you do on autopilot. Decisions are the ones that need your attention back on the meal.</p>
+<h2 id="why-do-decisions-matter-more-than-taps">Why do decisions matter more than taps?</h2>
+<p><strong>Because every decision asks you to hold the meal in mind while you answer something else.</strong> Lose the thread between "chicken burrito" and "which of these burritos", and the entry does not happen.</p>
+<p>Cordeiro and colleagues surveyed 141 food journalers (47 active, 94 lapsed) alongside 5,526 forum posts. Their line on missed entries is blunt: "Simply forgetting to journal is a major barrier", and it was the most cited reason respondents had missed at least one. Asked what made journaling hard, 31 called it too much effort, 27 called it time consuming and 16 called it tedious (<a href="https://homes.cs.washington.edu/~jfogarty/publications/chi2015-barriersandnegativenudges.pdf">CHI 2015</a>).</p>
+<p>The same paper describes the other failure: people who had a bad day stopped opening the app, because red numbers read like a verdict. No app I checked lets you turn that off.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Study</th>
+<th>Who</th>
+<th>What it found</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cordeiro et al., 2015</td>
+<td>141 journalers, 47 active and 94 lapsed, plus 5,526 forum posts</td>
+<td>Forgetting was the most cited reason for a missed entry; 31 respondents called journaling too much effort</td>
+<td><a href="https://homes.cs.washington.edu/~jfogarty/publications/chi2015-barriersandnegativenudges.pdf">CHI 2015 PDF</a></td>
+</tr>
+<tr>
+<td>Patel et al., 2022</td>
+<td>38 adults randomized, 18 detailed and 20 simplified, 3 month program</td>
+<td>Simplified logging got 97% of days against 49%, with the same weight loss (3.3 kg vs 3.4 kg)</td>
+<td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9795401/">JMIR Form Res</a></td>
+</tr>
+<tr>
+<td>Chen et al., 2024</td>
+<td>30 people, 4 weeks, each person tried both prompt types, Android</td>
+<td>Context triggered prompts: 21.77% logged within an hour against 17.32% for fixed-time prompts</td>
+<td><a href="https://www.ruizlab.org/wp-content/uploads/2024/10/3613904.3641993.pdf">CHI 2024 PDF</a></td>
+</tr>
+<tr>
+<td>Cavero-Redondo et al., 2020</td>
+<td>Meta-analysis of 20 studies</td>
+<td>Phone based self-monitoring held adherence better than paper at six and twelve months</td>
+<td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7400167/">Nutrients</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Patel's trial is the one that moves me most. Eighteen people logged every food in the Fitbit app and twenty ticked a daily checklist of high calorie foods; median days logged were 49% against 97%, and weight change was the same, 3.4 kg against 3.3 kg (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9795401/">JMIR Form Res 2022</a>). Thirty-eight people is a pilot, not a verdict.</p>
+<h2 id="do-reminders-fix-the-forgetting">Do reminders fix the forgetting?</h2>
+<p><strong>Partly, and less than you would hope.</strong> Chen and colleagues gave 30 people four weeks of both prompt types, and context triggered prompts were followed by a log within the hour 21.77% of the time against 17.32% for fixed-time ones (<a href="https://www.ruizlab.org/wp-content/uploads/2024/10/3613904.3641993.pdf">CHI 2024</a>).</p>
+<p>Read that as the ceiling for a banner. Four in five prompts went unanswered in the better condition, because a notification still asks you to go and do the six decisions. That study ran on Android phones, so treat the size of the gap as a direction rather than a number for iPhones.</p>
+<p>MealSaid's answer is to make the interruption harder to dismiss: at times you pick, your phone rings like a normal call and a voice asks what you ate. Whether that beats a banner over a month is exactly the test I have not published yet, and I am not going to claim it until I have. The longer version of the dropout research is in <a href="/blog/why-people-quit-calorie-tracking/">why most people quit calorie tracking</a>.</p>
+<h2 id="where-mealsaid-is-not-the-answer">Where MealSaid is not the answer</h2>
+<p><strong>It is one sentence per meal and nothing else, which is a feature until it is not.</strong></p>
+<ul>
+<li>No barcode scanner and no database you can browse, so a packaged food you cannot name is a guess.</li>
+<li>iOS 26 and English only, and the phrase needs a connection because the understanding happens on our server.</li>
+<li>It estimates from your sentence. If you want gram-level control and a full micronutrient profile, Cronometer is the better app and I would say so to anyone.</li>
+</ul>
+<p>And the thing that no app covers: if logging tips into counting that feels compulsive, stop and talk to a clinician rather than switching apps. The Nazar numbers above are the reason that sentence is in this post.</p>
+<h2 id="how-i-checked-this">How I checked this</h2>
+<p>Checked 26 October 2026. The decision counts come from each company's current help article, read on that date, counting only the choices the instructions name for a single food, and ignoring the shortcuts (saved meals, favourites, recents) that cut every count. The research numbers come from the PubMed abstracts and open PDFs linked above, read the same day, and each one carries its sample size in the table or the sentence.</p>
+<p>What I could not do. There is no study of calorie tracking apps in an ADHD population that I could find, so the friction argument here is an inference from general logging research, not a tested claim about ADHD. I also have no adherence data of my own yet; the 30 day comparison of reminders against a scheduled call is running on one person, which is me, and that is a weak design I will label as such when it goes up.</p>
+<p>Corrections and better papers to ohmbrock42@gmail.com.</p>]]></content:encoded>
+  </item>
+  <item>
     <title>A simpler Cronometer alternative: I counted the steps</title>
     <link>https://mealsaid.app/blog/simpler-cronometer-alternative/</link>
     <guid isPermaLink="true">https://mealsaid.app/blog/simpler-cronometer-alternative/</guid>
