@@ -5,7 +5,7 @@
   <link>https://mealsaid.app/blog/</link>
   <description>Notes from building MealSaid, the calorie tracker you talk to.</description>
   <language>en</language>
-  <lastBuildDate>Sun, 25 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 26 Oct 2026 00:00:00 +0000</lastBuildDate>
   <atom:link href="https://mealsaid.app/feed.xml" rel="self" type="application/rss+xml"/>
   <item>
     <title>A simpler Cronometer alternative: I counted the steps</title>
@@ -964,7 +964,7 @@
 <td>AI Tracking accepts voice, typed text or a photo, from the plus button</td>
 <td>No</td>
 <td>Premium, cheapest annual SKU $99.99</td>
-<td><a href="https://help.lifesum.com/en/article/ai-tracking-explained-android-28mp0b">Help</a>, <a href="https://apps.apple.com/us/app/lifesum-food-tracker-fasting/id286906691">App Store</a></td>
+<td><a href="https://help.lifesum.com/en/article/ai-tracking-how-does-it-work-15sw7rk">Help</a>, <a href="https://apps.apple.com/us/app/lifesum-food-tracker-fasting/id286906691">App Store</a></td>
 </tr>
 <tr>
 <td>MealSaid</td>
@@ -1001,6 +1001,7 @@
 <p>MealSaid is my answer to the same three tests, for free. You say what you ate, it estimates calories, protein, carbs, fat and fiber, and writes them to Apple Health; a Siri phrase does it with the app closed. It has no barcode scanner and no photo logging, there is no food database to browse, it is English only, and it needs iOS 26. Wrong app for anyone who logs packaged food by barcode.</p>
 <h2 id="how-i-checked-this">How I checked this</h2>
 <p>Checked 21 October 2026. I read each company's own help article or US App Store listing on that date and took the prices from the listing or the pricing page, not from a roundup. MyFitnessPal's help article was last updated 21 September 2026 and Cronometer's voice-logging article on 20 October 2026, per their help centres.</p>
+<p>Re-checked 26 October 2026: Lifesum's AI Tracking help link returned a 404, so I replaced it with Lifesum's current "AI Tracking - How does it work?" article, which still says voice, text and photo input run from the plus button and need Premium. Prices and other claims in this post were unchanged.</p>
 <p>Apple's current iPhone guide page renders its body only with JavaScript, so the Dictate key link above points at the archived iOS 12 copy of the same article, which still loads as plain text.</p>
 <p>Two apps are missing for a reason. FatSecret's help pages and premium page returned 403 to every fetch I tried, so its Smart Assistant is not in the table rather than guessed. Cal AI's own site offers describing a meal in words (<a href="https://www.calai.app/">calai.app</a>) but neither that page nor its App Store listing mentions voice, so I left it out too.</p>
 <p>I did not install and time these apps. The one thing I can say from use is about my own, and the timing test across six apps is still running. Corrections to ohmbrock42@gmail.com.</p>]]></content:encoded>
