@@ -14,6 +14,8 @@
 
 ## Blog posts
 
+- [How to stay consistent with calorie tracking: 6 rules](https://mealsaid.app/blog/how-to-stay-consistent-with-calorie-tracking/): Six rules from habit research, with sample sizes. Health habits took a median of 59 to 66 days to feel automatic, and 4 to 335 days across people.
+- [Can I log food by talking to an app? I checked 22](https://mealsaid.app/blog/can-i-log-food-by-talking-to-an-app/): Eleven of 21 iPhone food trackers document saying what you ate, checked 27 October 2026. Three take the meal through Siri with the app still shut.
 - [Hands-free calorie tracking while cooking or driving](https://mealsaid.app/blog/hands-free-calorie-tracking/): Three iPhone apps log a meal with zero touches. MyFitnessPal needs five and Lose It needs eight, counted from their own steps on 26 October 2026.
 - [Calorie tracker for ADHD, counted by decisions per meal](https://mealsaid.app/blog/calorie-tracker-for-adhd/): No app treats ADHD. Logging one food takes 6 choices in Lose It, 5 in MyFitnessPal, 4 in Cronometer and 1 if you say the meal out loud.
 - [A simpler Cronometer alternative: I counted the steps](https://mealsaid.app/blog/simpler-cronometer-alternative/): Cronometer's own help page lists 4 steps to log a food, Lose It lists 9. Five simpler alternatives with prices and step counts, checked 25 Oct 2026.
