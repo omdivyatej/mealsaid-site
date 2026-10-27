@@ -1337,6 +1337,92 @@ def sc_adherence():
     save(im, "how-to-stay-consistent-with-calorie-tracking-3.webp")
 
 
+# ------------------------------------------------------------ can i log food by talking
+TALK_COLS = [
+    ("Say a whole meal", ["MyFitnessPal", "Cronometer", "MyNetDiary", "MacroFactor", "Lifesum",
+                          "MacrosFirst", "SnapCalorie", "Foodvisor", "MealSaid"]),
+    ("Vague or self contradicting", ["Lose It!", "Carb Manager", "BiteSnap"]),
+    ("No talking in any source", ["Cal AI", "YAZIO", "Noom", "FatSecret", "Nutritionix Track",
+                                  "Simple", "Fastic", "Zero", "AteMate", "MyPlate"]),
+]
+TALK_NOTES = {
+    "Lose It!": ["Listing claims a whole meal,", "its help page a food search."],
+    "Carb Manager": ["Help page says Say, voice logging,", "and not what it parses."],
+    "BiteSnap": ["Listing says voice enabled, no", "detail, and is a year old."],
+}
+
+
+def talk_census():
+    im, d = canvas()
+    text(d, (80, 58), "22 iPhone food trackers, by what talking to them does", 38, "m")
+    text(d, (80, 112), "From each app's own help page or US App Store listing, read 27 October 2026", 24, fill=INK2)
+    for col, (head, apps) in enumerate(TALK_COLS):
+        x = 80 + col * 500
+        n = str(len(apps))
+        text(d, (x, 186), n, 56, "b", fill=ACC if col == 0 else INK2)
+        text(d, (x + d.textlength(n, font=F(56, "b")) + 26, 212), head, 27, "m", fill=INK)
+        d.line([(x, 268), (x + 420, 268)], fill=LINE, width=2)
+        y = 288
+        for a in apps:
+            d.rounded_rectangle([x, y, x + 420, y + 40], 10, fill="#171d26")
+            text(d, (x + 18, y + 20), a, 25, fill=INK, anchor="lm")
+            y += 46
+            for line in TALK_NOTES.get(a, []):
+                text(d, (x + 18, y - 4), line, 21, fill=INK3)
+                y += 28
+            if a in TALK_NOTES:
+                y += 14
+    text(d, (1080, 772), "FatSecret's listing never mentions voice and its", 21, fill=INK3)
+    text(d, (1080, 800), "help centre refuses every automated fetch.", 21, fill=INK3)
+    source(d, "Sources: each app's own help centre or US App Store listing, read 27 October 2026. MealSaid is my own app.")
+    save(im, "can-i-log-food-by-talking-to-an-app-1.webp")
+
+
+# (label, source kind, YYYY-MM-DD or None)
+TALK_DATES = [
+    ("Cronometer", "help article", "2026-10-26"),
+    ("MyNetDiary", "App Store listing", "2026-10-26"),
+    ("Lose It!, whole meal claim", "App Store listing", "2026-10-26"),
+    ("Lifesum", "App Store listing", "2026-10-23"),
+    ("Foodvisor", "App Store listing", "2026-10-22"),
+    ("MacrosFirst", "App Store listing", "2026-10-20"),
+    ("SnapCalorie", "App Store listing", "2026-10-08"),
+    ("MyFitnessPal", "help article", "2026-09-21"),
+    ("Lose It!, voice search only", "help article", "2026-08-25"),
+    ("Carb Manager", "help article", "2026-07-10"),
+]
+
+
+def talk_dates():
+    from datetime import date
+    im, d = canvas()
+    text(d, (80, 58), "How old is each company's voice claim?", 38, "m")
+    text(d, (80, 112), "Last updated date on the page the claim comes from", 24, fill=INK2)
+    lo, hi = date(2026, 7, 1), date(2026, 10, 31)
+    x0, x1 = 600, 1480
+    px = lambda dd: x0 + (dd - lo).days / (hi - lo).days * (x1 - x0)
+    for mth, lab in ((date(2026, 7, 1), "1 Jul"), (date(2026, 8, 1), "1 Aug"), (date(2026, 9, 1), "1 Sep"),
+                     (date(2026, 10, 1), "1 Oct"), (date(2026, 10, 31), "31 Oct")):
+        d.line([(px(mth), 182), (px(mth), 700)], fill="#161c25", width=2)
+        text(d, (px(mth), 722), lab, 22, fill=INK3, anchor="ma")
+    y = 212
+    for label, kind, ds in TALK_DATES:
+        dd = date(*map(int, ds.split("-")))
+        hot = label.startswith("Lose It")
+        text(d, (80, y + 8), label, 25, fill=INK if hot else INK2, anchor="lm")
+        text(d, (80, y + 36), kind, 20, fill=INK3, anchor="lm")
+        d.line([(x0 - 20, y + 8), (px(dd), y + 8)], fill="#1d2430", width=3)
+        col = ACC if hot else INK2
+        d.ellipse([px(dd) - 11, y - 3, px(dd) + 11, y + 19], fill=col)
+        y += 52
+    d.line([(px(date(2026, 8, 25)), 180), (px(date(2026, 8, 25)), 700)], fill="#4a5363", width=2)
+    d.line([(px(date(2026, 10, 26)), 180), (px(date(2026, 10, 26)), 700)], fill="#4a5363", width=2)
+    text(d, (px(date(2026, 9, 25)), 160), "62 days apart, two Lose It pages, two answers", 23, fill=ACC, anchor="ma")
+    text(d, (80, 766), "BiteSnap is off this scale: its listing was last updated 10 October 2025. MacroFactor and MacrosFirst help pages carry no date.", 22, fill=INK2)
+    source(d, "Sources: Zendesk help centre timestamps and Apple's lookup API for listing dates, read 27 October 2026.")
+    save(im, "can-i-log-food-by-talking-to-an-app-2.webp")
+
+
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     quit_logins(); quit_waffle(); quit_bars()
@@ -1357,3 +1443,4 @@ if __name__ == "__main__":
     hf_touches(); hf_carplay()
     adhd_forest(); adhd_decisions()
     sc_habit_times(); sc_logins(); sc_adherence()
+    talk_census(); talk_dates()
