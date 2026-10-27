@@ -1245,6 +1245,98 @@ def adhd_decisions():
     save(im, "calorie-tracker-for-adhd-2.webp")
 
 
+# ------------------------------------------------------------ stay consistent
+# (label, sub, low, point, high, kind)
+HABIT_TIMES = [
+    ("Keller 2021, healthy eating", "median 59 days, range 4 to 335", 4, 59, 335, "median"),
+    ("Lally 2010, eating, drinking, exercise", "median 66 days, range 18 to 254", 18, 66, 254, "median"),
+    ("Lally 2008, eating and self-weighing", "mean 91 days, SD 55", 36, 91, 146, "mean"),
+    ("Fournier 2017, stretching in the morning", "mean 106 days", None, 106, None, "mean"),
+    ("Fournier 2017, stretching in the evening", "mean 154 days", None, 154, None, "mean"),
+]
+
+
+def sc_habit_times():
+    im, d = canvas()
+    text(d, (80, 58), "Days until a health habit felt automatic", 38, "m")
+    text(d, (80, 112), "Every study in one 2024 review that reported a formation time", 24, fill=INK2)
+    x0, x1, top = 620, 1500, 340
+    px = lambda v: x0 + v / top * (x1 - x0)
+    for g in (0, 50, 100, 150, 200, 250, 300):
+        d.line([(px(g), 196), (px(g), 672)], fill="#161c25", width=2)
+        text(d, (px(g), 694), str(g), 22, fill=INK3, anchor="ma")
+    text(d, (px(150), 736), "days", 23, fill=INK3, anchor="ma")
+    d.line([(px(21), 190), (px(21), 684)], fill="#5a6476", width=3)
+    text(d, (px(21) + 10, 160), "21 days, the claim everyone repeats", 22, fill=INK2)
+    y = 250
+    for label, sub, lo, point, hi, kind in HABIT_TIMES:
+        text(d, (80, y - 10), label, 26, fill=INK, anchor="lm")
+        text(d, (80, y + 22), sub, 21, fill=INK3, anchor="lm")
+        if lo is not None:
+            d.line([(px(lo), y), (px(hi), y)], fill="#39414f", width=6)
+            for v in (lo, hi):
+                d.line([(px(v), y - 13), (px(v), y + 13)], fill="#39414f", width=6)
+        col = ACC if kind == "median" else INK
+        d.ellipse([px(point) - 12, y - 12, px(point) + 12, y + 12], fill=col)
+        text(d, (px(point), y - 28), str(point), 24, "m", fill=col, anchor="ms")
+        y += 98
+    text(d, (80, 772), "Dots are the median (green) or the mean (white). Bars are the reported range, or one standard deviation for Lally 2008.", 22, fill=INK2)
+    source(d, "Source: Singh et al., Healthcare 2024, a review of 20 studies and 2,601 participants. Read 27 October 2026.")
+    save(im, "how-to-stay-consistent-with-calorie-tracking-1.webp")
+
+
+# (group label, logins for the smaller loss, logins for the bigger loss)
+SC_LOGINS = [("Lost under 5%", "Lost 5% or more", 1.6, 2.4), ("Lost under 10%", "Lost 10% or more", 1.7, 2.7)]
+
+
+def sc_logins():
+    im, d = canvas()
+    text(d, (80, 58), "Journal visits a day at month six, by weight lost", 38, "m")
+    text(d, (80, 112), "Minutes a day fell from 23.2 to 14.6 over the same six months", 24, fill=INK2)
+    base, top, bw = 660, 230, 190
+    xs = [300, 530, 940, 1170]
+    vals = [(SC_LOGINS[0][0], SC_LOGINS[0][2], False), (SC_LOGINS[0][1], SC_LOGINS[0][3], True),
+            (SC_LOGINS[1][0], SC_LOGINS[1][2], False), (SC_LOGINS[1][1], SC_LOGINS[1][3], True)]
+    for x, (label, v, win) in zip(xs, vals):
+        h = (base - top) * v / 3.0
+        col = ACC if win else "#3a4252"
+        d.rounded_rectangle([x, base - h, x + bw, base], 10, fill=col)
+        d.rectangle([x, base - 12, x + bw, base], fill=col)
+        text(d, (x + bw / 2, base - h - 20), f"{v}", 52, "b", anchor="ms")
+        text(d, (x + bw / 2, base + 24), label, 24, fill=INK2, anchor="ma")
+    d.line([(220, base), (1440, base)], fill=LINE, width=2)
+    text(d, (80, 760), "Of their starting weight, over 24 weeks. Both gaps were significant at p below 0.001.", 22, fill=INK2)
+    text(d, (80, 794), "Time spent per day did not differ by weight lost. Only the number of separate visits did.", 22, fill=INK3)
+    source(d, "Source: Harvey et al., Obesity 2019, n = 142 in a 24 week online programme, 93 still logging at month six.")
+    save(im, "how-to-stay-consistent-with-calorie-tracking-2.webp")
+
+
+# (measure, definition, effect, p value, significant)
+SC_ADHERENCE = [
+    ("Consistency", "Weeks with three or more days logged", "0.23% of body weight per consistent week", "p = 0.009", True),
+    ("Frequency", "Share of all 56 days with any log", "0.02% of body weight per extra 1% of days", "p = 0.013", True),
+    ("Completeness", "Weeks recording half your calorie goal", "no association with weight change", "p = 0.062", False),
+]
+
+
+def sc_adherence():
+    im, d = canvas()
+    text(d, (80, 58), "Three ways to measure logging, two of them predicted weight loss", 38, "m")
+    text(d, (80, 112), "Eight weeks of app logging by 90 adults with overweight or obesity", 24, fill=INK2)
+    y = 230
+    for measure, definition, effect, pval, sig in SC_ADHERENCE:
+        col = ACC if sig else "#5a6476"
+        d.rounded_rectangle([80, y, 92, y + 132], 6, fill=col)
+        text(d, (130, y + 10), measure, 34, "m", fill=INK if sig else INK2)
+        text(d, (130, y + 58), definition, 24, fill=INK3)
+        text(d, (130, y + 96), effect, 28, fill=col)
+        text(d, (1500, y + 24), pval, 30, "m", fill=INK2, anchor="ra")
+        y += 172
+    text(d, (80, 764), "Mean weight change was 1.54% down over eight weeks. Among the 50 who finished, none of the three reached significance.", 22, fill=INK2)
+    source(d, "Source: Payne et al., Obesity Science and Practice 2022, n = 90, Calorie Counter by FatSecret. Read 27 October 2026.")
+    save(im, "how-to-stay-consistent-with-calorie-tracking-3.webp")
+
+
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     quit_logins(); quit_waffle(); quit_bars()
@@ -1264,3 +1356,4 @@ if __name__ == "__main__":
     bfc_matrix(); bfc_widget_count()
     hf_touches(); hf_carplay()
     adhd_forest(); adhd_decisions()
+    sc_habit_times(); sc_logins(); sc_adherence()
