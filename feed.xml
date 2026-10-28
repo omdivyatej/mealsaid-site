@@ -5,8 +5,208 @@
   <link>https://mealsaid.app/blog/</link>
   <description>Notes from building MealSaid, the calorie tracker you talk to.</description>
   <language>en</language>
-  <lastBuildDate>Tue, 27 Oct 2026 00:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 28 Oct 2026 00:00:00 +0000</lastBuildDate>
   <atom:link href="https://mealsaid.app/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>Is MyFitnessPal still free in 2026? What is paywalled</title>
+    <link>https://mealsaid.app/blog/is-myfitnesspal-still-free/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/is-myfitnesspal-still-free/</guid>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Yes, with ads. Eight of the 33 features in MyFitnessPal&#x27;s own plan table are free. Barcode, voice, photo and the AI Coach need Premium at $79.99 a year.</description>
+    <content:encoded><![CDATA[<p>MyFitnessPal is still free in 2026, and a free account still logs your food and pushes the nutrition into Apple Health, with ads. I counted the rows in MyFitnessPal's own plan comparison page today: 8 of 33 listed features sit on the free tier, 21 need Premium, and 4 need Premium+ (<a href="https://support.myfitnesspal.com/hc/en-us/articles/34889191368077-The-difference-between-Free-Premium-and-Premium">MyFitnessPal support</a>).</p>
+<p>Everything that saves you typing is on the paid side of that line. I read MyFitnessPal's own help centre and its US App Store listing on 28 October 2026. The date each of those pages was last edited is in the table below.</p>
+<p>I build a competing app, so the free tier gets credit here where it earns it.</p>
+<h2 id="is-myfitnesspal-still-free-in-2026">Is MyFitnessPal still free in 2026?</h2>
+<p><strong>Yes, and you can run it indefinitely without paying, as long as you find your food by searching.</strong> The company answers this on its own page: "The standard features of MyFitnessPal are free to use" (<a href="https://support.myfitnesspal.com/hc/en-us/articles/15457546881805-What-is-included-in-the-free-version">What is included in the free version</a>, last updated 6 September 2026).</p>
+<p>The download itself is free on the US App Store, where the listing shows ten in-app purchases (<a href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718">App Store</a>). Ads pay for the rest, and MyFitnessPal says so plainly: "The core of MyFitnessPal is free, and it stays that way because ads help pay for it" (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032273152-The-ad-free-experience-with-MyfitnessPal-Premium">ad-free experience</a>, 15 September 2026).</p>
+<p>What changed since 2022 is not the price of free. It is how much now sits above it.</p>
+<h2 id="what-do-you-actually-get-for-free">What do you actually get for free?</h2>
+<p><strong>Eight rows, by MyFitnessPal's own count: food and exercise logging, weight and measurements, custom foods and recipes, viewing macros, percentage goals, diary sharing, partner app links, and the printable report.</strong></p>
+<figure><img alt="Stacked bar showing 8 of 33 features in MyFitnessPal's plan table are free, 21 need Premium and 4 need Premium plus, with the eight free features listed" src="/blog/img/is-myfitnesspal-still-free-1.webp"  width="1600" height="900" loading="lazy"><figcaption>Stacked bar showing 8 of 33 features in MyFitnessPal's plan table are free, 21 need Premium and 4 need Premium plus, with the eight free features listed</figcaption></figure>
+<p>The partner apps row is the one people miss. That is the row covering Apple Health, so nutrition still flows from a free account into Health, with caffeine, vitamin A and timestamps excluded (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032271092-Apple-Health-connection-and-syncing">Apple Health connection and syncing</a>, 24 September 2026).</p>
+<p>The food database is free as well, and it is still the biggest in the category. Search a food by name, set the serving, done. Free MyFitnessPal runs that whole loop with no upsell in the way.</p>
+<h2 id="what-is-behind-the-premium-paywall">What is behind the Premium paywall?</h2>
+<p><strong>Every shortcut that removes typing.</strong> Barcode Scan, Meal Scan, Voice Logging and the Nutrition Coach are all paid, and so is turning off the ads.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Free tier</th>
+<th>Premium</th>
+<th>MyFitnessPal page, last updated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Food search and manual logging</td>
+<td>Yes</td>
+<td>Yes</td>
+<td><a href="https://support.myfitnesspal.com/hc/en-us/articles/15457546881805-What-is-included-in-the-free-version">Free version</a>, 6 Sep 2026</td>
+</tr>
+<tr>
+<td>Barcode Scan</td>
+<td>No</td>
+<td>Yes</td>
+<td><a href="https://support.myfitnesspal.com/hc/en-us/articles/360032624771-How-to-use-the-Barcode-Scanner">Barcode Scanner</a>, 15 Oct 2026</td>
+</tr>
+<tr>
+<td>Meal Scan (photo)</td>
+<td>No</td>
+<td>Yes</td>
+<td><a href="https://support.myfitnesspal.com/hc/en-us/articles/360032625951-MyFitnessPal-Premium-features">Premium features</a>, 18 Sep 2026</td>
+</tr>
+<tr>
+<td>Voice Logging</td>
+<td>No</td>
+<td>Yes, English only</td>
+<td><a href="https://support.myfitnesspal.com/hc/en-us/articles/30332897072269-How-to-log-food-with-your-voice">Voice logging</a>, 21 Sep 2026</td>
+</tr>
+<tr>
+<td>Nutrition Coach (AI)</td>
+<td>No</td>
+<td>Yes, iOS only</td>
+<td><a href="https://support.myfitnesspal.com/hc/en-us/articles/45212266254221-Introducing-Nutrition-Coach-Your-Nutrition-Assistant">Nutrition Coach</a>, 28 Oct 2026</td>
+</tr>
+<tr>
+<td>No ads</td>
+<td>No</td>
+<td>Yes</td>
+<td><a href="https://support.myfitnesspal.com/hc/en-us/articles/360032273152-The-ad-free-experience-with-MyfitnessPal-Premium">Ad free</a>, 15 Sep 2026</td>
+</tr>
+<tr>
+<td>Apple Health sync</td>
+<td>Yes</td>
+<td>Yes</td>
+<td><a href="https://support.myfitnesspal.com/hc/en-us/articles/360032271092-Apple-Health-connection-and-syncing">Apple Health</a>, 24 Sep 2026</td>
+</tr>
+<tr>
+<td>Data export</td>
+<td>No</td>
+<td>Yes</td>
+<td><a href="https://support.myfitnesspal.com/hc/en-us/articles/34889191368077-The-difference-between-Free-Premium-and-Premium">Plan comparison</a>, 26 Oct 2026</td>
+</tr>
+<tr>
+<td>GLP-1 dose tracking</td>
+<td>No paywall stated</td>
+<td>Yes</td>
+<td><a href="https://support.myfitnesspal.com/hc/en-us/articles/40936733058445-GLP-1-Support">GLP-1 Support</a>, 24 Oct 2026</td>
+</tr>
+</tbody>
+</table></div>
+<div class="stat"><strong>1 October 2022</strong><span>the date MyFitnessPal&#x27;s own page gives for Barcode Scan going Premium only</span><small><a href="https://support.myfitnesspal.com/hc/en-us/articles/360032624771-How-to-use-the-Barcode-Scanner">MFP support</a></small></div>
+
+<p>One oddity is worth flagging, because it is the kind of thing that makes people argue in forum threads. Voice Logging sits on the Premium features page under faster ways to log food, but it is not a row in the plan comparison table I counted, even though that table was refreshed two days ago (<a href="https://support.myfitnesspal.com/hc/en-us/articles/360032625951-MyFitnessPal-Premium-features">Premium features</a>; <a href="https://support.myfitnesspal.com/hc/en-us/articles/34889191368077-The-difference-between-Free-Premium-and-Premium">plan comparison</a>).</p>
+<p>So the honest statement is that voice is Premium on the page that explains voice, and absent from the page that compares plans.</p>
+<h2 id="what-does-myfitnesspal-premium-cost-in-2026">What does MyFitnessPal Premium cost in 2026?</h2>
+<p><strong>$19.99 a month or $79.99 a year, as the headline purchases on the US App Store listing.</strong> The same listing shows ten Premium purchases at four different prices.</p>
+<figure><img alt="Bar chart of MyFitnessPal in app purchase prices: 9.99 with two listings, 19.99 with three, 49.99 with two and 79.99 with three" src="/blog/img/is-myfitnesspal-still-free-2.webp"  width="1600" height="900" loading="lazy"><figcaption>Bar chart of MyFitnessPal in app purchase prices: 9.99 with two listings, 19.99 with three, 49.99 with two and 79.99 with three</figcaption></figure>
+<p>Two of those ten are yearly subscriptions at different prices. "MyFitnessPal Yearly Premium" appears twice at $79.99 and once at $49.99, alongside "MyFitnessPal Annual Premium" at $79.99 (<a href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718">App Store</a>). Which one you are offered is not something the listing explains.</p>
+<p>Premium+ I could not price from a primary source today. Its help page describes meal planning and grocery lists but gives no figure, and MyFitnessPal's pricing blog post answered every request I made on 28 October 2026 with a Cloudflare challenge. What I can state: Premium+ adds the Meal Planner, and it is sold in six countries, the United States, the United Kingdom, Canada, Ireland, New Zealand and Australia (<a href="https://support.myfitnesspal.com/hc/en-us/articles/34347930588557-Premium">Premium+</a>, 20 September 2026).</p>
+<h2 id="what-is-the-newest-thing-you-need-premium-for">What is the newest thing you need Premium for?</h2>
+<p><strong>Nutrition Coach, the AI assistant MyFitnessPal added in 2026, which has been Premium from the start.</strong> Its help page was edited again on the day I checked, and it says Coach is "available to Premium and Premium+ MyFitnessPal members on iOS", in English, in six countries (<a href="https://support.myfitnesspal.com/hc/en-us/articles/45212266254221-Introducing-Nutrition-Coach-Your-Nutrition-Assistant">Nutrition Coach</a>, 28 October 2026).</p>
+<p>Not everything new lands on the paid side. GLP-1 dose tracking, added for the United States and Canada, names no subscription anywhere on its help page and appears in no tier list (<a href="https://support.myfitnesspal.com/hc/en-us/articles/40936733058445-GLP-1-Support">GLP-1 Support</a>, 24 October 2026).</p>
+<p>The pattern across four years is narrower than the arguments about it. Logging your food stays free. Logging it fast does not.</p>
+<h2 id="is-the-free-tier-enough-for-you">Is the free tier enough for you?</h2>
+<p><strong>If you are happy to search the database by name, yes, and you should probably stop reading here.</strong> If what stops you logging is the typing, the free version is the one without the fix.</p>
+<p>The US listing carries a 4.7 average from 2,384,277 ratings (<a href="https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718">App Store</a>). That covers free and paid users together, so read it as popularity rather than a verdict on the paywall. The database and the Apple Health write, both free, are genuinely hard to beat.</p>
+<p>Cronometer does barcode better, and gives it away: its own Gold page lists Barcode Scanner under Basic Functionality, the free column (<a href="https://cronometer.com/gold">Cronometer Gold</a>, read 28 October 2026).</p>
+<p>If the paywall is what pushed you out, I compared seven alternatives on price and free tier in <a href="/blog/myfitnesspal-alternatives/">MyFitnessPal alternatives, checked this month</a>, and went through the in-app purchase list of each one in <a href="/blog/free-calorie-counter-without-subscription/">what is actually free without a subscription</a>.</p>
+<p>I build MealSaid, which is free with no ads and no in-app purchases, and you log by saying what you ate out loud. It is a much smaller thing than MyFitnessPal: no barcode scanner, no photo logging, no database to browse, iPhone only, iOS 26 and English only. For looking up a packaged food by name, free MyFitnessPal beats it outright.</p>
+<h2 id="how-i-checked-this">How I checked this</h2>
+<p>Checked 28 October 2026. I read each MyFitnessPal help article through the help centre's public API, which also returns the last-updated timestamp printed in the table above, and counted the 33 rows of the Free, Premium and Premium+ comparison by hand (8 free, 21 Premium, 4 Premium+). The ten in-app purchases and the rating count came from the US App Store page for MyFitnessPal, read the same day.</p>
+<p>Two things I could not verify. MyFitnessPal's pricing blog post is behind a Cloudflare challenge, so the Premium+ price is absent from this post rather than copied from a third party. Help centre pages return 403 to scripted fetches in a browser-less setting, so the links above open fine for you and may look broken to a link checker.</p>
+<p>Corrections to ohmbrock42@gmail.com.</p>]]></content:encoded>
+  </item>
+  <item>
+    <title>Does MacroFactor write nutrition to Apple Health?</title>
+    <link>https://mealsaid.app/blog/does-macrofactor-write-to-apple-health/</link>
+    <guid isPermaLink="true">https://mealsaid.app/blog/does-macrofactor-write-to-apple-health/</guid>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+    <description>Yes, and so do Lose It and Cronometer. None of the three names which of Apple Health&#x27;s 39 nutrition fields it writes. Checked 28 October 2026.</description>
+    <content:encoded><![CDATA[<p>Yes. MacroFactor writes nutrition to Apple Health, and so do Lose It and Cronometer. What none of the three will tell you in plain text is which nutrition fields they write.</p>
+<p>Apple Health accepts 39 nutrition fields (<a href="https://developer.apple.com/documentation/healthkit/nutrition-type-identifiers">Apple developer documentation</a>). I read each company's own documentation on 28 October 2026 and counted how many of those 39 the text actually names: MacroFactor 0, Cronometer 0, Lose It 1.</p>
+<p>I build a calorie tracker, so I had to go and find this out for my own app. Here is each one, with the page it comes from and the date that page was last edited.</p>
+<h2 id="does-macrofactor-write-nutrition-to-apple-health">Does MacroFactor write nutrition to Apple Health?</h2>
+<p><strong>Yes, and reads it back.</strong> MacroFactor's integrations page carries a five-row table, and the Apple Health column says Yes for Read Nutrition, Write Nutrition, Read Weight, Write Weight and Read Steps.</p>
+<p>The catch is that the table is a PNG. Nothing in the page text says MacroFactor writes nutrition anywhere, so a search engine or a chatbot reading that page comes away with no answer (<a href="https://help.macrofactorapp.com/en/articles/102-integrations">MacroFactor help, Integrations</a>, read 28 October 2026).</p>
+<p>The oldest primary statement I found is a March 2022 product update on MacroFactor's own site: "You can now export your nutrition data to Apple Health and Google Fit" (<a href="https://macrofactor.com/mm-march-2022/">MacroFactor, March 2022</a>).</p>
+<p>Reading came later. The version 2.9.3 notes, dated 26 August 2024, added import of the day's calories, macros and micronutrients from Apple Health (<a href="https://macrofactor.com/version-2-9-3/">release notes</a>). MacroFactor ranks sources, with manual entries first, then its own food log, then Apple Health, so an imported total will not overwrite a day you logged yourself (<a href="https://help.macrofactorapp.com/en/articles/102-integrations">Integrations</a>).</p>
+<p>That ranking rule is the best-documented conflict policy of any tracker I have read, and MacroFactor deserves the credit for it.</p>
+<h2 id="does-lose-it-write-nutrition-to-apple-health">Does Lose It write nutrition to Apple Health?</h2>
+<p><strong>Yes, and its help page is the only one of the three that lists what it sends in plain text.</strong> Weight, Food and Exercise go to Apple Health for everyone.</p>
+<p>Premium users who have set a corresponding custom goal also send nutrient goals, blood pressure, blood glucose, BMI and body fat (<a href="https://help.loseit.com/hc/en-us/articles/47773580085140-Using-Apple-Health-With-Lose-It">Lose It help, Using Apple Health With Lose It!</a>, last updated 1 April 2026).</p>
+<p>Coming back the other way, Lose It reads food only if you grant it Dietary Energy, and it marks those entries: "Foods written from Apple Health to Lose It! will have a heart icon" (same page). That is the single Apple Health field name any of the three documents use.</p>
+<p>One limit worth knowing before you switch apps. Lose It cannot backdate the connection, so historical data in Health will not flow in.</p>
+<h2 id="does-cronometer-write-nutrition-to-apple-health">Does Cronometer write nutrition to Apple Health?</h2>
+<p><strong>Yes, but its Apple Health page no longer says what.</strong> The page was rewritten on 27 October 2026, and what it covers now is importing activity, heart rate, sleep and backfilled days into Cronometer.</p>
+<p>On writing, the live version says only that you can "manually select what data Cronometer can read and write into Apple Health" (<a href="https://support.cronometer.com/hc/en-us/articles/360020734212-Apple-Health-Apple-Watch">Cronometer support, Apple Health and Apple Watch</a>, last updated 27 October 2026).</p>
+<p>I quoted an earlier version of that same page on 20 October 2026 in <a href="/blog/calorie-apps-apple-health/">our Apple Health comparison</a>, where it gave a count of 13 nutrients plus cholesterol. That sentence is gone from the version live today, and I cannot verify the number any more, so I am not repeating it.</p>
+<p>Cronometer's Android page is a different story. Its Health Connect article lists 12 biometrics plus Food and Water as exports, item by item (<a href="https://support.cronometer.com/hc/en-us/articles/22731903751316-Health-Connect">Cronometer support, Health Connect</a>, last updated 30 September 2026).</p>
+<div class="stat"><strong>14 vs 0</strong><span>export types named on Cronometer&#x27;s Health Connect page against its Apple Health page</span><small><a href="https://support.cronometer.com/hc/en-us/articles/22731903751316-Health-Connect">Cronometer support</a></small></div>
+
+<h2 id="what-does-nutrition-mean-in-apple-health">What does nutrition mean in Apple Health?</h2>
+<p><strong>It means up to 39 separate fields, and an app picks its own subset.</strong> Apple groups them as 10 macronutrient fields, 13 vitamins, 8 minerals, 6 ultratrace minerals, water and caffeine.</p>
+<figure><img alt="Four columns listing all 39 Apple Health nutrition type identifiers grouped as 10 macronutrients, 13 vitamins, 8 minerals, 6 ultratrace minerals, water and caffeine" src="/blog/img/does-macrofactor-write-to-apple-health-1.webp"  width="1600" height="900" loading="lazy"><figcaption>Four columns listing all 39 Apple Health nutrition type identifiers grouped as 10 macronutrients, 13 vitamins, 8 minerals, 6 ultratrace minerals, water and caffeine</figcaption></figure>
+<p>Every one of those is a separate permission. An app that asks for dietaryEnergyConsumed and nothing else is honestly described as writing nutrition to Apple Health, and will still leave your protein history empty (<a href="https://developer.apple.com/documentation/healthkit/nutrition-type-identifiers">Apple developer documentation</a>, read 28 October 2026).</p>
+<aside class="note">
+<p>You can see the truth on your own phone: Health app, Browse, Nutrition, pick a field, then Show All Data. Whatever is not listed there was never written.</p>
+</aside>
+<h2 id="which-fields-does-each-app-actually-name">Which fields does each app actually name?</h2>
+<p><strong>Between them, one.</strong> Lose It names Dietary Energy, and only in the context of reading food in.</p>
+<figure><img alt="Four rows of 39 squares each showing fields named in documentation: MacroFactor 0, Lose It 1, Cronometer 0, MealSaid 5" src="/blog/img/does-macrofactor-write-to-apple-health-2.webp"  width="1600" height="900" loading="lazy"><figcaption>Four rows of 39 squares each showing fields named in documentation: MacroFactor 0, Lose It 1, Cronometer 0, MealSaid 5</figcaption></figure>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>App</th>
+<th>Writes nutrition</th>
+<th>Reads nutrition</th>
+<th>Fields named in the doc</th>
+<th>Source, last updated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MacroFactor</td>
+<td>Yes, per its integrations table</td>
+<td>Yes, day totals</td>
+<td>None, the table is an image</td>
+<td><a href="https://help.macrofactorapp.com/en/articles/102-integrations">MacroFactor help</a>, undated</td>
+</tr>
+<tr>
+<td>Lose It!</td>
+<td>Yes, listed as Food</td>
+<td>Yes, with Dietary Energy permission</td>
+<td>Dietary Energy</td>
+<td><a href="https://help.loseit.com/hc/en-us/articles/47773580085140-Using-Apple-Health-With-Lose-It">Lose It help</a>, 1 Apr 2026</td>
+</tr>
+<tr>
+<td>Cronometer</td>
+<td>Yes, no detail given</td>
+<td>No food import listed</td>
+<td>None</td>
+<td><a href="https://support.cronometer.com/hc/en-us/articles/360020734212-Apple-Health-Apple-Watch">Cronometer support</a>, 27 Oct 2026</td>
+</tr>
+<tr>
+<td>MealSaid</td>
+<td>Yes</td>
+<td>No</td>
+<td>Energy, protein, carbohydrates, total fat, fiber</td>
+<td><a href="/blog/how-mealsaid-works/">How MealSaid works</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>Two of those rows are worse than they look. MacroFactor's answer exists but is unreadable to anything that cannot see a picture, and Cronometer's answer existed eight days ago and does not now.</p>
+<h2 id="why-does-the-missing-field-list-matter">Why does the missing field list matter?</h2>
+<p><strong>Because the next app you try can only import what the last one wrote.</strong> Apple Health is the handover, and the handover is field by field.</p>
+<p>Say you spend a year in one tracker, then move. If that tracker only ever wrote dietary energy, your new app sees calories and nothing else, however carefully you logged your macros. There is no way to find this out from a marketing page.</p>
+<p>It matters for double counting too. Two apps writing the same meal give you a doubled day in Health, which is the single most common Apple Health complaint I see, and the fix is picking one source per field.</p>
+<p>MealSaid, my app, writes five fields: dietary energy, protein, carbohydrates, total fat and fiber, plus workouts. It writes nothing else, so no vitamins and no sodium, and it does not read food from Health at all. It is iPhone only, needs iOS 26, is English only, and has no barcode scanner. If you want vitamins and minerals in Health, use Cronometer: its own page lists 84 nutrients in the free Basic column (<a href="https://cronometer.com/gold">Cronometer Gold</a>, read 28 October 2026).</p>
+<h2 id="how-i-checked-this">How I checked this</h2>
+<p>Checked 28 October 2026. I counted Apple's nutrition type identifiers from Apple's own documentation page and got 39 dietary fields across six groups. I read the MacroFactor, Lose It and Cronometer help pages the same day, and for the two Zendesk help centres I pulled each article through the public help centre API so I could record the exact last-updated timestamp rather than trusting a byline.</p>
+<p>MacroFactor's integrations table is an image, which I downloaded and read directly; it has five rows and the Apple Health column reads Yes in all five. MacroFactor's help pages carry no last-updated date at all.</p>
+<p>What I could not verify: the number of nutrients Cronometer exports to Apple Health, which its page no longer states, and whether MacroFactor writes individual micronutrient fields or only calories and macros. Both companies could settle this with one list.</p>
+<p>Corrections to ohmbrock42@gmail.com.</p>]]></content:encoded>
+  </item>
   <item>
     <title>How to stay consistent with calorie tracking: 6 rules</title>
     <link>https://mealsaid.app/blog/how-to-stay-consistent-with-calorie-tracking/</link>

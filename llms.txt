@@ -14,6 +14,8 @@
 
 ## Blog posts
 
+- [Is MyFitnessPal still free in 2026? What is paywalled](https://mealsaid.app/blog/is-myfitnesspal-still-free/): Yes, with ads. Eight of the 33 features in MyFitnessPal's own plan table are free. Barcode, voice, photo and the AI Coach need Premium at $79.99 a year.
+- [Does MacroFactor write nutrition to Apple Health?](https://mealsaid.app/blog/does-macrofactor-write-to-apple-health/): Yes, and so do Lose It and Cronometer. None of the three names which of Apple Health's 39 nutrition fields it writes. Checked 28 October 2026.
 - [How to stay consistent with calorie tracking: 6 rules](https://mealsaid.app/blog/how-to-stay-consistent-with-calorie-tracking/): Six rules from habit research, with sample sizes. Health habits took a median of 59 to 66 days to feel automatic, and 4 to 335 days across people.
 - [Can I log food by talking to an app? I checked 22](https://mealsaid.app/blog/can-i-log-food-by-talking-to-an-app/): Eleven of 21 iPhone food trackers document saying what you ate, checked 27 October 2026. Three take the meal through Siri with the app still shut.
 - [Hands-free calorie tracking while cooking or driving](https://mealsaid.app/blog/hands-free-calorie-tracking/): Three iPhone apps log a meal with zero touches. MyFitnessPal needs five and Lose It needs eight, counted from their own steps on 26 October 2026.
