@@ -1490,6 +1490,71 @@ def mfpfree_skus():
     save(im, "is-myfitnesspal-still-free-2.webp")
 
 
+# ------------------------------------------------------------ does macrofactor write to apple health
+HK_GROUPS = [
+    ("Macronutrients", ["dietaryEnergyConsumed", "dietaryCarbohydrates", "dietaryFiber", "dietarySugar",
+                        "dietaryFatTotal", "dietaryFatMonounsaturated", "dietaryFatPolyunsaturated",
+                        "dietaryFatSaturated", "dietaryCholesterol", "dietaryProtein"]),
+    ("Vitamins", ["dietaryVitaminA", "dietaryThiamin", "dietaryRiboflavin", "dietaryNiacin",
+                  "dietaryPantothenicAcid", "dietaryVitaminB6", "dietaryBiotin", "dietaryVitaminB12",
+                  "dietaryVitaminC", "dietaryVitaminD", "dietaryVitaminE", "dietaryVitaminK", "dietaryFolate"]),
+    ("Minerals", ["dietaryCalcium", "dietaryChloride", "dietaryIron", "dietaryMagnesium",
+                  "dietaryPhosphorus", "dietaryPotassium", "dietarySodium", "dietaryZinc"]),
+    ("Ultratrace minerals", ["dietaryChromium", "dietaryCopper", "dietaryIodine", "dietaryManganese",
+                             "dietaryMolybdenum", "dietarySelenium"]),
+    ("Hydration", ["dietaryWater"]),
+    ("Caffeination", ["dietaryCaffeine"]),
+]
+
+
+def mfah_fields():
+    im, d = canvas()
+    text(d, (80, 56), "The 39 nutrition fields Apple Health accepts", 38, "m")
+    text(d, (80, 110), "Apple's nutrition type identifiers, grouped the way Apple groups them, read 28 October 2026", 23, fill=INK2)
+    cols = [(80, HK_GROUPS[0:1]), (470, HK_GROUPS[1:2]), (860, HK_GROUPS[2:3]), (1230, HK_GROUPS[3:6])]
+    for x, groups in cols:
+        y = 180
+        for name, fields in groups:
+            text(d, (x, y), f"{name} ({len(fields)})", 26, "m", fill=ACC if name == "Macronutrients" else INK)
+            y += 46
+            for f in fields:
+                text(d, (x, y), f, 23, fill=INK2)
+                y += 38
+            y += 24
+    text(d, (80, 806), "Only the ten macronutrient fields are what most trackers mean by nutrition. No app has to write all 39.", 22, fill=INK3)
+    source(d, "Source: developer.apple.com/documentation/healthkit/nutrition-type-identifiers, read 28 October 2026.")
+    save(im, "does-macrofactor-write-to-apple-health-1.webp")
+
+
+NAMED_FIELDS = [
+    ("MacroFactor", 0, "Table says Write Nutrition: Yes. No field named."),
+    ("Lose It!", 1, "Dietary Energy, and only for reading food in"),
+    ("Cronometer", 0, "Apple Health page names no nutrient"),
+    ("MealSaid", 5, "Energy, protein, carbohydrates, total fat, fiber"),
+]
+
+
+def mfah_named():
+    im, d = canvas()
+    text(d, (80, 56), "How many of Apple's 39 nutrition fields each app names in its own docs", 38, "m")
+    text(d, (80, 110), "Each square is one field. Filled squares are fields the documentation names in text.", 23, fill=INK2)
+    y = 200
+    cell, gap = 26, 8
+    for app, n, note in NAMED_FIELDS:
+        text(d, (80, y), app, 30, "m", fill=INK)
+        text(d, (80, y + 40), note, 21, fill=INK3)
+        gx = 650
+        for i in range(39):
+            x = gx + (i % 20) * (cell + gap)
+            yy = y - 4 + (i // 20) * (cell + gap)
+            d.rounded_rectangle([x, yy, x + cell, yy + cell], 4, fill=ACC if i < n else "#1a2029")
+        text(d, (1360, y + 22), f"{n} of 39", 30, "b", fill=INK if n else INK3, anchor="lm")
+        y += 150
+    text(d, (80, 790), "MacroFactor's answer is a Yes in a screenshot, so no search engine can read it. Lose It and Cronometer say Food.", 22, fill=INK2)
+    source(d, "Sources: each app's own help page, read 28 October 2026. MealSaid is my own app. Apple lists 39 dietary identifiers.")
+    save(im, "does-macrofactor-write-to-apple-health-2.webp")
+
+
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     quit_logins(); quit_waffle(); quit_bars()
@@ -1512,3 +1577,4 @@ if __name__ == "__main__":
     sc_habit_times(); sc_logins(); sc_adherence()
     talk_census(); talk_dates()
     mfpfree_split(); mfpfree_skus()
+    mfah_fields(); mfah_named()
