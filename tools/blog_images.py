@@ -1423,6 +1423,73 @@ def talk_dates():
     save(im, "can-i-log-food-by-talking-to-an-app-2.webp")
 
 
+# ------------------------------------------------------------ is myfitnesspal still free
+FREE_FEATURES = [
+    "Food and exercise logging", "Log measurements and view past progress",
+    "Create foods, meals and recipes", "View macronutrients",
+    "Customize calorie and macro goals by percentage", "Share and view your diary with others",
+    "Linking to partner apps (Apple Health sync)", "Printable report",
+]
+
+
+def mfpfree_split():
+    im, d = canvas()
+    text(d, (80, 58), "8 of the 33 features in MyFitnessPal's own plan table are free", 38, "m")
+    text(d, (80, 112), "Free, Premium and Premium+ comparison page, read 28 October 2026", 24, fill=INK2)
+    x0, x1, y, h = 80, 1520, 190, 76
+    segs = [(8, ACC, "8 free", "la"), (21, "#3a4252", "21 need Premium", "la"), (4, "#222935", "4 need Premium+", "ra")]
+    x = x0
+    for n, col, label, anc in segs:
+        w = (x1 - x0) * n / 33
+        d.rectangle([x, y, x + w, y + h], fill=col)
+        text(d, (x + 14 if anc == "la" else x1, y + h + 18), label, 26, "m", fill=INK if col == ACC else INK2, anchor=anc)
+        x += w
+    text(d, (80, 330), "The eight you get without paying", 28, "m")
+    yy = 382
+    for f in FREE_FEATURES:
+        d.rectangle([80, yy + 10, 92, yy + 22], fill=ACC)
+        text(d, (116, yy), f, 27, fill=INK)
+        yy += 48
+    text(d, (1030, 382), "Behind Premium, among others:", 27, fill=INK2)
+    for i, f in enumerate(["Barcode Scanner", "Meal Scan (photo)", "Voice Logging", "Nutrition Coach (AI)",
+                           "Ad free", "Data export", "Macros by meal", "Food timestamps"]):
+        text(d, (1030, 434 + i * 42), f, 25, fill=INK3)
+    source(d, "Source: MyFitnessPal support, The difference between Free, Premium, and Premium +, last updated 26 October 2026.")
+    save(im, "is-myfitnesspal-still-free-1.webp")
+
+
+SKU_PRICES = [
+    (9.99, "2 listings", "Premium, Monthly Premium"),
+    (19.99, "3 listings", "Monthly Premium"),
+    (49.99, "2 listings", "Premium, Yearly Premium"),
+    (79.99, "3 listings", "Yearly Premium, Annual Premium"),
+]
+
+
+def mfpfree_skus():
+    im, d = canvas()
+    text(d, (80, 58), "Ten Premium purchases, four different prices", 38, "m")
+    text(d, (80, 112), "In-app purchase list on the US App Store page for MyFitnessPal, read 28 October 2026", 24, fill=INK2)
+    x0, x1 = 600, 1300
+    scale = lambda v: x0 + v / 90 * (x1 - x0)
+    for v in (0, 20, 40, 60, 80):
+        d.line([(scale(v), 200), (scale(v), 660)], fill="#161c25", width=2)
+        text(d, (scale(v), 676), f"${v}", 21, fill=INK3, anchor="ma")
+    y = 228
+    for price, count, names in SKU_PRICES:
+        hot = price == 79.99
+        col = ACC if hot else "#3a4252"
+        d.rounded_rectangle([x0, y, scale(price), y + 52], 8, fill=col)
+        text(d, (scale(price) + 22, y + 26), f"${price:.2f}", 36, "b", fill=INK if hot else INK2, anchor="lm")
+        text(d, (80, y + 6), names, 26, fill=INK)
+        text(d, (80, y + 40), count, 22, fill=INK3)
+        y += 110
+    text(d, (80, 724), "Yearly Premium is listed twice at $79.99 and once at $49.99, so the annual bill depends on the offer you are shown.", 23, fill=INK2)
+    text(d, (80, 760), "No Premium+ purchase appears here. Apple shows at most ten in-app purchases on a listing.", 23, fill=INK3)
+    source(d, "Source: apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718, in-app purchase list, read 28 October 2026.")
+    save(im, "is-myfitnesspal-still-free-2.webp")
+
+
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
     quit_logins(); quit_waffle(); quit_bars()
@@ -1444,3 +1511,4 @@ if __name__ == "__main__":
     adhd_forest(); adhd_decisions()
     sc_habit_times(); sc_logins(); sc_adherence()
     talk_census(); talk_dates()
+    mfpfree_split(); mfpfree_skus()
